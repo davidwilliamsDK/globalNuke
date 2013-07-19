@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Shading tab&gt; Shading Lights group</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	    <style type="text/css">
+<!--
+.style1 {color: #990000}
+-->
+        </style>
+</head>
+
+	<body bgcolor="#ffffff">
+<p class="h2_top"><b>Shading tab&gt; Shading Lights group</b></p>
+<p> Shading Lights  allows you to light your particles from specific points, which are defined by up to eight Light groups.  Adding  Particular's Lights is an important part of creating an interesting particle animation. Without  Shading Lights or its  <a href="shading.html">Shading tab </a> turned on, the particles are lit uniformly as if the light source is constant from all directions.</p>
+<p><span class="bodystyle"><strong>NOTE:</strong> As, mentioned, Particular has its own set of eight internal lights. Nuke's Light nodes do not by default interact with Particular in any way. If you want the lights in Particular to appear the same in the 3D scene, you need to use expressions to link the Shading Lights properties (like Position, Rotation and Color)  to the lights in the Nuke scene. We have information about expressions on the <a href="3Dnuke.html">3D Nuke page</a>. </span></p>
+<p class="bodystyle"> <br>
+  <br>
+  <img src="../images/ui-shading-lights.png" width="588" height="242"></p>
+<p class="bodystyle"><span class="caption">The  Shading Lights group. </span></p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle">&nbsp;</p>
+<p class="h2">Ambient Color</p>
+<p class="bodystyle">Lets you adjust the color of the ambient light. In comparison, the Light group&gt; Color  lets you adjust the color of each individual Light.</p>
+<p class="bodystyle">The default Ambient Color is black. If you are having difficulty seeing the effect of Shading Lights, change this color to white or something light. </p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle">&nbsp; </p>
+<p class="h2">Light 1, 2, 3...	groups </p>
+<p class="bodystyle">Each Light group is a unique opportunity to link Particular to Nuke's 3D elements. Each Light acts like a Nuke light except it ONLY affects the specific Particular node. With Shading turned on, each active Light works as a Spot Light or Point Light to illuminate the particles. There are eight Lights in all. </p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle">&nbsp;</p>
+<p class="h2">Type pop-up</p>
+	<p class="bodystyle">Sets the kind of Shading Light that is used. <br>
+	</p>
+	<p class="bodystyle"><img src="../images/shadowlight-type.png" width="141" height="66"><br>
+	</p>
+	<p class="bodystyle">There are  three Type options: </p>
+	<ul>
+	  <li class="bodystyle"><strong>Off:</strong> Does not change the emission rate based on any of the Light's properties. This is useful when Intensity is used for other things (such as actually lighting a scene). </li>
+	  <li class="bodystyle"><strong>Point Light: </strong> Emits the light  in every direction. </li>
+	  <li class="bodystyle"><strong>Spot Light: </strong> The default setting. Emits light particles in one direction, like a real-life spotlight would. It appears to push all of the particles with equal intensity. This is the default behavior of the Light particles. </li>
+    </ul>
+	<p class="bodystyle style1">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Color </p>
+	<p class="bodystyle"> Sets the  color of the Light. There are a few ways to edit the color. <br>
+	</p>
+	<p class="bodystyle"><img src="../images/multi-emitter-color.png" width="245" height="25"><br>
+	</p>
+	<ul>
+	  <li class="bodystyle">The  R, G and B fields let you type in a specific RGB value.</li>
+	  <li class="bodystyle">Click the  square Color  icon to display  a Color Eyedropper. Command-Click [Mac] or Control-Click [Windows] in the Viewer pane on the color you want to select.&nbsp; </li>
+	  <li class="bodystyle">Click the circular Color icon  to bring up a Color Picker panel.  Inside the Color Picker, you can edit the graph color property to change the swatch color.&nbsp;</li>
+	  <li class="bodystyle">Click the Number '3' icon to turn the RGB fields  into a single field. You can input any kind of color mode value into this field.</li>
+	  <li class="bodystyle">This coloration can also be changed with  the Color Over Life gradient in the <a href="particle.html">Particle tab&gt; Set Color</a> control.</li>
+    </ul>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Intensity [%] </p>
+	<p class="bodystyle"> Intensity sets the  emission rate of the particles. Higher values create more particles. </p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2">Position x, y, z </p>
+	<p class="bodystyle">Sets the position of the Multi Emitter particles. Input the X, Y and Z coordinates in their text fields. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Rotate x, y, z </p>
+	<p class="bodystyle">Active when Type is set to Spot Light. Sets the rotation of the Light particles. Input the X, Y and Z coordinates in their text fields. </p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2">Cone Angle </p>
+	<p class="bodystyle">Active when Type is set to Spot Light. Changes how much area is covered by the Spot Light. Higher values light a wider area. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Cone Feather [%] </p>
+	<p class="bodystyle">Active when Type is set to Spot Light. Causes the edges of the lighting to soften. When Feather is 100%, there is a gradual fade from the edge of the cone to the center of the lit area. When Feather is 0, there is discernible line where the Light stops and starts, and all particles that are affected by the Light are lit equally.</p>
+	<p class="bodystyle">&nbsp;</p>
+	</body>
+
+</html>

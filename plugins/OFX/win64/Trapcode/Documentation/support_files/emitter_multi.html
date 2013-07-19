@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Emitter tab&gt; Multi Emitter group</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	    <style type="text/css">
+<!--
+.style1 {font-family: Verdana, Arial, Helvetica, sans-serif}
+.style7 {margin-bottom: .5em; font-size: 12px;}
+-->
+        </style>
+    </head>
+
+	<body bgcolor="#ffffff" class="bodystyle style1">
+	<p class="h2_top"><b>Emitter tab&gt; Multi Emitter group </b></p>
+		<p class="bodystyle">This set of groups  lets you <strong>emit particles from multiple emitters</strong> within the same Particular node.  There are eight Multi Emitter groups for this purpose. The <a href="emitter_type.html">Emitter Type&gt;  Multi Emitter(s)</a>  must  be selected for them to be active. </p>
+		<p class="bodystyle">The advantage of using Multi Emitters is the ability to control several Emitters with only 
+	    a few properties, rather than setting up separate nodes for each Emitter. To get the most out of this group, we recommended that you link the emitters to Nuke's 3D 
+	    lights.  Read more in <a href="3Dnuke.html"><span class="bodystyle">Using 3D Lights</span></a>.</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle"><img src="../images/multi-emitter-UI.png" width="635" height="207" align="bottom" class="style7"> <img src="../images/transparent.gif" width="10" height="10"><img src="../images/nuke3D-nodesC.png" width="235" height="247" align="bottom"></p>
+		<p class="caption">At left,  Multi Emitters and its eight Emitters. <span class="caption">At right, the 3D 
+	    elements that Multi Emitters can pipe to via expressions. </span></p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Emitter 1, 2, 3...	subgroups	</p>
+		<p class="bodystyle">Each Multi Emitter group is a unique opportunity to link Particular's 2D particles to Nuke's 3D elements. Rather than using XYZ of lights in Nuke to emit particles, each Multi Emitter acts the same way as the standard  Point Emitter. There are eight Multi Emitters in all, numbered 1 to 8, and each Multi Emitter group has the same set of controls. </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Type pop-up</p>
+		<p class="bodystyle">Sets the kind of emission rate. By default, the Off option is chosen. <br>
+		</p>
+		<p class="bodystyle"><img src="../images/multi-type.jpg" width="184" height="66"><br>
+		</p>
+		<p class="bodystyle">There are  three Type options: </p>
+		<p class="bodystyle">&bull; <strong>Off:</strong>  Does not change the emission rate based on any of the Multi Emitter's properties. Useful when Intensity is used for other things (such as actually lighting a scene). </p>
+		<p class="bodystyle">&bull; <strong>Point Emitter:</strong>  Emits the particles in every direction. This is the default behavior of particles in Particular. The options in <a href="emitter_multi.html/#direction">Emitter&gt; Direction </a> don't   have  much effect on these type of emitters, and when they do, you have no control over their direction. </p>
+		<p class="bodystyle">* <strong>Directional Emitter: </strong>Emits particles in one direction, as if they were emitted from a real-life spotlight. It appears to push all of the particles with equal intensity. This emitter has a spread and a feather to the spread that is controlled with the Directional Spread parameter. You can point its direction with the <a href="emitter_multi.html/#direction">Emitter&gt; Direction pop-up</a>. Set the Direction option to Directional, Bi-Directional or Disc to see the difference. </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Color </p>
+		<p class="bodystyle"> Sets the particle color. There are a few ways to do this. </p>
+		<p class="bodystyle"><img src="../images/multi-emitter-color.png" width="245" height="25"></p>
+		<p class="bodystyle">&bull; The  R, G and B fields let you type in a specific RGB value.</p>
+		<p class="bodystyle">&bull; Click the  square Color  icon to display  a Color Eyedropper. Command-Click [Mac] or Control-Click [Windows] in the Viewer pane on the color you want to select.&nbsp; </p>
+		<p class="bodystyle">&bull; Click the circular Color icon  to bring up a Color Picker panel.  Inside the Color Picker, you can edit the graph color property to change the swatch color.&nbsp; </p>
+		<p class="bodystyle">&bull; Click the Number '3' icon to turn the RGB fields  into a single field. You can input any kind of color mode value into this field.</p>
+		<p class="bodystyle">&bull; This coloration can also be changed with  the Color Over Life gradient in the <a href="particle.html">Particle tab&gt; Set Color</a> control.</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Intensity [%] </p>
+		<p class="bodystyle"> Intensity sets the  emission rate of the particles. Higher values create more particles. </p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="h2">Position x, y, z  </p>
+		<p class="bodystyle">Sets the position of the Multi Emitter particles. Input the X, Y and Z coordinates in their text fields. <a href="#options"></a></p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Rotate x, y, z </p>
+		<p class="bodystyle">Sets the rotation of the Multi Emitter particles. Input the X, Y and Z coordinates in their text fields. </p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="h2">Directional Spread  </p>
+		<p class="bodystyle">Active when Type is set to Directional Emitter. Sets the variation in the direction that  the Multi Emitter particles are traveling. Higher values create more of a spread. </p>
+        <p>&nbsp;</p>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Particle Type pop-up&gt; Custom Particles</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body bgcolor="#ffffff">
+		<p class="h2_top"><b>Particle Type pop-up&gt;  Custom Particles</b></p>
+		<p class="bodystyle">The ability to use custom particles provides infinite flexibility in producing particle effects. There are two Particle Types that use custom particles: Sprites and Textured Polygons.<br>
+		  <em><br>
+	      </em>Try to keep image size as small as possible. A size no larger than 200x200 pixels is recommended for most types of effects. A good rule of thumb  is to keep the custom particle image  no larger than  the largest visible particle. If the custom particle image is larger than largest visible particle, then Particular must do extra scaling operations for every particle, which will slow down the render speed considerably.<br>
+        </p>
+		<p class="bodystyle"><img src="../images/particle-type-custom.png" alt="" height="240" width="297" border="0" livesrc="../source%20images/particle.psd"></p>
+		<p class="caption">  Sprite and Textured types   use a custom image. </p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="h2">Example of a custom particle </p>
+		<p class="bodystyle">Here is an example of applying a custom particle. At left, we have a crescent-shaped bitmap. In middle, we use the Texture (or Particle) input port to point to the node. At right, the crescent shape is emitted as Textured Polygons.<br>
+        </p>
+		<p class="bodystyle"><img src="../images/texture-layer-6c.png" width="98" height="100"> <img src="../images/transparent.gif" width="20" height="10"><img src="../images/texture-moonimport.png" width="280" height="225"> <img src="../images/transparent.gif" width="20" height="10"><img src="../images/texture-layer-6b.png" width="300" height="225"></p>
+		<p class="caption">&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="h2_top">        <b>Tutorial: Create Your Own Sprite Particles </b></p>
+	<p>	      <span class="bodystyle">Let's create our own custom particles. We will use a Nuke text node as the custom particle along with the Sprite Particle Type. </span></p>
+		<p><span class="bodystyle">To do so, add a new Text node to your project. (Draw&gt;Text) 
+		  Press 1 to connect the Text1 node to the Viewer1 node. 
+		  </span><span class="bodystyle">Double click the Text1 node to open its properties and make the following  changes:</span></p>
+<p><span class="bodystyle">&bull; Change the message to a single asterisk (*). <br>
+	    &bull; Set Justify for the Text1 node to Center and Center. <br>
+	    &bull; Change the Size property to something large, such as 500. (Fine tuning of 
+		  this size will happen in Particular's Particle Size settings.) </span><span class="bodystyle"><br>
+		  &bull; Change the Color  to a light gray. </span></p>
+	<p><em>Here is what you will see:</em><br>
+	</p>
+	<p><img src="../images/custompart-tute1.png" width="400" height="311"></p>
+	<p>&nbsp;</p>
+	<p><span class="bodystyle">Copy and paste the Text1 node so you have a duplicate. </span><span class="bodystyle">Text2 should appear connected to Text1 in the node graph. </span><span class="bodystyle">Double click the Text2 node to open its properties and make the following changes: </span></p>
+	<p><span class="bodystyle">&bull; Make the astrick smaller by changing its Size to 400. 
+        <br>
+        &bull; 
+    Change its Color to white. </span><span class="bodystyle"><br>
+    &bull; 
+    Change the position of  Text2  until it is centered on 
+    Text1. </span>We set Text2&gt; Translate to 0, -20 and kept Text1&gt; Translate at 0, 0. </p>
+	<p><em>Here is what you will see:</em><br>
+	</p>
+	<p><img src="../images/custompart-tute2.png" width="400" height="311"> <span class="bodystyle"><img src="../images/custompart-tute3.png" width="400" height="311"></span></p>
+	<p>&nbsp;</p>
+	<p><span class="bodystyle">Deselect both nodes and add a Particular node to the node graph. 
+	  Connect Text2 to the Particle input port on the Particular node. You should now have a node 
+    graph that starts at Text1, connects to Text2, then connects to Particular. Now connect the Particular node to the Viewer1 node to preview. Make sure that Input1 goes from Particular to Viewer1 and Input2 goes from Text1 to Viewer1. </span>(Click Shift-X if you need to switch the inputs.) </p>
+	<p><span class="bodystyle">In Particular, set Particle&gt; Particle Type to Sprite. 
+    Set Particle&gt; Size to 20. </span>Set Particle&gt; Opacity to 50%. </p>
+	<p><em>Here is what you will see:</em><br>
+	</p>
+	<p><span class="bodystyle"><img src="../images/custompart-tute4.png" width="400" height="311"> <img src="../images/custompart-tute5.png" width="300" height="155"></span> </p>
+	<p>&nbsp;</p>
+	<p class="bodystyle">To colorize the custom particle, set Particle&gt; Particle Type to Sprite Colorize. 
+  Set Graph Mode to the <a href="graph.html">Color over Life</a> chart. Change Particle&gt; Set Color to Over Life. Now the particles are colorized<a href="graph.html"></a>. Also try setting Particle&gt; Particle Type to Sprite Fill. Both options are  colorizing modes, but Sprite Colorize applies  lightness to the particle, while Sprite Fill fills the sprite with a color wherever the alpha value is not 0.<br>
+  <br>
+  <em>Here is what you will see:</em><br>
+	</p>
+	<p class="bodystyle"><img src="../images/custompart-tute6.png" width="400" height="309"></p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">Let's change a few settings to show how the Textured Polygon type works compared to the Sprite.   Textured Polygons and Sprites are both custom particles, and you can read about them in detail on the <a href="particle_type.html">Particle Type page</a>. Their main difference is the ability to have the Textured Polygons rotate in any 3D orientation to the camera, and that's what we will look at here. </p>
+	<p class="bodystyle">Change the Particle Type to Texture Polygon Colorize. This has the same colorization effect as the Sprite but the Texture Polygon can now be rotated in 3D.</p>
+		<p class="bodystyle">Open the Rotation group and  change the Random Rotate Speed to a value of 2.0. The custom asterisk particles are now mapped onto 3D polygons that rotate independently in 3D space as the particles are emitted.</p>
+		<p class="bodystyle"><em>Our final effect:</em><br>
+		</p>
+		<p class="bodystyle"><img src="../images/custompart-tute7.png" width="400" height="309"></p>
+		<p class="bodystyle"><br>
+    </p>
+</body>
+
+</html>

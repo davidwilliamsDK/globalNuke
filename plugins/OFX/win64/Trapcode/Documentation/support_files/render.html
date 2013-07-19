@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Rendering tab</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	    <style type="text/css">
+<!--
+.style1 {font-family: Verdana, Arial, Helvetica, sans-serif}
+.style3 {font-weight: bold; margin-bottom: .5em; font-size: 12px;}
+-->
+        </style>
+    </head>
+
+	<body bgcolor="#ffffff" class="bodystyle style1">
+		<p class="h2_top"><b>Rendering tab </b></p>
+		<p class="bodystyle">The Rendering  tab controls the output of the Render Mode, Depth of Field and compositing of the particles.</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p><img src="../images/ui-rendering.png" width="570" height="141"></p>
+		<p class="caption"> The Rendering tab. </p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="h2"><b>Render Mode</b></p>
+    <p class="bodystyle">This menu lets you choose how the particles look when they render. <br>
+    </p>
+    <p class="bodystyle"><img src="../images/render-mode.png" width="210" height="49"><br>
+    </p>
+    <p><span class="bodystyle">There are two Render Modes.</span></p>
+    <ul>
+      <li class="bodystyle"><b>Motion Preview</b>: This mode draws dots at each particle. It is quick way to preview the motion of particles with a low render hit. </li>
+      <li class="bodystyle"><b>Full Render</b>: The default mode. This creates the expected results rendering all particles with full scale, position and shading. This mode should always be used for final output.<br>
+      <br></li>
+    </ul>
+    <p><img src="../images/render-preview.jpg" width="300" height="233"> <img src="../images/render-full.jpg" width="300" height="233"></p>
+	  <p class="caption">Left to right, Render Mode set to Motion Preview and Full Render. </p>
+	  <p>&nbsp;</p>
+	  <p>&nbsp;</p>
+	  <p><span class="style3">Depth of Field </span></p>
+	  <p class="bodystyle">  Particular mimics the look of a real camera by adding a Depth of Field (DOF) simulation. How does Depth of Field work? A real camera cannot maintain focus in all depths of an image. DOF  mimics the way that a real camera cannot maintain its sharp focus at all depths. DOF is useful for  increasing the realism of a scene. It is also useful for matching your Particular effect to footage shot with a real camera where Depth of Field is apparent. </p>
+	  <p class="bodystyle">By default, DOF is turned on with the On option. Choose the Off option to turn off DOF. <br>
+	  </p>
+	  <p class="bodystyle"><img src="../images/render-DOF.png" width="145" height="44"><br>
+	    <br>
+    </p>
+	  <p class="bodystyle"><img src="../images/DOF-off.jpg" width="300" height="233"> <img src="../images/DOF-on.jpg" width="300" height="233"></p>
+	  <p class="caption">Left to right, Depth of Field set to Off and Camera Settings (On). </p>
+	  <p class="bodystyle">&nbsp;</p>
+	  <p>&nbsp;</p>
+	  <p><span class="h2">Depth of Field Type  </span></p>
+	  <p class="bodystyle">This control sets the kind of render that Depth of Field provides. This setting only  affects  Sprite and Textured Polygon, and is grayed out for other <a href="particle_type.html">Particle Types</a>.<br>
+	  </p>
+	  <p class="bodystyle"><img src="../images/render-type.png" width="215" height="49"><br>
+	  </p>
+	  <p class="bodystyle"> There are two Depth of Field Type options.</p>
+	  <ul>
+	    <li class="bodystyle"><b>Square:</b> This mode uses a  square aperture and is a slightly faster render because there are fewer sides.  </li>
+	    <li class="bodystyle"><b>Smooth:</b> This mode gives a smoother DOF effect that in most cases looks more realistic. For this reason, Smooth is the default option. It renders a bit slower than  Square. </li>
+    </ul>
+	  <p class="bodystyle">&nbsp;</p>
+    <p class="bodystyle">&nbsp;</p>
+	  <p><span class="h2">Transfer Mode </span></p>
+	  <p class="bodystyle"> The Rendering tab has built-in Transfer Mode options. These modes allow the Particular particles to be composited against the original content. The default setting is None, or off, which will simply replace the original image content with the output from Particular.</p>
+	  <p class="bodystyle">You can also use Transfer Modes to stack multiple instances of the Particular node.   Normal mode is typically the  best choice for stacking. <br>
+    </p>
+    <p><img src="../images/render-transfer.png" width="196" height="364"></p>
+	  <p class="caption">The list of  compositing modes. </p>
+	  <p>&nbsp;</p>
+	  <p>&nbsp;</p>
+	  <p class="h2">Opacity</p>
+	  <p class="bodystyle">Sets the transparency of the entire Particular effect. This option is active when Transfer Mode is set to any option other than None. The default value of 100 makes the particles fully opaque. Lower values make the particles more transparent.   </p>
+	  <p>&nbsp;</p>
+</body>
+</html>

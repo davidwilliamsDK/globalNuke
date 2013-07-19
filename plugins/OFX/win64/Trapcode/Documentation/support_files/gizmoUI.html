@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>The 3D Gizmo interface</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body bgcolor="#ffffff" class="bodystyle">
+        <p class="h2_top">The 3D Gizmo interface </p>
+        <p class="bodystyle">The Setup tab  is specifically for controlling the Particular 3D Gizmo group. These controls often refer to working with Particular's camera controls in conjunction with Nuke's camera nodes. They also refer to working with the Particular card, which is the 3D Card node onto which Particular's output is being projected. </p>
+        <p>&nbsp;</p>
+        <p><img src="../images/gizmo-setup-UI.png" width="481" height="341"></p>
+        <p class="caption">The Setup tab.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">Set Scene Camera&gt; Get Cameras button </p>
+        <p class="bodystyle">After  you add the Gizmo to your scene, this  is the first button you should press in the Setup tab. It tells the Gizmo to look for any Camera node connected to your scene, and to populate or refresh the Camera dropdown list of the cameras. </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">Set Scene Camera&gt; Camera pop-up </p>
+        <p class="bodystyle">After you  click the Get Cameras button, then use the Camera pop-up to choose a Camera node. </p>
+        <p class="bodystyle">The pop-up shows a list of cameras that the Gizmo sees, and which you can choose to connect to the scene. Once you select a Nuke scene camera, its Position and Rotation values are automatically used to control Particular's built-in camera, and the two cameras sync up perfectly. </p>
+        <ul>
+          <li class="bodystyle"><strong>None: </strong>This unlinks the camera values. </li>
+          <li><span class="bodystyle"><strong>Camera1, Camera2: </strong>Shows the cameras that are available in your scene for Particular. </span>This syncs the Nuke scene camera with Particular's built-in camera. </li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><img src="../images/gizmo-setcamera.png" width="389" height="83"> </p>
+        <p>&nbsp;  </p>
+        <p>&nbsp;</p>
+        <p class="h2">Add Emitter Proxy&gt; Add Selected button </p>
+        <p class="bodystyle">Adds a node to the Objects pop-up list. To do so, select a node in the Node Graph panel, then click the Add Selected button. This node doesn't have to be connected to a Scene node or Emitter node. The node must have Translate and Rotate properties for it to link.</p>
+        <p>Once the node is added, it can be used as an Emitter proxy as long as it has a Transform knob. </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">Add Emitter Proxy&gt; Objects pop-up </p>
+        <p class="bodystyle">Shows the list of nodes that the Gizmo sees and you can choose to connect to the scene. Use the Object pop-up to choose a  node that's already been populated with the Add Selected and Refresh buttons. The node must have Translate and Rotate properties for it to link.</p>
+        <p>&nbsp;</p>
+        <p><img src="../images/gizmo-setproxy.png" width="429" height="82"></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">Add Emitter Proxy&gt; Refresh button </p>
+        <p class="bodystyle">Updates the Objects pop-up with all of the nodes connected to the Emitter scene node. </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">Add Emitter Proxy&gt; Card Properties&gt; Align to Cam checkbox </p>
+        <p class="bodystyle">When checked, the card onto which Particular's output is being projected will always face the selected scene camera. </p>
+        <p class="bodystyle">When unchecked, the card's rotation values will only calculate using the Rot Offset values. </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">Add Emitter Proxy&gt; Card Properties&gt; Lock Card To pop-up</p>
+        <p class="bodystyle">Allows you to control the position of the Particular projection card within your scene. <br>
+    </p>
+        <p><img src="../images/gizmo-lockcardto.png" width="191" height="71"><br>
+        </p>
+        <p class="bodystyle">There are three Lock Card To options:</p>
+        <ul>
+          <li class="bodystyle"><strong>None: </strong>The card is positioned at 0,0,0 and offset using the Trans Offset values. </li>
+          <li class="bodystyle"><strong>Emitter: </strong>The card is positioned at the Emitter proxy object and will animate along with it. The Tans Offset values can be used to tweak this positioning.</li>
+          <li class="bodystyle"><strong>Camera:</strong> The card is positioned just in front of the chosen scene camera. The Trans Offset values can be used to tweak this positioning. This option is recommended if you are performing large camera moves. </li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">Add Emitter Proxy&gt; Card Properties&gt; Trans Offset xyz</p>
+        <p class="bodystyle">Offsets the Particular projection card in 3D space.  Use  Trans Offset, for instance, if you lock the card to the Emitter but need it to travel with the camera.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">Add Emitter Proxy&gt; Card Properties&gt; Rot Offset xyz</p>
+        <p class="bodystyle">Rotates the Particular projection card in 3D space. </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">Add Emitter Proxy&gt; Card Properties&gt; Scale xy</p>
+        <p class="bodystyle">Scales the size of the Particular projection card. Be careful when resizing. If the values are too small,  the particle image may get clipped. </p>
+        <p></p>
+        <p>&nbsp;</p>
+        <p class="h2">Add Emitter Proxy&gt; Card Properties&gt; Scale Uniform </p>
+        <p class="bodystyle">Scales the size of the Particular projection card uniformly on the X axis and Y axis. </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">Technical Note about Particular plug-in </p>
+        <p class="bodystyle">When the 3D Gizmo is being used, there is a slight adjustment in the Particular parameters. The Position and Rotation controls in the Emitter tab become tied to the Trans Offset and Rot Offset controls in the Gizmo Setup tab. The blue shading of the Position and Rotation fields indicate this connection. </p>
+        <p>&nbsp;</p>
+        <p><img src="../images/gizmo-bluefields.png" width="591" height="413"></p>
+        <p class="caption">The Emitter tab&gt; Position and Rotation controls are connected to the Gizmo's position and rotation.</p>
+        <p>&nbsp;</p>
+</body>
+</html>

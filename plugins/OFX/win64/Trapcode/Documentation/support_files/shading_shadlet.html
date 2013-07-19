@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Shading tab&gt; Shadowlet Settings group</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body bgcolor="#ffffff">
+<p class="h2_top"><b>Shading tab&gt; Shadowlet Settings group</b></p>
+<p class="bodystyle">The Shadowlet Setting group provides a  soft self-shadowing for the particle volume. Shadowlets create a shadow off the main light. You can imagine it as a  projected shadow &mdash; a volumetric, cone-shaded simulation of the shadow from each particle as created from the light's perspective. </p>
+<p class="bodystyle"><strong>Why use a Shadowlet? </strong>Let's say  your project has a lot of particles. Realistically, the center of that particle cluster would be obscured by all of the particles around them. You will not want the clustered mass in the center to be brightly reflected. The Shadowlet takes care of this issue and adds to the believability of the scene. </p>
+<p class="bodystyle"><strong>How it works:</strong> If you move a  Light, you will see that the shadow it creates reacts to the Shadowlet input. If you rotate the project to look from behind or at another angle, you will see the Shadowlet stays in its central location but its shading shifts with the camera angle. Read our tutorial 'How to Use a Shadowlet' at the <a href="#tute">bottom of this page</a>, including our discussion of  a smoke particle style called 'smoklet'. </p>
+<p class="bodystyle"><br>
+  <br>
+  <img src="../images/ui-shadowlet.png" width="337" height="223"></p>
+<p class="bodystyle"><span class="caption">The  Shadowlet  Settings group. </span></p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle">&nbsp; </p>
+<p class="h2"><b>Shadowlet for Main </b></p>
+	<p class="bodystyle">Turns the Shadowlet calculation on/off. It enables self-shadowing for particles in the main system.  Set to Off by default. Choose On to get the appearance of particles casting shadows. This happens as Particular recognizes the Shadowlet light. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p><img src="../images/shadowlet-formain.png" width="197" height="48"></p>
+	<p class="caption">&nbsp;</p>
+	<p><img src="../images/shadlt-image-off.jpg" width="300" height="220"> <img src="../images/shadlt-image-on.jpg" width="300" height="222"></p>
+	<p class="caption">Left to right, Shadowlet for Main  turned Off and On. </p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2"><b>Shadowlet for Aux </b></p>
+	<p class="bodystyle">Turns the Shadowlet calculation on/off for  the Aux particles only. It enable self-shadowing for particles in the Aux System. Set to Off by default. Choose On to control  shadowing for the Aux particles separate from the main particles. Aux is  an  auxiliary particle system that lets the main particles  emit their own particles. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p><img src="../images/shadowlet-foraux.png" width="183" height="53"></p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2"><b>Color </b></p>
+	<p class="bodystyle">Color  controls the color of the Shadowlet's shadow. Darker colors are most appropriate for the shadow color such as black or dark brown. Pick a color that  corresponds to the darker parts of the scene. If you have a colored background  or if the scene has a tint, the default gray color of the shading generally may make the particles look out of place. Color lets you choose a color that makes the Shadowlet shading blend into the background of the scene. </p>
+	<p>&nbsp;</p>
+	<p><img src="../images/shadlt-color-black.jpg" width="300" height="224"> <img src="../images/shadlt-color-blue.jpg" width="300" height="224"></p>
+	<p class="caption">Left to right, the Shadowlet Color is set to black (the default) and a brighter blue. </p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2"><b>Color Strength </b></p>
+	<p class="bodystyle">The Color Strength controls how strong the RGB is   weighted in against the particle color when computing the Shadowlet shadow. Strength  sets how the shadowlet Color is blended with the original color of the particle. Set to 100 by default this gives the shadow color full contribution to particles in the shadows area. Lower values will make the shadow color appear to blend less with the particles color.</p>
+	<p class="bodystyle">Some particles do not have a defined color, such as Sprite and Textured Polygon. In such cases, Color Strength should always be at 100. All other particles types, like Sprite Colorize/Fill and Textured Polygon Colorize/Fill have a well-defined color.</p>
+	<p>&nbsp;</p>
+	<p><img src="../images/shadlt-image-on.jpg" width="300" height="224"> <img src="../images/shadlt-strength-low.jpg" width="300" height="226"></p>
+	<p class="caption">Left to right,  Color Strength is high and low. Color is set to blue. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2"><b>Opacity</b></p>
+	<p class="bodystyle">This control sets the opacity  of the Shadowlet shadow, which controls how strong the shading is. Default value is 5. Opacity should typically have a low setting,  between 1 and 15 when using Sprite or Textured Polygon particle types otherwise the particles in shadow may appear black. </p>
+	<p class="bodystyle">You can increase the value to crank up the opacity of the shading. In some cases higher values can work, for example, if particles are very spread apart. But in many cases, particles will be fairly densely packed and in these cases a low value should be used so the shadow does not appear too dark.</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2"><b>Adjust Size </b></p>
+	<p class="bodystyle">The Adjust Size value sets the overall coverage of the Shadowlet area. The default value is 100. High  values give greater coverage, while lower values create a smaller shadow volume. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p><img src="../images/shadlt-size-low.jpg" width="300" height="225"> <img src="../images/shadlt-size-high.jpg" width="300" height="225"></p>
+	<p class="caption">Left to right, Adjust Size is set to low and high values. </p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2"><b>Adjust Distance </b></p>
+	<p class="bodystyle">The Adjust Distance  value is the distance in pixels the Shadowlet volume appears from the Shadow Light. This control is set to 100 by default. Lower values place the Shadowlet closer to the Light and therefore the shadow appears darker. Higher values move the Shadowlet farther away from the light source and the shadowlet effect becomes less noticeable. </p>
+	<p class="bodystyle">It is useful to set Distance to 0 initially if you have multiple Lights and you don't know which one to set as the main shadow-casting light. </p>
+	<p>&nbsp;</p>
+	<p><img src="../images/shadlt-distance-low.jpg" width="300" height="224"> <img src="../images/shadlt-distance-high.jpg" width="300" height="226"></p>
+	<p class="caption">Left to right, Adjust Distance control set to a low and high value. </p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2"><b>Placement</b></p>
+	<p class="bodystyle">Placement  controls where the Shadowlet is positioned in 3D space relative to the particles.</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle"><img src="../images/shadowlet-place.png" width="197" height="91"><br>
+	</p>
+	<p class="bodystyle">There are four options: </p>
+	<p class="bodystyle">&bull; <strong>Auto</strong> is the default option. This lets Particular decide the best position setting relative to the particles and shadow casting lights.</p>
+	<p class="bodystyle">&bull;  <strong>Project</strong>  positions the Shadowlet at a depth that depends on  the 'Shadow' Light position. </p>
+	<p class="bodystyle">&bull;  <strong>Always Behind</strong>  renders the Shadowlet shadow behind the particles in the scene. This setting is useful if the Auto setting causes noticeable flickering.</p>
+	<p class="bodystyle"> &bull;&nbsp;<strong>Always in Front</strong> positions the Shadowlet in front of the particle. This setting is also useful if the Auto setting causes unwanted flickering. Since the shadow is always in front, it can give a greater sense of depth to the particles.</p>
+	<p><span class="bodystyle"></span></p>
+	<p>&nbsp;</p>
+	<p class="h2">Shadowlet Position x, y, z </p>
+	<p class="bodystyle">The position in 3D space where Shadowlets are placed. These values can be keyframed over time.</p>
+	<ul>
+      <li class="bodystyle">Set  Position X to move  positively or negatively  along the X-axis. </li>
+	  <li class="bodystyle">Set Position Y to move positively or negatively  along  the Y-axis. </li>
+	  <li class="bodystyle">Set Position Z to move positively or negatively  along   the Z-axis.</li>
+    </ul>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle"><a name="tute"></a></p>
+	<p><b class="h2_top">Tutorial: How to Use a Shadowlet</b></p>
+	<p class="bodystyle">Let's look at how to use a Shadowlet. First, apply the Particular node with its default settings. Then change its settings to the following: </p>
+	<p class="bodystyle"><strong>Emitter tab:</strong><br>
+	  Emitter Type = Sphere <br>
+	  Particles/sec = 200 <br>
+	  Velocity random = 30 <br>
+    Emitter Size XYZ = 10 x 10 x 10 </p>
+	<p class="bodystyle"><em>Here is what you will see:</em></p>
+	<p class="bodystyle"><img src="../images/shadowlet-tute2.png" width="250" height="250"> </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle"><strong>Particle tab: </strong><br>
+	  Life = 1 sec <br>
+	  Life Random = 50% <br>
+	  Particle Type = Cloudlet <br>
+	  Particle Feather = 100 <br>
+	  Size = 20 <br>
+	  Size Random = 50%<br>
+	Opacity = 30 </p>
+	<p class="bodystyle"><em>Here is what you will see:</em></p>
+	<p><img src="../images/shadowlet-tute3.png" width="250" height="250"></p>
+	<p>&nbsp;</p>
+	<p class="bodystyle"><strong>Shading tab: </strong><br>
+    Shadowlet for Main = On
+    <br>
+Shadowlet&gt; Color Strength = 70 <br>
+Shadowlet&gt; Opacity = 90 </p>
+	<p class="bodystyle"><em>Here is what you will see:</em></p>
+	<p class="bodystyle"><img src="../images/shadowlet-tute4.png" width="250" height="250"></p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle"><strong>Graph Mode: </strong><br>
+	  Opacity Over Life graph <br>
+    Choose the second preset </p>
+	<p class="bodystyle"><em>Here is what you will see:</em></p>
+	<p class="bodystyle"><img src="../images/shadowlet-tute5.png" width="336" height="277"></p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle"><strong>Physics tab:
+	  </strong><br>
+    Air tab&gt; Air Resistance = 2 </p>
+	<p class="bodystyle">If you change the color of the shadowlet, you can  better see the result of our  changes. </p>
+	<p class="bodystyle"><em>Here is what you will see:</em></p>
+	<p><img src="../images/shadowlet-tute7.png" width="250" height="250"></p>
+	<p>&nbsp;</p>
+	<p><span class="bodystyle"><strong>Shadowlet Position: </strong></span><br>
+    To control the position of the shadowlet, change the Shadowlet Position properties. By default, the shadowlet is directly in front of the Emitter (0 point of the axes). If you have a 3D scene, you can add a 3D Axis node and  link via expressions to control the position of the shadowlet.</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle"><strong>Create a 'smokelet' particle: </strong><br>
+    If you use the <a href="particle_type.html">Cloudlet Particle Type</a> with the Shadowlet Settings group, you can create an interesting type of particle  that we call a  'smokelet'. The smokelet adds realism when you are creating a smoke particle trail. </p>
+	<p class="bodystyle">To do so, open the Particle tab, go to the Particle Type pop-up, and choose Cloudlet. All the  settings for the smokelet are in the Shadowlet Settings group. For instance, change the Color to tint the smoke. The Color Strength will affect the saturation of the smokelet color, making the  color tint appear more or less gray. Opacity controls how opaque the shadow appears. In our example above, we have set Color to green,  Color Strength to 60 and Opacity to 100. This makes the smokelet a little darker and more subtle. NOTE: The shadowing is most apparent if the light source, like a Point Light node, is placed behind the lit particles. </p>
+	<p><em>Here is what you will see: </em><br>
+	  <br>
+    <img src="../images/smokelet_green.jpg" alt="smoke image" height="240" width="320" border="0" livesrc="../source%20images/smokelet_green.psd"><br>
+	</p>
+	<p>&nbsp;</p>
+	</body>
+
+</html>

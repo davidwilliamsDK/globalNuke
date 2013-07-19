@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Physics tab&gt; Bounce group</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body bgcolor="#ffffff">
+	<p class="h2_top"><b>Physics tab&gt;  Bounce group</b></p>
+	<p class="bodystyle">The Bounce group is used to make particles bounce off of specific nodes in the composition.  Bounce  is one of two Physics Models offered in the Physics tab. The other Physics Model is the <a href="physics_air.html">Air group</a>. </p>
+	<p class="bodystyle">Two image nodes can be specified for the Bounce:&nbsp;the Floor and the Wall. <b>The Floor and Wall  must stand still; they cannot contain any keyframes.</b> Your camera can move around in the scene, but the Floor and Wall must be fixed in the scene; otherwise, Particular cannot calculate the correct position for the particle motion.</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p><span class="bodystyle"></span><img src="../images/ui-bounce.png" width="346" height="289"></p>
+	<p class="caption">The Bounce group. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Floor Mode pop-up </b></p>
+	<p class="bodystyle"> Floor Mode is used to calculate the size or extents of the Floor. To select an image node to use as the Floor, use the <a href="inputports.html">Floor input port</a>. <br>
+    </p>
+	<p class="bodystyle"><img src="../images/bounce-floor.png" width="191" height="68"></p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">There are  three Floor Mode options: </p>
+	<ul>
+      <li class="bodystyle"><strong>Infinite Plane: </strong>The default setting. Extends the dimension of the node to an infinite size and particles will not bounce around or off of the edge of the node.</li>
+	  <li class="bodystyle"><strong>Layer Size:</strong> Uses the image's dimension to calculate the Bounce area.</li>
+	  <li class="bodystyle"><strong>Layer Alpha: </strong>Uses the area defined by the node's alpha channel to calculate the Bounce area. Use this option to create an area inside the layer's extent for the bounce area. For example, you could define a circular mask for an image, and the mask (which sets the alpha values for the node) will define the Bounce area.</li>
+    </ul>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Floor Transform&gt; Position x, y</p>
+	<p class="bodystyle">Sets the position of the Floor  along the X and Y axes.  </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Floor Transform&gt; Rotate x, y</p>
+	<p class="bodystyle">Sets the rotation angle of the Floor  along the X and Y axes.  </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp; </p>
+	<p class="h2">Wall Mode pop-up</p>
+	<p class="bodystyle">Similar to Floor Mode, the Wall Mode is used to calculate the size or extents of the Wall. To select an image node to use as the Wall, use the <a href="inputports.html">Wall input port</a>. <br>
+	</p>
+	<p class="bodystyle"><img src="../images/bounce-wall.png" width="183" height="67"></p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">There are  three Wall Mode options: </p>
+	<ul>
+      <li class="bodystyle"><strong>Infinite Plane: </strong>The default setting. Extends the dimension of the node to an infinite size and particles will not bounce around or off of the edge of the node.</li>
+	  <li class="bodystyle"><strong>Layer Size:</strong> Uses  the node's dimension to calculate the Bounce area.</li>
+	  <li class="bodystyle"><strong>Layer Alpha: </strong>Uses  the area defined by the node's alpha channel to calculate the Bounce area. Use this option to create an area inside the node's extent for the Bounce area. For example, you could define a circular mask for a node, and the mask (which sets the alpha values for the node) will define the Bounce area.</li>
+    </ul>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Wall Transform&gt; Position x, y</p>
+	<p class="bodystyle">Sets the position of the Wall  along the X and Y axes.  </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Wall Transform&gt; Rotate x, y</p>
+	<p class="bodystyle">Sets the rotation angle of the Wall  along the X and Y axes.  </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2">Collision Event</p>
+	<p class="bodystyle">Controls what happens during a Bounce collision with options to allow the particles to bounce, slide, stick, or kill. <br>
+	</p>
+	<p class="bodystyle"><img src="../images/bounce-collision.png" width="182" height="90"><br>
+	</p>
+	<p class="bodystyle">There are four Collision Event options:</p>
+	<p class="bodystyle">&bull;  <strong>Bounce:</strong> This mode is the default choice. It will cause particles to bounce off the nodes defined in the Floor and Wall menus, just as a ball would bounce off of the floor in the real world. Only in this mode can you set the Bounce, Bounce Random, and  Slide controls (explained below).</p>
+	<p class="bodystyle">&bull;  <strong>Slide:</strong> This mode<strong> </strong>causes the particles to  slide parallel to the Floor or Wall after the collision. This is useful for emulating a thick liquid such as oil pouring into a Teflon pan. The result is the liquid sliding round on the surface, not bouncing away from it.</p>
+	<p class="bodystyle">&bull;  <strong>Stick<strong>:</strong> </strong>This mode makes the particles stop and remain exactly where they collide with the Bounce layers. This useful for creating an effect such as snow building up on an object.</p>
+	<p class="bodystyle">&bull;  <strong>Kill:</strong> This mode removes the main particle when it makes contact with the Bounce node. This behavior is useful when the Aux Emitter tab&gt;<a href="aux_system.html"> Emit control</a> is set to Emit at Collision. You can use the main Particle Type to create one appearance and the Aux particle system to create a secondary type of particle with a different appearance after the Bounce event.</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Bounce</p>
+	<p class="bodystyle">Determines how  much energy is conserved during the Bounce. High values make the particles  bounce higher after the collision while low values cause the particles to bounce very little, losing most of their momentum from the collision.</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Bounce Random</p>
+  <p class="bodystyle">Sets the randomness for the Bounce value. High values apply more randomness to the Bounce. Bounce Random makes the particles bounce a little differently in height. This can make the result look more realistic, since objects that strike a surface in the real world don't all have the same momentum or post-collision velocity.</p>
+  <p class="bodystyle">&nbsp;</p>
+  <p class="bodystyle">&nbsp;</p>
+  <p class="h2">Slide</p>
+  <p class="bodystyle">Sets the momentum of the particles parallel to the surface. High values mean the particles will slide off the surface quickly, like objects hitting ice. Low values mean particles will stall or stick to the surface. If the Bounce and Slide control are set to  a value of 0, the result will be the same as setting the Collision Event to Stick mode instead of Bounce.</p>
+  <p class="bodystyle">&nbsp;</p>
+	</body>
+
+</html>

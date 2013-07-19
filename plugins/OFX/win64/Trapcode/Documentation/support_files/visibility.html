@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Visibility tab</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body bgcolor="#ffffff" class="bodystyle">
+	<p class="h2_top">Visibility tab </p>
+		<p class="bodystyle">The Visibility tab controls where particles are visible in your composition. For example, particles that are far away can be set to fade out, which is great for simulating fog. There is an <a href="visibility_obscure.html">Obscuration Transform group</a>.  </p>
+		<p class="bodystyle">There is also an option to use a Z buffer from another node, using  the <a href="inputports.html">ZBuffer input port</a>. This method lets you control or match the visibility depth to an animation or image rendered in a 3D program. </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p><img src="../images/ui-visiblity.png" width="588" height="243"> <img src="../images/transparent.gif" width="20" height="10"><img src="../images/nearfar.gif" alt="" height="200" width="230" border="0" livesrc="../source%20images/nearfar.psd"></p>
+		<p class="caption">At left, the Visibility tab. At right, a diagram of how Visibility works in Particular. </p>
+	<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle"><br>
+        </p>
+		<p class="h2">Far Vanish</p>
+		<p class="bodystyle">		  The Far Vanish value set the distance from the camera when particles become completely invisible. Low values mean the particles become invisible relatively close to the camera. High values assure that the particles remain visible even if they are very distant from the camera.    <a href="#options"></a></p>
+	<p class="bodystyle">&nbsp;</p>
+		<p><img src="../images/visible-farvanish-low.jpg" width="300" height="224"> <img src="../images/visible-farvanish-high.jpg" width="300" height="226"></p>
+	<p class="caption">At left,  Far Vanish is low  and the  particles appear to have little depth. <br>
+    At right,  Far Vanish is   high  and the  particles  have a lot of depth. </p>
+	<p>&nbsp;</p>
+		<p>&nbsp;</p>
+	<p class="h2">	        <b>Far Start Fade</b></p>
+	<p class="bodystyle">		  The Far Start Fade set the distance from the camera when particles start to fade out or become transparent before they disappear at the Far Vanish point. Low values will make the particles start to fade relatively close to the camera. High values keep the particles from fading until they get close to the Far Vanish distance. Note that the Far Start Fade should be less than the Far Vanish value or the particles will not appear to fade out but simply disappear.    <a href="#options"></a></p>
+	<p>&nbsp;</p>
+	<p><img src="../images/visible-farfade-low.jpg" width="300" height="224"> <span class="caption"><img src="../images/visible-farfade-high.jpg" width="300" height="225"></span></p>
+	<p class="caption"> At left, Far Start Fade is low and particles look semi-transparent, even close to the camera. <br>
+    At right, Far Start Fade is high, which means even distant particles are visible in the scene. </p>
+	<p class="caption">&nbsp;</p>
+	<p class="caption">&nbsp;</p>
+	<p class="h2"><b>Near Start Fade</b></p>
+		<p class="bodystyle">	    This control set the near distance from the camera where particles start to fade out. At low values, only particles very close to the camera become semi-transparent. Higher values make the fade begin farther from the camera likely causing more particles to render with some transparency.    <a href="#options"></a></p>
+	    <p class="h2">&nbsp;</p>
+		<p><img src="../images/visible-nearfade-low.jpg" width="300" height="224"> <span class="caption"><img src="../images/visible-nearfade-high.jpg" width="300" height="225"></span></p>
+		<p class="caption">At left,  Near Start Fade is low, which makes most particles in the scene visible. <br>
+	    At right, Near Start Fade is high, which makes many particles appear partially transparent.</p>
+		<p class="h2">&nbsp;</p>
+		<p class="h2"><br>
+		  <br>
+		  <b>Near Vanish</b></p>
+	<p class="bodystyle">		  This control set the near distance from the camera when particles become completely invisible.		At low values, nearly all particles in the scene will be at least somewhat visible. Higher values mean the particles must be farther away from the camera to be invisible in the scene.    </p>
+	<p class="bodystyle"><strong>Note:</strong> Near Vanish should always be a lower value than Near Start Fade. Otherwise particles will  appear to instantly disappear as they approach the camera.</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p><img src="../images/visible-nearvanish-low.jpg" width="300" height="224"> <img src="../images/visible-nearvanish-high.jpg" width="300" height="226"></p>
+		<p class="caption">Left to right, Near Vanish set low and high. </p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="h2">	    <b>Near and Far Curves</b></p>
+	<p class="bodystyle">		  This menu lets you set the curve used to fade particles in the Near Fade and Far Fade zones.<br>
+    </p>
+		<p><img src="../images/visiblity-nearfar.png" width="211" height="48"></p>
+		<p><br>
+		There are two Curve options:</p>
+		<ul>
+		  <li class="bodystyle"><strong>Linear</strong>: The default choice. Linear will cause the fade to be the same with every subsequent step between  Near and Far. Let's say you have a Near Vanish point at 0 and a Near Start Fade at 10. At point 1, the particles are 10% opaque; at point 2, they are 20%; all the way to point 10, where they are 100%.&nbsp; </li>
+		  <li class="bodystyle"><strong>Smooth: </strong>Distributes the fade along a curve that is rounder like a quadratic curve. The curve would look something like: Point 1 = 3%, point 2 = 8%, point 3 = 14 %... point 5 = 30%... point 9 = 97%</li>
+    </ul>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="h2">How the ZBuffer works</p>
+		<p class="bodystyle"> Particular lets you select an RGB input to use as a Z-buffer. The <a href="inputports.html">ZBuffer input port</a> is connected to a black-and-white image to control the visibility of particles. In our example below, we use a grayscale Ramp node as the input. </p>
+	    <p class="bodystyle">Z-buffering can be useful when particles are inserted into a 3D scene.  A Z-buffer  is also known as a Depth Buffer because it contains per-pixel depth values. This depth  better simulates a 3D environment. Black is the farthest point from the camera and  makes the affected particles look distant. White pixels are the closest pixels to the camera and make the affected particles look close. The inbetween gray values  represent intermediate distances. Typically, Z-buffer particles are small and move relatively quickly compared to the animation or objects in the original 3D content.</p>
+        <p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2">Z at Black</p>
+		<p class="bodystyle">This affects the black value data for the ZBuffer input. Since black represents the farthest point from the camera, Particular  uses Z at Black to determine how the black pixels in the ZBuffer image  correspond to the  Far Vanish distance. By default, this value is set to 20 units from the camera. This means any particles closer to the camera than 20 will be visible. </p>
+		<p class="bodystyle">You can use values that correspond to real units.    </p>
+		<p>&nbsp;</p>
+	    <p>&nbsp;</p>
+    <p class="h2"> Z at White</p>
+		<p class="bodystyle">This affects the white value data for the ZBuffer input. Since white represents the closest point to the camera, Particular uses Z at White to determine how the white pixels in the ZBuffer image  correspond to the  Near Vanish distance.  By default, this value is set to 0 units from the camera. This means any particles farther from the camera than 0 will be invisible, because the source image is closer to the camera than the particles. </p>
+		<p class="bodystyle">You can use values that correspond to real units.   </p>
+		<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle"><em><img src="../images/zbuffer-enabledC.png" width="375" height="697"> <img src="../images/zbuffer-rampSM.png" width="200" height="699"> <img src="../images/zbuffer-disabledC.png" width="375" height="697"></em></p>
+		<p class="caption"><em>At left, a grayscale Ramp node is  used as the ZBuffer. In middle, the Ramp that is used. At right, the ZBuffer is turned off. <br>
+	    </em><br>
+		  <br>
+    </p>
+</body>
+</html>

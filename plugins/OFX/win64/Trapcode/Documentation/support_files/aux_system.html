@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Aux System tab</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	    <style type="text/css">
+<!--
+.style3 {margin-bottom: 0.5em; font-style: italic; font-weight: bold; font-size: 11px;}
+-->
+        </style>
+</head>
+
+	<body bgcolor="#ffffff">
+		<p class="h2_top"><b>Aux System tab </b></p>
+		<p class="bodystyle">The Aux System is a particle system within the main particle system, thus the name Aux or 'Auxiliary' System.  Aux particles are emitted from the main particles system&nbsp;either continuously or when the main particles collide. The Aux System  is useful for creating effects like particle trails, particle traces and organic lines. </p>
+		<p class="bodystyle">Read about the three Aux System groups and an 'Emitting Particles from Particles' tutorial on the <a href="aux_groups.html">Aux System group </a> page. </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p><img src="../images/ui-auxsystem.png" alt="" width="584" height="393" border="0"></p>
+	<p><span class="caption"><font face="Verdana, Arial, Helvetica, sans-serif">The  </font></span><span class="style3"><font face="Verdana, Arial, Helvetica, sans-serif">Aux System tab</font></span><span class="caption"><font face="Verdana, Arial, Helvetica, sans-serif">. </font></span></p>
+	<p>&nbsp;</p>
+	<p><br>
+	  <br>
+      <b class="h2">Emit pop-up</b> </p>
+	<p class="bodystyle">Emit turns on the Aux  particle system. <br>
+	      <br>
+      <img src="../images/aux-emit.png" width="166" height="65"><br>
+      <br>
+	  <br>
+	There are three Emit options: </p>
+	<p class="bodystyle">&bull;&nbsp;<strong>Off:</strong> By default, this option is set to Off, which means the Aux particle are not active. </p>
+	<p class="bodystyle">&bull; <strong>At Bounce Event</strong>: Tells the Aux particles to be emitted at a collision event. </p>
+	<p class="bodystyle">&bull;<strong> Continuously: </strong>Tells the Aux particles to be emitted continuously.</p>
+	<p class="bodystyle">&nbsp;</p>
+		<table width="347" border="0" cellspacing="2" cellpadding="0">
+			<tr>
+				<td width="160" align="center"><img src="../images/aux_off.gif" alt="" width="160" height="120" border="0"></td>
+				<td width="181" align="center"><img src="../images/aux_on.gif" alt="" width="160" height="120" border="0"></td>
+			</tr>
+			<tr>
+				<td align="center" class="caption"><b>Aux Off</b></td>
+				<td align="center" class="caption"><b>Aux On&gt; Continuously </b></td>
+			</tr>
+	</table>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="bodystyle"><span class="h2">Emit Probability [%] </span></p>
+		<p class="bodystyle">Emit Probability sets how many of the main particles actually produce Aux particles.  Probability is measured in percentage. Low values produce fewer particles. Higher values produce more particles. </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle"><img src="../images/aux-emitprob-low.jpg" width="300" height="225"> <img src="../images/aux-emitprob-high.jpg" width="300" height="225"></p>
+		<p class="caption">Left to right, Emit Probability is low and high. </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle"><b>Particle Emit Rate </b></p>
+	<p class="bodystyle">Sets the rate of Aux particle emission. Low values create a low emission of Aux particles. Higher values create more emission and thus more Aux particles.</p>
+		<p class="bodystyle">Particles are measured in seconds when Emit&gt; Continuously is chosen. Particles are measured by collision when Emit&gt; At Bounce Event is chosen. <br>
+        </p>
+		<p class="bodystyle"><img src="../images/aux-partsec-low.jpg" width="300" height="225"> <img src="../images/aux-partsec-high.jpg" width="300" height="226"></p>
+		<p class="caption">Left to right, Particles Emit Rate is low and high. Emit pop-up is set to Continuously. </p>
+		<p class="bodystyle"></p>
+		<p class="bodystyle"></p>
+		<p class="bodystyle"><b>Life</b></font></p>
+		<p class="bodystyle">Life controls the lifespan of the Aux particles, or how long they live on screen. Low values give the particles a shorter lifespan. High values give the particles a longer lifespan. Has a related Life Randomness parameter in the <a href="aux_groups.html">Aux&gt; Randomness group</a>. </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle"><b>Velocity</b></p>
+		<p class="bodystyle">Sets the initial velocity of the Aux particles at birth. Low values make the particles start slower. High values make the particles start faster. This control is sometimes referred to as 'Initial Velocity' in Trapcode Particular documentation. </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle"><b>Type</b></p>
+		<p class="bodystyle"> The Type controls sets the Particle Type used by the Aux System. These are the same choices as the  main particles, except that custom particles are not available, which excludes using Sprites or Textured Polygons. See the&nbsp;<a href="particle_type.html" target="_self">Particle Types</a> page for an explanation of particles. </p>
+		<p class="bodystyle">The  Same as Main option is active by default. This tells the Aux System to use the same Particle Type that the main particle system is using. This option is often helpful in keeping a consistent look to your composition. The main particle type is set in the Particle tab&gt; <a href="particle_type.html">Particle Type</a> pop-up. </p>
+		<p class="bodystyle"><strong>Technical Note:</strong> There is a limitation on Aux particles. Aux particles do NOT   behave like full Textured Polygons if 
+		  the main Particle Type is set to  Textured Polygon. The Aux 
+    particles do take on the the polygon characteristic of orbiting around the composition camera. However, their rotation is limited since there is only a Rotate Speed control for the Z axis.</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle"><img src="../images/aux-type.png" width="225" height="127"></p>
+		<p class="caption"> Aux System Type options</p>
+	    <p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle"><img src="../images/aux-type-poly-polyC.jpg" width="300" height="240"> <span class="caption"><img src="../images/aux-type-poly-starC.jpg" width="300" height="240"></span> <span class="caption"><img src="../images/aux-type-star-starC.jpg" width="300" height="240"></span></p>
+		<p class="caption">At left,  main particle is Textured Polygon, Aux particle is Same as Main.<br>
+		  In middle,  main particle is Textured Polygon, Aux particle is Star.<br>
+		  At right, 
+		  main particle is Star, Aux particle is Same as Main.</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+	    <p class="bodystyle"><b>Color From Main [%] </b></p>
+		<p><span class="bodystyle">Enables Aux particles to inherit the color from the main particle that created them. Measured in percentage. High values inherit a lot of  main particle color. Low values take on less main particle color. </span></p>
+		<p><span class="bodystyle">The main particle color is set by the Particle tab's <a href="particle.html">Color and Set Color</a> controls. </span></p>
+	    <p>&nbsp;</p>
+		<p><img src="../images/aux-colormain-low.jpg" width="300" height="225"> <img src="../images/aux-colormain-high.jpg" width="300" height="225"></p>
+	<p><span class="caption">At left, Color From Main  set low, and the Aux particles take on the default Color over Life Gradient. At right, </span><span class="caption">  Color From Main  set high, and the Aux particles take on the red color of the main particles.</span></p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="bodystyle"><b>Gravity</b></p>
+	<p class="bodystyle">Gravity makes the Aux particles fall downwards in a natural way. The particles pick up speed as they fall, just like any object in real world would. Low values make the Aux particles fall slowly. High values make the Aux particles fall more quickly. </p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2">Transfer Mode </p>
+	<p class="bodystyle">The Transfer Mode controls how Aux particles are composited together. See a similar example on the Particle tab&gt; <a href="particle_glow.html">Glow group</a> page for more information. <br>
+    </p>
+	<p><img src="../images/aux-mode.png" width="172" height="65"></p>
+	<p class="caption">&nbsp;</p>
+	<p class="bodystyle">There are three Transfer Mode options for the Aux System.<br>
+    </p>
+	<table width="536" border="0" cellspacing="2" cellpadding="0" height="102">
+      <tr align="left" valign="top" height="22">
+        <td width="88" height="22"><p class="bodystyle"><b>Normal</b></p></td>
+        <td width="12" height="22" class="bodystyle"></td>
+        <td width="428" class="bodystyle"><p class="bodystyle">The normal composite mode simply applies the glow area over top of the particle. This is the default mode.</p></td>
+      </tr>
+      <tr align="left" valign="top">
+        <td height="36"><p class="bodystyle"><b>Add</b></p></td>
+        <td width="12" class="bodystyle"></td>
+        <td width="428" class="bodystyle"><p class="bodystyle">In this mode the glow is added on top of the particles causing a much brighter result. This mode is useful for creating the appearance of sparks or fire flies. Set the Opacity lower to control the brightness of the glow.</p></td>
+      </tr>
+      <tr align="left" valign="top">
+        <td height="36"><p class="bodystyle"><b>Screen</b></p></td>
+        <td width="12" class="bodystyle"></td>
+        <td width="428" class="bodystyle"><p class="bodystyle">In this mode the screen compositing mode is used to composite the glow on top of the glow sphere or star. The screen mode brightens the glow effect but will not create a burnt out appearance as seen in the add mode.</p></td>
+      </tr>
+    </table>
+	<br>
+    <p class="bodystyle">&nbsp;</p>
+    <p>&nbsp;</p>
+	<p class="bodystyle"><b>Rotate Speed </b></p>
+	<p class="bodystyle">Controls how fast the Aux particles rotate. High values make the particles rotate quickly. Low values make the particles rotate slowly. </p>
+	<p class="bodystyle">Unlike the <a href="particle_rotation.html">Rotation group</a> for main particles, this single Rotation value controls rotation only around the Z axis. When keyframing this parameter, all Aux particles born at a certain frame will get the current Rotation Speed.</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2">Feather</p>
+	<p class="bodystyle">This control sets the softness  of the Aux particles. High values give a  feathery soft edge to the particle. Lower values give a more globular, solid edge. See a similar example on the Particle tab&gt; <a href="particle_glow.html">Glow group</a> page. </p>
+	<p class="bodystyle">&nbsp;</p>
+	</body>
+</html>

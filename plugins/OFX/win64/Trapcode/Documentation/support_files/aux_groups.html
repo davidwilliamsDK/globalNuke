@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Aux System tab&gt; Three groups</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body bgcolor="#ffffff">
+		<p class="h2_top"><b>Aux System tab&gt; Control from Main Particles, Physics, Randomness groups  </b></p>
+		<p class="bodystyle">The Aux System is a particle system within the main particle system.  Aux particles are emitted from the main particles system, and their behavior is great for creating effects like particle trails.  </p>
+		<p class="bodystyle">There are three subsections covered here: Control from Main Particles group,  Physics (Air mode only) and Randomness group. You can  read a tutorial for 'Emitting Particles from Particles'  at the <a href="#tute">bottom of this page</a>. </p>
+		<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2">Control from Main Particles group </p>
+	<p class="bodystyle">This group  lets you modify how and when the Aux particles are emitted by the Aux System.  Useful for getting more  variation in the Aux particle behavior, which contributes to a more natural effect. There are three controls in this group: Inherit Velocity, Start Emit and Stop Emit. <br>
+	</p>
+	<p class="bodystyle"><img src="../images/ui-aux-main.png" width="342" height="95"></p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle"><span class="h2">Control from Main Particles&gt; Inherit Velocity</span></p>
+	<p class="bodystyle">The Inherit Velocity control lets you add motion to the Aux particles. Inherit Velocity  limits the creation of Aux particles based on the lifetime of the main particle.  High values make the Aux particles move faster because they start out with, or 'inherit', more velocity. The main particle velocity is set in <a href="emitter.html">Emitter group&gt; Velocity</a>. </p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="bodystyle"><span class="h2">Control from Main Particles&gt; Start Emit<br>
+    Control from Main Particles&gt;    Stop Emit [% of Life]</span></p>
+	<p class="bodystyle">The Start and Stop Percentage controls define when the Aux particles appear in the life of the main particles. The Start and Stop values are a percentage of the <a href="particle.html">Particle&gt; Life [sec]</a> value. For example, if  Start and Stop  are set to 20 and 80, then the Aux particles will appear starting at 20% of the main particle Life [sec] value and will stop appearing at 80% of the same value. A value of 0 and 100 respectively will emit Aux particles from the beginning to the end of the main particle's life. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Physics (Air mode only) group </p>
+	<p class="bodystyle">This group gives the Aux particles separate settings for three  controls in the <a href="physics_air.html">Physics&gt; Air group</a>. This lets the Aux particles  take on different physics-based behavior than  the main particles, which can make your animation more interesting.  There are three controls in this group: Air Resistance, Wind Affect and Turbulence Position. <br>
+	</p>
+	<p class="bodystyle"><font size="-2"><img src="../images/ui-aux-air.png" alt="" width="340" height="99" border="0"></font></p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p><span class="h2">Physics (Air mode only)&gt; Air Resistance</span></p>
+	<p class="bodystyle">Air Resistance will modify the value set in Physics&gt; Air&gt;  Air Resistance. A value of 0 adds no air resistance. A value of 255 causes full air resistance modification to just the aux particles. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p><span class="h2">Physics (Air mode only)&gt; Wind Affect [%]  </span></p>
+	<p class="bodystyle">  Wind Affect  is  a multiplier that will increase the Physics&gt; Air&gt; Wind motion in X, Y, and Z space for the Aux particles. Wind Affect is measured in a percentage.  With values less than 100, Wind Affect decreases the Wind motion speed. With values greater than 100, Wind Affect multiplies and increases the Wind motion speed. </p>
+	<p class="bodystyle">For example, a Wind Affect value of 80 causes the Aux particles to move at .8 times the Wind values in the Physics&gt; Air section. A value of 275 will multiple the Wind values by 2.75 times the original speed. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p><span class="h2">Physics (Air mode only)&gt; Turbulence  </span></p>
+	<p class="bodystyle">Turbulence Position is the same  setting as <a href="physics_turb.html">Affect Position</a> value in the Physics&gt; Air&gt; Turbulence Field group. However, this  Turbulence control only changes the Aux particles offset by the Turbulence Field. It does not affect the displacement of the main particles. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="h2">Randomness group </p>
+	<p class="bodystyle">This group applies a randomness value to certain parameters in the main <a href="aux_system.html">Aux System tab</a>. Useful for getting more natural variation in the overall particle behavior. There are three controls in this group: Life, Size and Opacity. <br>
+	</p>
+	<p class="bodystyle"><img src="../images/ui-aux-random.png" width="344" height="97"></p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle"><span class="h2">Randomness&gt; Life</span></p>
+	<p class="bodystyle">Sets a randomness factor to  how long the Aux particles live. Affects the Life [sec] value in the <a href="aux_system.html">Aux System tab</a>. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle"><span class="h2">Randomness&gt; Size</span></p>
+	<p class="bodystyle">Sets a randomness factor to the size of the Aux particles. Affects the Size value in the <a href="aux_system.html">Aux System tab</a>. </p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle">&nbsp;</p>
+	<p class="bodystyle"><span class="h2">Randomness&gt; Opacity </span></p>
+	<p class="bodystyle">Sets a randomness factor to the opacity of the Aux particles. Affects the Opacity   value in the <a href="aux_system.html">Aux System tab</a>. </p>
+	<p class="bodystyle"></p>
+	<p class="bodystyle"></p>
+	<p><a name="tute"></a></p>
+		<p class="h2_top"><b>Tutorial: Emitting Particles from Particles</b></p>
+		<p class="bodystyle">Let's emit some particles with the Aux System. <span class="bodystyle">For our tutorial, we are working with a 640*480 composition at 30 fps and 5 seconds long. 
+
+		  When emitting particles from  particles, you can easily generate an overwhelming amount of particles. Let's start by decreasing the emission of the main particle system. Set Emitter&gt; Particles/sec to 20.  Not too exciting yet.<br>
+  <br></p>
+		<table width="588" border="0" cellspacing="2" cellpadding="0">
+          <tr>
+            <td width="379" align="center" valign="top"><p align="left" class="bodystyle"><b>Basic Aux particles. </b></p>
+                <p align="left" class="bodystyle">We will get the excitement going by activating the Aux System. Set Aux System&gt; Emit to Continuously. Set Type to Same as Main. To make the Aux Particles stronger, set Aux System&gt; Opacity to 100.</p>
+                <p align="left"><span class="bodystyle"> Now we have particles generated from the particles.</span></p>                
+                <p align="left" class="bodystyle">&nbsp;</p>
+            </td>
+            <td width="12" align="center">&nbsp;</td>
+            <td width="197" align="center"><span class="bodystyle"><img src="../images/aux1.gif" alt="" width="160" height="120" border="0"></span></td>
+          </tr>
+          <tr>
+            <td align="center" class="caption">&nbsp;</td>
+            <td align="center" class="caption">&nbsp;</td>
+            <td align="center" class="caption">&nbsp;</td>
+          </tr>
+        </table>
+	    <br>
+        <table width="588" border="0" cellspacing="2" cellpadding="0">
+          <tr>
+            <td width="379" align="center" valign="top"><p align="left" class="bodystyle"><b>Particle Trace Effect. </b></p>
+              <p align="left" class="bodystyle">To get a long trace for each particle, set Aux System&gt; Life to 5. This way the Aux Particles lives long enough to produce a long trail. </p>
+              <p align="left" class="bodystyle">To get a denser trace, set Aux System&gt; Particles/sec to 20.</p>
+            <p align="left">&nbsp;</p></td>
+            <td width="12" align="center">&nbsp;</td>
+            <td width="197" align="center"><img src="../images/aux2.gif" alt="" width="160" height="120" border="0"></td>
+          </tr>
+          <tr>
+            <td align="center" class="caption">&nbsp;</td>
+            <td align="center" class="caption">&nbsp;</td>
+            <td align="center" class="caption">&nbsp;</td>
+          </tr>
+        </table>
+		<br>
+		<table width="588" border="0" cellspacing="2" cellpadding="0">
+          <tr>
+            <td width="379" height="122" align="center" valign="top"><p align="left" class="bodystyle"><b>Organic Lines Effect</b>.</p>
+                <p align="left" class="bodystyle">So far, the Aux Particles have just been standing still. Let's see what happens if we put some motion to them. Let's add some gravity by setting Gravity to 100, and then click OK. Try RAM preview:</p>
+                <p align="left" class="bodystyle"> Notice that the Aux System has its own Gravity control. To change gravity for the main particles, use the Physics tab&gt;<a href="physics.html"> Gravity control.</a></p>
+            </td>
+            <td width="12" align="center">&nbsp;</td>
+            <td width="197" align="center"><img src="../images/aux3.gif" alt="" width="160" height="120" border="0"></td>
+          </tr>
+          <tr>
+            <td align="center" class="caption">&nbsp;</td>
+            <td align="center" class="caption">&nbsp;</td>
+            <td align="center" class="caption">&nbsp;</td>
+          </tr>
+        </table>
+		<br>
+		<table width="588" border="0" cellspacing="2" cellpadding="0">
+          <tr>
+            <td width="379" height="122" align="center" valign="top"><p align="left" class="bodystyle"><b>Particle Trail Effect</b>. </p>
+                <p align="left" class="bodystyle">Now let's roughen up the animation a bit and make it look more like each particle is emitting a heavy trail. We'll do this by giving the Aux Particles some initial random velocity. Set Aux System&gt;Velocity to 10. <br>
+</p>
+            </td>
+            <td width="12" align="center">&nbsp;</td>
+            <td width="197" align="center"><img src="../images/aux4.gif" alt="" width="160" height="120" border="0"></td>
+          </tr>
+          <tr>
+            <td align="center" class="caption">&nbsp;</td>
+            <td align="center" class="caption">&nbsp;</td>
+            <td align="center" class="caption">&nbsp;</td>
+          </tr>
+    </table>
+	  <p>&nbsp;</p>
+</body>
+</html>

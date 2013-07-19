@@ -1,0 +1,1 @@
+Use these example scripts in place of the Particular 3d Gizmo, or use them as starting points to create your own particle effects.

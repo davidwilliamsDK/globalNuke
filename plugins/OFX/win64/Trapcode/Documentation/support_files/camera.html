@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Camera tab</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	    <style type="text/css">
+<!--
+.style1 {font-family: Verdana, Arial, Helvetica, sans-serif}
+.style7 {margin-bottom: .5em; font-size: 12px;}
+-->
+        </style>
+    </head>
+
+	<body bgcolor="#ffffff" class="bodystyle style1">
+	<p class="h2_top"><b>Camera tab </b></p>
+		<p class="bodystyle">The Camera  tab  controls  the  Camera properties for Particular. This tab  contains standard camera properties for mimicking a 3D camera, including Depth of Field.<br>
+	</p>
+		<p class="bodystyle"><img src="../images/ui-camera.png" width="586" height="227"> </p>
+		<p class="caption">The Camera tab.</p>
+		<p class="bodystyle">&nbsp; </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Position x, y, z </p>
+		<p class="bodystyle">Sets the position of the camera.  <a href="#options"></a></p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Zoom</p>
+		<p class="bodystyle">Controls the zoom level of the camera. High values makes the zoom bigger and gets rid of the lens distortion, like using a long zoom len that flattens the image. A value of 1,000 is pretty straight on and won't see a lot of lens distortion. Low values simulate a wide angle lens and put the camera close to subject. The  lower the zoom, the more lens distortion.  </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Rotation x, y, z </p>
+		<p class="bodystyle">Sets the  direction the camera is pointing.  <a href="#options"></a></p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Ortho Projection checkbox</p>
+		<p class="bodystyle">Simulates an Ortho camera so all particles to appear on the same 2D plane. It basically gets rid of depth perspective and treats all of the particles as the same size. This can be useful for observing where particles are on the XY plane without worrying about distance from the camera. </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle"><img src="../images/ortho-offC.jpg" width="400" height="308"> <img src="../images/ortho-onC.jpg" width="400" height="308"></p>
+		<p class="caption">At left, Ortho Projection is off. At right, Ortho Projection is on. </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Focal Distance</p>
+		<p class="bodystyle">The distance from the camera that particles are most in focus.  All Particles are  in focus when they are first emitted because Focal Distance is same distance from the camera as the <a href="emitter.html">Emitter</a>. Particles that aren't at the Focal Distance value will be out of  focus to varying degrees. </p>
+		<p class="bodystyle">The default value is the same value as Position Z.  If you change Focal Distance, then particles get more or less out of focus. The particles that are closer to camera are in focus. Higher values sets a greater amount of distance for which the particles will be in focus.   <a href="#options"></a></p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Focal Aperture</p>
+		<p class="bodystyle">One of three fine tune controls for <a href="render.html">Depth of Field</a> (DOF). Focal Aperture is an aperture for determining how much is in focus. The larger the value, the larger the virtual aperture, which causes the depth of field to be shallower and less in focus. </p>
+		<p class="bodystyle">Higher values mean  particles that aren't at Focal Distance aren't going to be as in focus. A value of 0 is equivalent to turning off DOF in the <a href="render.html">Rendering tab</a>.  </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Blur Level</p>
+		<p class="bodystyle">One of three fine tune controls for Rendering&gt; <a href="render.html">Depth of Field</a> (DOF).  Blur Level affects the amount of blur on the out-of-focus particles. It adjusts the blur amount in depth of field independently of camera options. </p>
+		<p class="bodystyle"> A value of 0 is equivalent to turning off DOF in rendering. At 100% the blur is what it would be with real camera.  <a href="#options"></a></p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Dist Image Plane     </p>
+		<p class="bodystyle">One of three fine tune controls for Rendering&gt; <a href="render.html">Depth of Field</a> (DOF).  Like Blur Level, Dist Image Plane  changes how much the particles are out of focus. It sets the distance of the image plane from the focal point of the camera. </p>
+		<p class="bodystyle">A value of 0 is equivalent to turning off DOF in rendering. The larger this value, the shallower the depth of field, and the more particles are  out of focus if they are already out of focus. </p>
+		<p class="bodystyle">&nbsp;</p>
+	</body>
+</html>

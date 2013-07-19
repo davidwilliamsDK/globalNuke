@@ -1,0 +1,19 @@
+
+flAIR Terms and Conditions
+--------------------------
+
+Definition: 'software' means all of the contents and materials of the files this agreement is provided with.
+
+The software and all accompanying materials are Copyright © by frischluft.com. The copyright restrictions extend to any future updates, patches or bug fixes made available to you by frischluft.com wether distributed via ftp, email, cd or any electronic format.
+
+The software contains trade secrets. To protect them you are not allowed to reverse engineer the software in any way. You are not allowed to modify, disassemble, decompile or transform the software to any human perceivable form. You may not modify, rent, lease, loan, resell or create derivatives of this software or any parts of it.
+
+You are not allowed to redistribute this software or any parts of it in any way. If you want to redistribute this software you need a written permission from Frischluft.
+
+*** NO WARRANTY ***
+
+The software is sold "as is" and without any warranty of any kind either expressed, implied or otherwise. In no event shall frischluft.com be held liable for data loss, damages, loss of profits or any other kind of loss while using or misusing this software, wether or not advised of the possibility of damage, and on any theory of liability, arising from the use of this software in any way.
+
+Copyright © frischluft.com
+All rights reserved.
+www.frischluft.com

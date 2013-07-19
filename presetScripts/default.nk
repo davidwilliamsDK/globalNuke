@@ -1,0 +1,48 @@
+#! C:/Program Files/Nuke6.3v7/Nuke6.3.exe -nx
+version 6.3 v7
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="2447" h="1556" screen="0">
+        <splitter orientation="1">
+            <split size="2435"/>
+            <splitter orientation="1">
+                <split size="91"/>
+                <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                    <page id="Toolbar.1"/>
+                </dock>
+                <split size="2340"/>
+                <splitter orientation="2">
+                    <split size="751"/>
+                    <dock id="" activePageId="Viewer.1">
+                        <page id="Viewer.1"/>
+                    </dock>
+                    <split size="751"/>
+                    <dock id="" activePageId="DAG.1">
+                        <page id="DAG.1"/>
+                        <page id="Curve Editor.1"/>
+                        <page id="DopeSheet.1"/>
+                    </dock>
+                </splitter>
+            </splitter>
+            <split size="0"/>
+            <dock id=""/>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name J:/globalNuke/presetScripts/defaultNK.nk
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+}
+Viewer {
+ inputs 0
+ frame 1
+ input_process false
+ name Viewer1
+ selected true
+ xpos -40
+ ypos -9
+}

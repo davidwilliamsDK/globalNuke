@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Input Ports for Particular</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	    <style type="text/css">
+<!--
+-->
+        </style>
+</head>
+
+	<body bgcolor="#ffffff">
+<p class="h2_top"><b>Input Ports for Particular  </b></p>
+<p>  There are eight unique input ports for the Particular process node, along with the standard output port. The Particle/Texture, Emitter and Source ports are used a lot. The Floor and Wall ports are used less often. Somewhat hidden in the stack of ports are  Reflection Map, Obstruction and ZBuffer.</p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle"><img src="../images/inputs-plugin.png" width="443" height="180"><img src="../images/transparent.gif" width="10" height="10"><img src="../images/inputs-gizmo.png" width="433" height="180"></p>
+<p class="caption">At left, the Particular plug-in  inputs. At right, the Particular 3D Gizmo inputs. </p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle">The input ports for the Particular node are used to control the RGBA output of the particles.&nbsp;
+<p class="bodystyle"> &bull; <strong>Source</strong> selects the image node which Particular will be placed over if you change the Rendering tab&gt;<a href="render.html"> Transfer Mode</a> to an option other than None.
+<p class="bodystyle"> &bull; <strong>Emitter</strong> selects the image node you want the <a href="emitter_layer.html">Layer Emitter</a> to use. The Layer Emitter group uses the Emitter input port. With this port attached to the output of an image node, the RGBA data is used for the Layer Emitter. You can then influence the parameters of the Layer Emitter within Particular.</p>
+<p class="bodystyle">&bull;<strong> Emitters</strong> is an input used by the Gizmo which is preattached to an Emitter node. The input is used by the Gizmo when finding nodes to use as an Emitter Proxy.</p>
+<p class="bodystyle">&bull; <strong>Particle</strong> or <strong>Texture</strong> selects the image node you want the Particle tab&gt; <a href="particle_texture.html">Texture group </a> to use. The Texture group uses the Particle input port. With this port attached to the output of an image node, the RGBA data is used for the Texture. You can then influence the  parameters of the Texture within Particular.
+<p class="bodystyle"> &bull; <strong>Floor</strong> and <strong>Wall</strong> selects the image node you want to use for the Floor and Wall functions in the Physics tab&gt; <a href="physics_bounce.html">Bounce group</a>. RGB information is not used for these two inputs, only the alpha channel, and only when alpha is turned on for the Floor and Wall. The  properties of these inputs are controlled from within Particular.
+<p class="bodystyle">&bull; <strong>Reflection Map</strong> or <strong>RefMap</strong> uses the RGB of an image node to control the color of particles. This node requires the <a href="shading.html">Shading tab </a> to be turned on and the <a href="particle_type.html">Particle Type</a> to be Textured Polygons. It is affected by the Shading tab&gt; Reflection Strength control. 
+<p class="bodystyle">&bull; <strong>Obstruction</strong> or <strong>Obstructions</strong> uses the alpha channel of an image to block particles. The controls for the location of the Obstruction node are  in the Visibility tab&gt; <a href="visibility.html">Obscuration Transform group</a>. </p>
+<p class="bodystyle">&bull; <strong>ZBuffer</strong> uses a black and white depth matte to control the visibility of particles. It takes an RGB input and works    with the <a href="visibility.html">Visibility tab</a>. If your depth matte is in a different channel, it may be necessary to use a shuffle node before passing it into the Particular node. <BR>
+  <BR>
+</p>
+<p class="bodystyle">&nbsp;</p>
+<p class="h2">Workflow tips </p>
+<p class="bodystyle">The Image&gt; Constant node can be very helpful when working with Particular. If you  attach a Constant to a Particular node, then disable the Constant, you can  disable any nodes that you don't plan on using in in your composition. Doing so helps to avoid unexpected effects. This method also lets you  get to the input nodes that are hidden in the Particular node stack. </p>
+<p class="bodystyle">Particular uses 2D image nodes only for all its inputs. If you want to use a 3D node to control a property in Particular, you have to use an expression to link the properties. Read more on this<a href="3Dnuke.html"> 3D Nuke Page</a>. </p>
+	</body>
+
+</html>

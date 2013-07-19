@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Shading tab</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	    <style type="text/css">
+<!--
+.style1 {color: #990000}
+-->
+        </style>
+</head>
+
+	<body bgcolor="#ffffff">
+<p class="h2_top">Shading tab </p>
+<p class="bodystyle"> The Shading tab  illuminates and colors the particles in a scene. This behavior  simulates the shading that comes from lighting effects. Without Shading turned on, there really isn't any lighting at all. All of the particles  just take on a uniformly lit appearance.</p>
+<p class="bodystyle">The appearance of Shading  is affected by the particles' proximity to the <a href="shading_lights.html">Shading Lights group</a>, which provides up to eight built-in lights. There is also a <a href="shading_shadlet.html">Shadowlet Settings group</a> that  provides a  soft self-shadowing for the particle volume.</p>
+<p class="bodystyle"><strong>NOTE:</strong> As, mentioned, Particular has its own set of eight internal lights. Nuke's Light nodes do not by default interact with Particular in any way. If you want the lights in Particular to appear the same in the 3D scene, you need to use expressions to link the Shading Lights properties (like Position, Rotation and Color)  to the lights in the Nuke scene. We have information about expressions on the <a href="3Dnuke.html">3D Nuke page</a>. </p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle"><font size="-2" face="Verdana, Arial, Helvetica, sans-serif"><img src="../images/ui-shading.png" width="595" height="297"></font> </p>
+<p class="caption">The   Shading tab.</p>
+<p class="bodystyle">&nbsp;</p>
+<p>&nbsp;</p>
+<p class="h2">Shading pop-up </p>
+<p class="bodystyle">As you may expect, this pop-up turns on/off the calculation of shading from lights in the scene. By default,  Shading  is inactive 
+  with the Off option. Switch on the Shading group by setting Shading to On. The Shading group needs to work with Shading Lights. <br>
+</p>
+<p class="bodystyle"><img src="../images/shading-popup.png" width="122" height="51"><br>
+</p>
+<p class="bodystyle"><strong>IMPORTANT:</strong> If there are no Lights in your Timeline, when you first turn on the Shading group, the particles will seem to disappear. Also, if Shading Lights&gt; <a href="shading_lights.html">Ambient Color</a> is set to black, you may have difficulty seeing the lighting effect. </p>
+<p class="bodystyle"><strong>  Test the Shading</strong>: Add two Point or Spot Lights. Rotate one Light towards the particles and one away from the particles. Keep at least one light a white color. This is a great way to see how the Shading properties work.</p>
+<p>&nbsp;</p>
+<p><img src="../images/shading-off.jpg" width="300" height="164"> <span class="caption"> <img src="../images/shading-on0.jpg" width="300" height="165"></span><span class="caption"> <img src="../images/shading-on2.jpg" width="300" height="165"></span></p>
+<p class="caption"> At left: Shading   set to  Off. All particles  are colored  based on the Particle&gt; Color setting.<br>
+  In middle: Shading  set to  On  without a Light node. The scene goes black because Particular cannot calculate Shading without a Light.<br>
+  At right: Shading  set to On and a Light added. Particular shows the coloring of the particles based on their  proximity to the Light. </p>
+<p class="bodystyle">&nbsp;</p>
+<p>&nbsp;</p>
+<p class="h2">Light Falloff pop-up </p>
+<p class="bodystyle"> Determines how the shading is calculated from the Light group values.   <br>
+</p>
+<p class="bodystyle"><img src="../images/shading-lightfalloff.png" width="195" height="53"></p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle">There are two Light Falloff options. </p>
+<ul>
+  <li class="bodystyle"><strong>Natural (Lux):</strong> The default setting. This setting creates natural looking shading where particles that are close to the light position appear very bright, while particles that are more distant from the light appear dimmer. Natural calculates the light intensity fall off with 
+  square of the distance from the particle. This is how natural light intensities decrease in the real  world&mdash;just imagine a street lamp on a dark street. The street lamp only illuminates objects around it brightly. Objects that are distant from the street lamp get practically no illumination. This is  how Red Giant's sister product, Trapcode Lux, calculates light intensity&mdash;thus the 'Lux' term. </li>
+  <li class="bodystyle"><strong>None:</strong> Particles receive the same brightness no matter how distant they are from the Light  position. This can be useful in certain situations. For example, if other 3D nodes are  lit by the same Nuke Lights, the None option will make the particle shading behave the same way as the shading of the images. Nuke uses a constant shading model for Point and Spot Lights meaning all images  get the same illumination intensity, without factoring in their distance from the Light(s).  <br>
+    </span><br>
+  </li>
+  </ul>
+<p><img src="../images/light-falloff-natural.jpg" width="300" height="165"> <img src="../images/light-falloff-AE.jpg" width="300" height="164"></p>
+<p class="caption">Left to right, Light Falloff set to Natural (Lux) and None.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="h2">Nominal Distance </p>
+<p class="bodystyle">Active when Light Falloff&gt; Natural (Lux) is selected. Nominal Distance  defines the distance, measured in pixels, at which the Light has its original Intensity and where the light fall off begins. </p>
+<p class="bodystyle">For example, if a Light has a Light Intensity value of 100% and a Nominal Distance value of  250, the particles with a distance 250 pixels of less from the light will all have a value of 100%. As the particles are positioned further away from the light than the nominal distance the Light intensity will decrease causing the particles to appear progressively dimmer. </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="h2"><b>Ambient </b></p>
+<p class="bodystyle">The Ambient value defines how much ambient light the particles will reflect. The Ambient light   is a background light that is everywhere and radiates in every direction.  Ambient  is useful for adding illumination to the particles  in the shadows, where there may be no illumination from the Light Falloff&gt; Natural (Lux) mode.</p>
+<p class="bodystyle">For the Ambient value to show any result, there needs to be  an Ambient Light in the Node Graph. The default value is 20. High values make the ambient light color and intensity dominant in the scene, making it look more like the Light Falloff &gt; None option. Low values make the light contribution visible.</p>
+<p class="bodystyle"><strong>NOTE: </strong>The default Ambient Color is black. If you don't see a result when first using Ambient, go to the <a href="shading_lights.html">Shading Lights group</a> and change the Ambient Color color to white. </p>
+<p class="bodystyle">&nbsp;</p>
+<p><img src="../images/light-ambient-none.jpg" width="300" height="166"> <span class="caption"><img src="../images/light-ambient-low.jpg" width="300" height="165"></span> <span class="caption"><img src="../images/light-ambient-high.jpg" width="300" height="165"></span></p>
+<p class="caption">At left, a Point Light in the scene.<br>
+  In middle,  a Point Light and a blue Ambient Light with low Ambient value.<br>
+  At right, 
+  a Point Light and a blue Ambient Light with high Ambient value.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="h2"><b>Diffuse</b></p>
+<p class="bodystyle">Defines how much the particles reflect the light in a diffuse manner. In the real world, diffuse light would be light that has passed through a translucent or sheer fabric, or bounced off of a white wall. Diffuse light is indirect lighting that has  scattered from a surface. This gives the light a softer appearance than direct light with less shininess. This does not tie into any particular Light but instead affects all Lights in the composition. </p>
+<p class="bodystyle">The default value is 80. High values make the light(s) contribution brighter and causes particles closer to the lights in the Natural model to have a more uniform color and intensity. Low values result in the light color and intensity having a dim, soft appearance. Matte surfaces  typically have a large diffuse component.</p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle"><img src="../images/light-diffuse-low.jpg" width="300" height="166"> <img src="../images/light-diffuse-high.jpg" width="300" height="166"></p>
+<p class="caption">At left, low Diffuse value. At right, <span class="caption"> high Diffuse value. </span></p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle">&nbsp;</p>
+<p class="h2">Specular  Amount </p>
+<p class="bodystyle">Simulates a hot spot created by the light shining directly back at the viewer like from a metallic or glossy surface. The values defines how much the particles reflect the light in the direction of the camera. For example, a glossy surface like plastic or metal has a large specular component.</p>
+<p class="bodystyle">High values make the particles appear more glossy, and particles  even somewhat distant from the light object appear to be brightly illuminated. At low values, the particles will look  less glossy, and  the particles very close to the light object will appear to be brightly illuminated. </p>
+<p class="bodystyle">You may need to lower the Diffuse value to allow more of the the glimmer to show through. The specular appearance is very sensitive to the angle of the particle.</p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle"><img src="../images/light-specular-low.jpg" width="300" height="165"> <img src="../images/light-specular-high.jpg" width="300" height="166"></p>
+<p class="caption">Left to right, low and high Specular Amount.</p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle">&nbsp;</p>
+<p class="h2">Specular  Sharpness </p>
+<p class="bodystyle">Defines how narrow the specular reflection is. For example, a glass surface may have a very narrow angle of reflection, while a plastic surface may be slightly less narrow.  Specular Sharpness  lets you lower the sensitivity of Specular Amount so it is not so sensitive to the angle of the particle. </p>
+<p class="bodystyle">High values make the specularity more sensitive, and more particles will reflect light back to the camera. Low values make the specularity less sensitive and fewer particles will reflect light back to the camera.</p>
+<p></p>
+<p class="bodystyle"><img src="../images/light-specsharp-low.jpg" width="300" height="166"> <img src="../images/light-specsharp-high.jpg" width="300" height="165"></p>
+<p class="caption">At left, high  Specular Amount and  high Specular Sharpness.  <br>
+  At right, high  Specular Amount and  low Specular Sharpness.</p>
+<p class="style1">&nbsp;</p>
+<p class="h2">&nbsp;</p>
+<p class="h2"><b>Reflection Strength </b></p>
+<p class="bodystyle">  Defines how much the Reflection Map image  contributes to the particle shading. Active when Shading is On and the <a href="particle_type.html">Particle Type</a> is either Sprite or Textured Polygons. To set the Reflection Map, use the <a href="inputports.html">Reflection Map input port</a>. </p>
+<p class="bodystyle">Since the Reflection Map can be combined with the regular shading from  Lights, this is useful for adjusting the overall balance of particle color between the Light(s) and the Reflection Map. </p>
+<p class="bodystyle">At a  value of 100, the Reflection Map is fully on and the particles will pick up color based on the map's color and brightness. At lower values, the strength of the Reflection Map is lowered and mixed into the shading from the scene. Values greater than 100 increase the brightness of the Reflection Map node, making it appear as though it is lighting the scene. Very high values will simply make the particles appear white with no specific coloration.</p>
+<p class="bodystyle">&nbsp;</p>
+<p class="bodystyle"><img src="../images/shade-strength-low.jpg" width="300" height="224"> <img src="../images/shade-strength-high.jpg" width="300" height="225"></p>
+<p class="caption">At left,  Reflection Map loaded and low Reflection Strength. At right,  Reflection Map loaded and high Reflection Strength. </p>
+<p class="bodystyle">&nbsp;</p>
+</body>
+
+</html>

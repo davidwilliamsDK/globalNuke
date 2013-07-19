@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Emitter tab&gt; Layer Emitter group</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	    <style type="text/css">
+<!--
+.style1 {font-family: Verdana, Arial, Helvetica, sans-serif}
+-->
+        </style>
+</head>
+
+	<body bgcolor="#ffffff">
+		<p class="h2_top"><b>Emitter tab&gt; Layer Emitter group</b></p>
+		<p class="bodystyle">This  group lets you <strong>emit particles from image nodes</strong>. The <a href="emitter_type.html">Emitter Types   </a> of Layer or Layer Grid <a href="emitter_type.html"></a> need to be selected for this  group to be active.  When Layer  Grid is selected, the <a href="emitter_grid.html">Grid Emitter group</a> also becomes active.</p>
+	    <p class="bodystyle">Unlike the other predefined Emitter Types, the Layer Emitter points to an   image node as the particle source.  The Layer Emitter can use the RGB or Lightness values from that  image to define the area from which particles will be emitted and drive other particle properties. The ability to emit particles from   Read nodes in the composition, for instance, is very useful for animations like making particles burst out of a logo. </p>
+		<p>&nbsp;</p>
+		<p class="bodystyle"><img src="../images/layeremitter.png" width="331" height="154"></p>
+		<p class="bodystyle"><span class="caption">The Layer Emitter group.</span></p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">How to identify the image node</p>
+		<p class="bodystyle">Before using the Layer Emitter section, you need to import and select an image Read node to use for particle emission. Basically, you will create a 2D node and connect it to Particular, then use Particular to position it in 3D space.</p>
+		<p class="bodystyle">To add a still image or animated file to your composition, go to  Import&gt; Add Mode&gt; Image&gt; Read. Alternately, you can drag-and-drop an image into the Node pane. If you are importing an animated file, we recommend using image sequences instead of movie files since Nuke has more difficulty managing movie files. </p>
+		<p class="bodystyle">To use your  image as the Layer Emitter, first connect the image Read node to the <a href="inputports.html">Emitter input port</a> of Particular. Then select Normal mode from the <a href="render.html">Rendering&gt; Transfer Mode</a> control. </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Layer Transform&gt; Position x, y, z </p>
+		<p class="bodystyle">Sets the position of the Layer Emitter particles. Input the X, Y and Z coordinates in their text fields. You can animate these properties by clicking the Animation button. </p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Layer Transform&gt; Rotate x, y, z </p>
+		<p class="bodystyle">Sets the rotation of the Layer Emitter particles. Input the X, Y and Z coordinates in their text fields. You can animate these properties by clicking the Animation button.<a href="#options"></a></p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="bodystyle">&nbsp;</p>
+		<p class="h2">Layer Transform&gt;  Duration </p>
+		<p class="bodystyle">Duration sets how many frames of the imported image  should be recognized. </p>
+		<p class="bodystyle">If you have imported  a still image like a JPEG, that Duration would be 1 frame. Technically, you don't have to set Duration for a still image, because Particular will just repeat that single frame forever. </p>
+		<p class="bodystyle">For an image sequence or video, you can tell Particular how many frames  that sequence or video is.  For a 4 frame animation, set  Duration to 4. For a 170 frame animation, set Duration to 170. </p>
+		<p class="bodystyle">Alternately, you can decide how many of those  frames  you want Particular to pay attention to. Let's say you imported a 170 frame animation, but you only want to use  half of the animation. Set  Duration to 85 if you want to look at only the first 85 frames.</p>
+		<p class="style1">&nbsp;</p>
+	<p class="style1">&nbsp;</p>
+		<p class="h2">Layer Sampling  </p>
+		<p class="bodystyle">Defines whether the image  should be read at the particle's birth time only, or continuously updated at each frame. <br>
+	</p>
+	<p class="bodystyle"><img src="../images/layeremit-sampling.png" width="256" height="48"><br>
+	</p>
+	<p class="bodystyle">There are two Layer Sampling options: </p>
+	<p class="bodystyle">&bull;  <strong>Current Time</strong>  is selected by default. This option is good for an image that  has no animation and/or the content is the same on every frame. </p>
+	<p class="bodystyle">&bull;&nbsp;Choose the <strong>Particle Birth Time </strong>option if you want to emit particles  based on an image that has animated content.</p>
+	<p class="style1">&nbsp;</p>
+		<p class="style1">&nbsp;</p>
+		<p class="h2">Layer RGB Usage </p>
+  <p class="bodystyle">The Layer RGB Usage control defines how the particle size, velocity, rotation and color are changed by the RGB values or lightness of the Layer Emitter content. <br>
+	</p>
+	<p><img src="../images/layeremit-RGBuse.png" width="266" height="128"><br>
+	</p>
+	<p class="bodystyle">There are six Layer RGB options:</p>
+	<p class="bodystyle">&bull; <strong>Lightness - Size.</strong> The particle size is modified by the lightness value at each pixel. Black pixels result in a particle size close to 0, making them nearly invisible. Completely white particles will be created at the particle size specified in the <a href="particle.html">Particle&gt; Particle Size</a> control. Gray values between black and white result in particles size proportionally between 0 and the value in the Particle Size control. For example, a 50% gray lightness value will result in a particle size that is 50% of the particle size value.</p>
+    <p class="bodystyle">&bull;<strong>&nbsp;Lightness - Velocity.</strong> The particle velocity is affected by the lightness. If lightness is less than 50%, the particle will emit backwards. If lightness is exactly 50%, velocity will be 0. Above 50%, the particles will emit forwards.</p>
+    <p class="bodystyle">&bull;&nbsp;<strong>Lightness - Rotation.</strong> The particle rotation is affected by the lightness. Lightness values that are less than 50 percent white (127 or less) will have negative rotational momentum. Values greater than 127 will have positive rotational momentum.</p>
+    <p class="bodystyle">&bull;&nbsp;<strong>RGB - Size Vel Rot.</strong> A combination of the preceding menu options, this choice uses the R (Red channel) value to define the particle size, the G (Green channel) value to control velocity, and the B (Blue channel) value to control rotation.</p>
+    <p class="bodystyle">&bull;&nbsp;<strong>RGB - Particle Color. </strong>The default choice. This menu choice  uses the RGB color information at each pixel to determine particle color. </p>
+    <p class="bodystyle">&bull;&nbsp;<strong>None. </strong>Choose this option to  set the particle emission area. You need to have an image Read node attached since its alpha channel is  used for emission. This option will let the particles take on  Color, Velocity and other slider properties, but the actual location of particle emission is  set by the image Read node and the 3D properties in Particular. </p>
+    </body>
+
+</html>

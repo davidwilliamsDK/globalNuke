@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Particular Gizmo with Particular Plug-in</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body bgcolor="#ffffff" class="bodystyle">
+        <p class="h2_top">Particular 3D Gizmo </p>
+        <p>When you launch Nuke, the Trapcode Menu in the toolbar has two options.  Particular v2 is the standard 2D node.  Particular 3D Gizmo is a group set up to operate Particular in Nuke's 3D space. </p>
+        <p>This page  discusses the difference between  the Particular plug-in and Particular Gizmo. We  have included a simple <a href="#tute">step-by-step tutorial</a> for using the Gizmo in a 3D scene. <a href="gizmoUI.html">Go here</a> to read about each control in the Gizmo Setup tab. </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">The Particular v2 plug-in </p>
+        <p>This screenshot shows the Particular v2 plug-in.  Connect the plug-in to your Viewer and you're good to go. </p>
+        <p>Most of the time, you will choose Particular within the Gizmo. However, we have left the plug-in exposed for a few reasons. You may want to use the plug-in without the Gizmo to create something simple or using the background, or if you aren't using Nuke's 3D space for 3D work. You might also want to make your own 3D wrapper.&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><img src="../images/particularpluginC.png" width="900" height="561"></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">The Particular 3D Gizmo </p>
+        <p>This screenshot shows the Particular 3D Gizmo. The Gizmo is  a  group of nodes and scripts that let Particular interact with Nuke's 3D environment. The Particular3DGizmo Setup tab controls this interaction. </p>
+        <p>Without the  Gizmo, Particular acts like a flat node with particles on it. With the  Gizmo as a 3D wrapper, Particular is projected onto a 3D card that is  functional in Nuke's 3D space. You won't see any Viewer output from the Gizmo, however, until a camera is set up in Nuke. Most likely, you already have a 3D scene  with a camera fired up and ready for Particular. </p>
+        <p>&nbsp;</p>
+        <p><img src="../images/particulargizmoC.png" width="900" height="699"></p>
+        <p>&nbsp;</p>
+        <p><a name="tute"></a></p>
+        <p>&nbsp;</p>
+        <p class="h2_top">Tutorial: Using the Gizmo with a 3D scene </p>
+        <p class="bodystyle">To use the Particular 3D Gizmo, you need a 3D scene setup.  Let's go through this process together. By the way, we discuss the nodes and expressions in a Particular 3D scene on this <a href="3Dnuke.html">3D Nuke page</a>. </p>
+        <p class="bodystyle"><strong>Step 1-</strong> Your basic 3D scene should consist of a Scene node with a Camera and an Axis node attached, all piped into a 
+          ScanlineRender node. This is the scene  into which you will bring the Particular 3D Gizmo.</p>
+        <p class="bodystyle"><strong>Step 2-</strong> Add our group node called Particular3DGizmo along with its attached Emitters node to the scene. Connect the output of the Particular3DGizmo to the Scene1 node.  Connect the input of the Emitters node 
+        to the Axis node. </p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle"><img src="../images/3Dtute-1.png" width="400" height="336"> </p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle"><strong>Step 3-</strong> In the Properties of the Gizmo, move to the Setup tab.  Click the Get Cameras button.  This will 
+          populate the camera list with all the cameras in the scene.  In this example, Camera1 is all that appears. 
+        Select Camera1 from the Camera dropdown list. </p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle"><img src="../images/gizmo-setcamera.png" width="389" height="83"></p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle"><strong>Step 4- </strong>Click Refresh under the Add Emitter Proxy group.  This will refresh the Objects list with all the Axis 
+          nodes (or other nodes with translate properties) connected to the Emitters node.  Now, select Axis1 
+        from the dropdown list. If you enter 3D mode in Nuke, you can control the emitter of Particular and the camera of Particular 
+        with the Axis1 and Camera1 nodes, respectively. </p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle"><img src="../images/gizmo-setproxy.png" width="429" height="82"></p>
+        <p class="bodystyle"><img src="../images/3Dtute-2.png" width="400" height="348"></p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle"><strong>Step 5-</strong> As you can see, the output of Particular is actually projected onto a card in 3D space.  </p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle"><img src="../images/3Dtute-3.png" width="400" height="285"></p>
+    <p class="bodystyle"><br>
+          <br>
+          <strong>Step 6- </strong>You can 
+          automatically attach the card to the location of the Emitter, or lock it to the Camera, using the Card 
+          Properties dropdown list. When working in a scene that has a lot of camera movement, locking to the Camera will probably give 
+          you a better result.  The card will move along with the camera as it moves, and therefore the particles will 
+      always be projected on it. </p>
+        <p class="bodystyle">Locking to the Emitter works well when the Camera is more stationary, and you have more things passing 
+          between the camera and the particles.  They will be obscured because the objects in Nuke&rsquo;s 3D space will 
+          be between the card the particles are projected on and the camera. The Trans Offset lets you offset the card.  For instance, if you lock the card to the emitter but need it to travel with the camera.</p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle"><img src="../images/gizmo-lockcardto.png" width="191" height="71"></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+</body>
+</html>

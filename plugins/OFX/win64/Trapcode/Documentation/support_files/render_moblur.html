@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Render tab&gt; Motion Blur</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body bgcolor="#ffffff" class="bodystyle">
+		<p class="h2_top"><b>Render tab&gt; Motion Blur</b></p>
+	    <p class="bodystyle">Motion Blur gives  particles that move really fast a smooth look, like a real world camera does. Let's see how that works.</p>
+	    <p class="bodystyle">&nbsp;</p>
+	    <p class="bodystyle"><img src="../images/ui-motionblur.png" alt="" width="570" height="204" border="0"></p>
+	    <p class="caption">The Motion Blur group. </p>
+	    <p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2">Technical Note about render time </p>
+	<p class="bodystyle">Something to note is that Motion Blur  produces a  LOT of particles, which can make your project quite memory intense. This is because Motion Blur in  Particular is somewhat different from Motion Blur in other software. </p>
+	<p class="bodystyle">Most applications and plugins blend some frames that are time offset to produce a blurred frame. In Particular,  additional particles are inserted into the particle list before rendering. This method means that depth cueing in the blurred frame is correct. It also means that per-particle transfer modes are applied for each blur level, and that produces a lot of extra particles.</p>
+	<p class="bodystyle"><br>
+      <br>
+      <img src="../images/moblur-offC.jpg" width="300" height="255"> <img src="../images/moblur-onC.jpg" width="300" height="255"></p>
+	<p class="caption">Left to right, Motion Blur turned off and on. </p>
+	<p>&nbsp;</p>
+	<p class="h2"><span class="bodystyle"><br>
+    <br>
+    </span>  <b>Motion Blur</b> pop-up </p>
+	<p class="bodystyle">By default, Motion Blur is turned on. If you disable Motion Blur with the Off option then all of the Motion Blur parameters become grayed out and inactive. <br>
+	</p>
+	<p class="bodystyle"><img src="../images/mblur-onoff.png" width="127" height="46"></p>
+	<p class="bodystyle">&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2"><b>Shutter Angle</b></p>
+		<p class="bodystyle">Shutter Angle sets how long the virtual camera shutter stays open when a picture is taken. This controls the 'streak-length' or 'blur-length' of particles. High values set a longer particle streak. Low values set a short streak. </p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="h2">	    <b>Shutter Phase</b></p>
+		<p class="bodystyle">Shutter Phase offsets the point in time when the virtual camera shutter opens. </p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="h2"><b>Type</b></p>
+		<p class="bodystyle"> Sets	the	behavior of the Motion Blur. <br>
+		</p>
+		<p class="bodystyle"><img src="../images/mblur-type.png" width="184" height="48"><br>
+		</p>
+		<p class="bodystyle">There are two Type options: </p>
+		<ul>
+		  <li class="bodystyle"><b>Linear</b>: The default method of Motion Blur. Linear assumes that particles move in a straight line during the time  the shutter is open. This method is generally faster than Subframe Sample, but sometime gives an artificial look to the animation.</li>
+		  <li class="bodystyle"><b>Subframe Sample: </b> This method samples the particle's position and rotation at a number of points during the time the shutter is open. Useful if particle motion is curvy, like when using <a href="physics_turb.html">Physics&gt; Turbulence</a> or <a href="physics_air.html">Physics&gt; Air&gt; Spin</a>. </li>
+    </ul>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="h2">	    <b>Levels</b></p>
+		<p class="bodystyle">Active when Type&gt; Subframe Sample is selected. Sets the number of Position and Rotation points to sample when using the Subframe Sample method. Higher values mean more samples.   <a href="#options"></a></p>
+	    <p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p class="h2"><b>Linear Accuracy </b><!--need to explain--></p>
+		<p class="bodystyle">Active when the Linear Type option is selected. Linear Accuracy affects the sampling when these particles are rendered. Higher values cause the Motion Blur algorithm to calculate with greater accuracy.   Linear Accuracy only works with the custom <a href="particle_type.html">Particle Types</a>, Sprite and Textured Polygon. </p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="h2"><b>Opacity Boost</b></p>
+		<p class="bodystyle"> When Motion Blur is active, the particles look 'smeared' out. This smearing can make the particles  lose their strength and become less opaque. Opacity Boost can counteract that loss. Higher values mean there is more opacity added to the particles.  <a href="#options"></a></p>
+		<p class="bodystyle">Opacity Boost is useful when creating sparks, or any particle that acts as a light-emitter.  </p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p class="h2"><b>Disregard</b></p>
+		<p class="bodystyle">For some animations, you will not want everything in the composition to be motion blurred. With Disregard, some parts of the particle simulation can be ignored when Motion Blur is computed. <br>
+		</p>
+	  <p class="bodystyle"><img src="../images/mblur-disregard.png" width="252" height="50"><br>
+	  </p>
+		<p class="bodystyle">There are two  Disregard options:</p>
+		<ul>
+		  <li class="bodystyle"><b class="bodystyle">Nothing</b><strong>:</strong> The default setting. Nothing in the simulation is disregarded. </li>
+		  <li class="bodystyle"><b class="bodystyle">Physics Time Factor (PTF)</b><strong>:</strong> Disregards the effects of the Physics Tab&gt; <a href="physics.html">Physics Time Factor</a>  control. When this mode is selected, the Motion Blur from the explosion is unaffected by a stand-still in time. This is useful for effects such as  freezing time  in an explosion.</li>
+    </ul>
+		<p class="bodystyle">&nbsp;</p>
+	</body>
+</html>

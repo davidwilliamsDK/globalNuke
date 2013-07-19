@@ -1,0 +1,15 @@
+NUKE_PATH
+\\framestore\pipeline\pantry\globalNuke
+
+NUKE_PLUGINS_PATH
+
+\\framestore\pipeline\pantry\globalNuke\plugin
+
+OFX_PLUGIN_PATH
+\\framestore\pipeline\pantry\globalNuke\plugins\OFX
+
+RR_ROOT
+\\vfx-render-manager\royalrender
+
+
+

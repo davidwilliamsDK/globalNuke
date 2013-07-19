@@ -1,0 +1,76 @@
+END USER LICENSE AGREEMENT
+
+CAREFULLY READ THE FOLLOWING LICENSE AGREEMENT. IF YOU DO NOT AGREE TO THE TERMS (OR MAY NOT DUE TO EXPORT RESTRICTIONS) DO NOT BUY THE PRODUCT.
+
+LICENSE GRANT
+
+"You" means the person or company who is being licensed to use the Software or Documentation. "We," "us" and "our" RE:Vision Effects, Inc.
+
+We hereby grant you a nonexclusive license to use the Software on any single computer, provided the Software is in use on only one computer at any time. The Software is "in use" on a computer when it is loaded into temporary memory (RAM) or installed into the permanent memory of a computer--for example, a hard disk, CD-ROM or other storage device. The software will work in demo mode, with watermark, until a non-demo license is purchased. With the purchase of a non-nodelocked non-demo software license we hereby grant you a nonexclusive license to use the software in non-demo mode on any single computer, provided the Software is in use on only one computer at any time. With the purchase of a node-locked non-demo license, the software will work in non-demo mode on the specified licensed machine and may transferred to another machine; however, the transfer of our node-locked non-demo licenses may come with additional fee. Render-only non-demo licenses come with a restriction that the project to be rendered must have been authored on a machine with a full (non-render-only) non-demo license. 
+
+
+TITLE
+
+We remain the owner of all right, title and interest in the Software and related explanatory written materials provided ("Documentation"). 
+
+ARCHIVAL OR BACKUP COPIES
+
+You may copy the Software for back-up and archival purposes, provided that the original and each copy is kept in your possession and that your installation and use of the Software does not exceed that allowed in the "License Grant" section above.
+
+THINGS YOU MAY NOT DO
+
+The Software and Documentation are protected by United States copyright laws and international treaties. You must treat the Software and Documentation like any other copyrighted material--for example a book. 
+
+You may not:
+
+- copy the Software except to make archival or backup copies as provided above;- modify or adapt the Software or merge it into another program;
+- reverse engineer, disassemble, decompile or make any attempt to discover the source code of the Software;
+- place the Software onto a server so that it is accessible via a pubic network such as the Internet, or;
+
+- sublicense, rent, lease or lend any portion of the Software or Documentation..
+
+
+TRANSFERS
+
+You may transfer all your rights to use the Software and Documentation to another person or legal entity provided you transfer this Agreement, the Software and Documentation, including all copies, update and prior versions to such person or entity and that you retain no copies, including copies stored on computer.
+
+
+LIMITED WARRANTY
+
+We warrant that for a period of 30 days after delivery of this copy of the Software to you:
+
+- the Software will perform in substantial accordance with the Documentation.
+
+To the extent permitted by applicable law, THE FOREGOING LIMITED WARRANTY IS IN LIEU OF ALL OTHER WARRANTIES OR CONDITIONS, EXPRESS OR IMPLIED, AND WE DISCLAIM ANY AND ALL IMPLIED WARRANTIES OR CONDITIONS, INCLUDING ANY IMPLIED WARRANTY OF TITLE, NONINFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, regardless of whether we know or had reason to know of your particular needs. No employee, agent, dealer or distributor of ours is authorized to modify this limited warranty, nor to make any additional warranties.
+
+SOME STATES DO NOT ALLOW THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION MAY NOT APPLY TO YOU.
+
+LIMITED REMEDY
+
+Our entire liability and your exclusive remedy for breach of the foregoing warranty shall be, at our option, to repair or replace the Software that does not meet the foregoing, provided you furnish us proof of purchase.
+
+IN NO EVENT WILL WE BE LIABLE TO YOU FOR ANY DAMAGES, INCLUDING ANY LOST PROFITS, LOST SAVINGS, OR OTHER INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE OR THE INABILITY TO USE THE SOFTWARE (EVEN IF WE OR AN AUTHORIZED DEALER OR DISTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF THESE DAMAGES) OR FOR ANY CLAIM BY ANY OTHER PARTY.
+
+SOME STATES DO NOT ALLOW THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION MAY NOT APPLY TO YOU.
+
+TERM AND TERMINATION
+
+This license agreement takes effect upon your use of the software and remains effective until terminated. You may terminate it at any time by destroying all copies of the Software and Documentation in your possession. It will also automatically terminate if you fail to comply with any term or condition of this license agreement. You agree on termination of this license to destroy all copies of the Software and Documentation in your possession.
+
+
+GENERAL PROVISIONS
+
+1. This written license agreement is the exclusive agreement between you and us concerning the Software and Documentation and supersedes any prior purchase order, communication, advertising or representation concerning the Software.
+
+2. This license agreement may be modified only by a writing signed by you and us.
+
+3. In the event of litigation between you and us concerning the Software or Documentation, the prevailing party in the litigation will be entitled to recover attorney fees and expenses from the other party.
+
+4. This license agreement is governed by the laws of the state of California.
+
+5. You agree that the Software will not be shipped, transferred or exported into any country or used in any manner prohibited by the United States Export Administration Act or any other export laws, restrictions or regulations.
+
+
+You agree that you may not purchase this product if you plan to export or reexport this (i) into (or to a national or resident of) Iran, Cuba, North Korea, Sudan, Syria or any other country to which the U.S. has embargoed goods; or (ii) to anyone on the U.S. Treasury Department's list of Specially Designated Nationals and Blocked Persons, U.S. Commerce Department's Table of Denial Orders and Entities List, or the U.S. State Departmentâs Debarred List. By purchasing this upgrade, you are agreeing to the foregoing and you are representing and warranting that you are not located in, under the control of, or a national or resident of any such country or on any such list.
+
+ 

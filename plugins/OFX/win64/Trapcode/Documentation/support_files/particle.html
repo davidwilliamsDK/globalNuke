@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive">
+		<title>Particle tab</title>
+	    <link href="docs.verdana.default.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body bgcolor="#ffffff" class="style3">
+    <p class="h2_top">Particle tab </p>
+	<p class="bodystyle">The Particle tab contains all the basic settings for the particles' appearance. Controls include Size, Opacity, Color and  other settings which determine how these properties vary over a particle's lifespan.</p>
+    <p class="bodystyle">We  discuss the Particle Type pop-up on <a href="particle_type.html">this page</a>. There are four Particle groups, each explained on a separate  page: <a href="particle_texture.html">Texture group</a>, <a href="particle_rotation.html"> Rotation group</a>, <a href="particle_glow.html"> Glow group </a> and <a href="particle_streaklet.html"> Streaklet group</a>. </p>
+    <p><br>
+      <br>
+      <img src="../images/ui-particle.png" alt="" height="396" width="593" border="0" livesrc="../source%20images/particle.psd"></p>
+    <p class="caption">The Particle tab. </p>
+    <p class="h2">&nbsp;</p>
+    <p class="h2">&nbsp;</p>
+    <p class="h2">Life [sec]</p>
+    <p class="bodystyle">Life controls how long the particles live,  measured   in seconds. Low values give a short particle life. High values give a long particle life but mean that more particles will created over time, leading to slow rendering. When keyframing this setting, all particles born at a certain frame will get the current lifetime. </p>
+    <p class="bodystyle">&nbsp;</p>
+    <p class="bodystyle">&nbsp;</p>
+    <p class="bodystyle"><span class="h2">Life Random [%] </span></p>
+    <p class="bodystyle">Life Random sets the randomness for Life,  measured in a percentage.  When the value is 0, the particles all die  at once. When the value is set above 0, the particles get slightly different lifespans. Higher values mean the randomness is higher, and that particles have more variation in their lifespan.    This is useful for creating natural looking effects such as trails. </p>
+    <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">Particle Type</p>
+    <p class="bodystyle">The Particle Type is the building block of Trapcode Particular. There are 11 different  types of particles. See the <a href="particle_type.html">Particle Type page</a>. </p>
+    <p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="h2"><b>Particle Feather</b></p>
+        <p class="bodystyle">Controls the softness of the following Particle Types: Sphere, Glow Sphere, Cloudlet and Streaklet. Grayed out for the other Particle Types. </p>
+        <p class="bodystyle">Low Feather values give the look of sharp circles. High Feather values give a more organic, smooth look. </p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle"><img src="../images/part-feather-low3.jpg" width="300" height="267"> <img src="../images/part-feather-high3.jpg" width="300" height="267"></p>
+        <p class="bodystyle"><span class="caption">Left to right, Sphere Feather set low and high. Particle Type is Glow Sphere. </span></p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="h2">Size</p>
+        <p class="bodystyle">Sets  the dimensions of the particles in pixels. Higher values create larger particles.  When keyframing Size, all particles born at a certain frame will get the current Size value. </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="h2">Size Random [%]</span></p>
+<p class="bodystyle">Size Random sets the randomness for Size,  measured in percentage. When non-zero, the particles get slightly different sizes up to the maximum size set in the Size control. Higher values means the randomness is higher, and the particles have more variation in size.<br>
+  </span><br>
+</p>
+<p>&nbsp;</p>
+        <p class="h2"><b>Opacity</b></p>
+        <p class="bodystyle">Sets the  opacity of the particles. The default is 100 percent, which makes the particles completely opaque. Low values give greater transparency. When keyframing Opacity, all particles born at a certain frame will get the current Opacity value. </p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle"><b>Opacity Random [%]</b></p>
+        <p class="bodystyle">Opacity Random sets the randomness for Opacity,  measured in percentage.  When the value is set above 0, the particles get slightly different transparency values. Higher values mean the randomness is higher, and  particles will have more variation in their transparency.<br>
+          <br>
+    </p>
+    <p>&nbsp;</p>
+    <p class="h2"><b>Set Color</b></p>
+    <p class="bodystyle">Set Color is the  method for setting the particle's color. It is inactive when the <a href="particle_type.html">Particle Type</a> option is  Sprite or Textured Polygon. <br>
+    </p>
+    <p><img src="../images/particle-setcolor.png" width="246" height="90"><br>
+    </p>
+    <p class="bodystyle">There are four Set Color options. Each option activates other color-related Particle controls. </p>
+    <ul>
+      <li class="bodystyle"><b>At Birth:</b> The default setting. Sets particle color at birth and maintains it over its lifetime. Use the Color setting below to set color.</li>
+      <li class="bodystyle"><b>Over Life:</b> Uses Color Over Life so the particle's color can vary over its life. Read more on the <a href="graph.html">Graph Mode</a> page.</li>
+      <li class="bodystyle"><b>Random from Gradient:</b> Selects a random color from the colors in Color Over Life.</li>
+      <li class="bodystyle"><b>From Light Emitter:</b> Causes the color of the particles to be set by the color of the Light set in the Light Options. </li>
+    </ul>
+    <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p class="h2">Color</p>
+        <p class="bodystyle"> Color  controls the particle's color. Active when  Set Color   is set to At Birth. There is no numeric value for Color. When keyframing Color, all particles born at a certain frame will get a certain color.</p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="bodystyle">&nbsp;</p>
+        <p class="h2">Color Random 
+        <p class="bodystyle">Color  Random sets the randomness for Color, as measured in a percentage.  When non-zero,  particles get slightly different colors. When the value is set above 0,  particles get slightly different coloration. A higher value means there is more randomness, and  particles will have more variation in color.</p>
+    <p>&nbsp;</p>
+    <p class="bodystyle"><img src="../images/part-setcolor-birth-white.jpg" width="300" height="224"> <img src="../images/part-setcolor-birth-green.jpg" width="300" height="226"></p>
+        <p class="caption">Left to right, Color set to white and green. </p>
+    <p>&nbsp;</p>
+    <p><img src="../images/part-colorandom-0.jpg" width="300" height="226"> <img src="../images/part-colorandom-50.jpg" width="300" height="224"> <img src="../images/part-colorandom-100.jpg" width="300" height="225"></p>
+    <p class="caption">Left to right, Color Randomness at 0, 50, 100. Color is white. <br>
+      <br>
+    </p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p class="h2">Transfer Mode</p>
+    <p class="bodystyle">The  Transfer Mode controls how particles are composited together.  These Transfer Modes are also used by the <a href="graph.html">Graph Mode&gt; Transfer Mode Over Time</a> parameter. </p>
+        <br>
+        <p class="bodystyle"><img src="../images/particle-mode.png" width="277" height="124"></p>
+        <p class="bodystyle">&nbsp;</p>
+    <p class="bodystyle">There are six Transfer Mode options:</p>
+        <ul>
+          <li class="bodystyle"><strong>Normal:</strong> The default setting. One particle appears in front of the other, based on their position on the Z axis.</li>
+          <li class="bodystyle"><strong>Add:</strong> Particles are added together. Useful for light effects and fires, especially in 32-bit  projects.</li>
+          <li class="bodystyle"><strong>Screen:</strong> The values of the pixels in  overlapping particles are inverted, multiplied, and then inverted again. The result is  brighter. Useful for light effects and fires, especially in 8- or 16-bit  projects.</li>
+          <li class="bodystyle"><strong>Lighten:</strong> When blending particles together, Lighten takes the lightest pixel from each particle. </li>
+          <li class="bodystyle"><strong>Normal/Add over Life:</strong> Uses a graph to switch or smoothly blend between Normal and Add modes over the particle's lifespan.</li>
+          <li class="bodystyle"><strong>Normal/Screen over Life:</strong> Uses a graph to switch or smoothly blend between Normal and Screen modes over the particle's lifespan.<br>
+          </li>
+        </ul>
+</body>
+</html>

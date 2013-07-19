@@ -1,0 +1,151 @@
+Neat Video
+To make video cleaner.
+
+WHAT'S NEW IN THE LATEST VERSION
+
+[+] New
+[*] Changed
+[-] Fixed
+
+
+Neat Video OpenFX plug-in (Windows, 32-bit/64-bit)
+
+
+Version 3.4
+
+ + Added support for Nuke 7, Scratch 7, DustBuster+ 5
+
+ * Performance optimizations for AMD/ATI GPUs
+    speedups in filter modes with larger temporal radiuses:
+    up to 25% in CPU+GPU mode and up to 65% in GPU-only mode
+
+ * Improved reliability on systems with multiple OpenCL platforms
+   (AMD/ATI and Intel)
+
+ + Added support for new NVIDIA GPUs with CUDA Compute Capability 3.5
+   (such as GeForce GTX Titan and Tesla K20)
+
+ * Performance optimizations for NVIDIA GPUs
+    speedups in filter modes with larger temporal radiuses and higher bitdepths:
+    up to 15% in CPU+GPU mode and up to 20% in GPU-only mode
+
+ + New Navigator panel to quickly locate areas for profiling and preview
+   using a thumbnail display
+
+ - Several minor bugs have been fixed
+
+
+
+Version 3.3
+
+ + Added support for AMD/ATI GPUs through OpenCL
+   (GPU acceleration is now possible with both NVIDIA and AMD/ATI cards)
+
+   The following AMD/ATI GPUs are supported:
+   - ATI Radeon HD 57xx/58xx/59xx;
+   - AMD Radeon HD 67xx/68xx/69xx;
+   - AMD Radeon HD 77xx/78xx/79xx;
+   - Another AMD/ATI GPU based on one of the following chip series:
+     Juniper, Cypress, Barts, Cayman, Cape Verde, Pitcairn, Tahiti
+
+ * Several cosmetic improvements in GUI
+
+ * Minor corrections in the reduced brightness color theme
+
+ - Product registration was not always preserved reliably, fixed
+
+ - Several minor bugs have been fixed
+
+
+
+Version 3.2
+
+ * Updated to CUDA 4.2
+   GTX 680 and newer GPUs are supported; improved performance of GPU render
+
+ * Additional optimizations of filters for multi-core CPUs and GPUs
+
+ + Color themes: normal and reduced brightness options, in Preferences
+
+ - Several bugs have been fixed
+
+
+
+Version 3.1
+
+ + Added support for HS-ART Dustbuster; the minumum required version is Dustbuster 4.5
+ + Added support for Assimilate Scratch; the minumum required version is Scratch 6.1
+ 
+ * Improved accuracy of color channel processing in temporal filter;
+   colors in fast-changing scenes are now preserved better
+
+ * Updated to new CUDA 4 (improving compatibility with several NVIDIA GPUs)
+
+ * Improved support for new GPUs (Compute Capability 2.x)
+
+ * Optimized use of memory in GPU processing, making rendering more
+   stable and in some cases faster
+
+ * Improved stability of GPU processing for large frames (such as 8k)
+
+ - In some rare cases, using CPU and GPU simultanteously could produce artifacts, fixed
+
+ - Several bugs in GPU-based processing have been fixed
+
+ - Number of CPU cores was determined incorrecly in Windows Server 2003
+   and Windows XP Professional x64 Edition, fixed
+
+ - Rendering a project with mixed frame sizes could be unstable, fixed
+
+
+
+Version 3.0
+
+ Improved quality of noise reduction
+ 
+ + Improved quality of temporal noise reduction
+   The temporal filter better preserves actual details.
+
+ + Improved accuracy of Adaptive Filtration
+   Automatic adjustments to the changes in noise properties 
+   along the timeline are more precise now, leading to more
+   accurate noise reduction.
+
+ 
+ Higher performance
+
+ + The first GPU-accelerated version of Neat Video OpenFX plug-in
+
+   + CUDA support
+     + Faster noise reduction using CUDA-compatible GPUs
+       For example, using NVIDIA GTX 470 on a computer based on Intel i7
+       makes Neat Video around x2 faster.
+
+     + CPUs and GPUs working together
+       Neat Video can use CPUs and GPUs at the same time for faster processing.
+
+     + Multiple GPU support
+       Neat Video works even faster with two or more CUDA GPUs.
+
+
+   + Automated optimization of performance settings for multi-core, multi-CPU and multi-GPU systems
+     + Built-in Optimizer in Neat Video Preferences
+     + Built-in Benchmark to measure processing speed on specific hardware
+
+ + Additional performance optimizations
+   * Faster processing: around x2 faster than in previous version
+     (using CPU alone, even without involving GPU)
+
+
+
+Version 2.6
+
+ + The first release of Neat Video OpenFX plug-in
+
+   All noise reduction features of traditional versions of
+   Neat Video are now directly available for users of
+   OpenFX-compatible host applications.
+
+
+-----------------------------------------------------
+Neat Video (c) 1999-2013 ABSoft. All rights reserved.

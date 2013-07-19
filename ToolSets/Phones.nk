@@ -1,0 +1,790 @@
+set cut_paste_input [stack 0]
+version 6.3 v5
+BackdropNode {
+ inputs 0
+ name BackdropNode4
+ tile_color 0x8e8e3800
+ label "UV\nConnect in phone graphics"
+ note_font_size 42
+ selected true
+ xpos -165
+ ypos -2356
+ bdwidth 599
+ bdheight 606
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode2
+ tile_color 0x7171c600
+ label BG
+ note_font_size 42
+ selected true
+ xpos 538
+ ypos -1710
+ bdwidth 783
+ bdheight 1280
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode3
+ tile_color 0x717cc6ff
+ label PHONE
+ note_font_size 42
+ selected true
+ xpos -497
+ ypos -1709
+ bdwidth 792
+ bdheight 1320
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode5
+ tile_color 0x8e8e3800
+ label "A over B remove channels"
+ note_font_size 42
+ selected true
+ xpos 387
+ ypos -338
+ bdwidth 593
+ bdheight 341
+}
+push 0
+PostageStamp {
+ name PostageStamp1
+ label "\[lindex \[split \[lindex \[split \[knob \[topnode].file] .] 0] /] end]"
+ selected true
+ xpos -487
+ ypos -1599
+ hide_input true
+ postage_stamp true
+}
+Unpremult {
+ channels all
+ name Unpremult2
+ selected true
+ xpos -487
+ ypos -1499
+}
+Dot {
+ name Dot2
+ selected true
+ xpos -327
+ ypos -1490
+}
+set N92b3ce0 [stack 0]
+Dot {
+ name Dot3
+ selected true
+ xpos -327
+ ypos -1395
+}
+set N93451a0 [stack 0]
+Dot {
+ name Dot4
+ selected true
+ xpos -327
+ ypos -1261
+}
+set N93454c0 [stack 0]
+Dot {
+ name Dot5
+ selected true
+ xpos -327
+ ypos -1130
+}
+set N92b4000 [stack 0]
+Dot {
+ name Dot6
+ selected true
+ xpos -327
+ ypos -1018
+}
+set N92b4320 [stack 0]
+Dot {
+ name Dot7
+ selected true
+ xpos -327
+ ypos -891
+}
+set N92b4640 [stack 0]
+Dot {
+ name Dot8
+ selected true
+ xpos -327
+ ypos -758
+}
+set N93280d0 [stack 0]
+Dot {
+ name Dot9
+ selected true
+ xpos -327
+ ypos -609
+}
+Shuffle {
+ in alpha
+ name Shuffle6
+ label "\[value in 1 ]"
+ selected true
+ xpos -271
+ ypos -642
+ postage_stamp true
+}
+Multiply {
+ name FADE5
+ selected true
+ xpos -175
+ ypos -601
+}
+push $N93280d0
+add_layer {reflect reflect.red reflect.green reflect.blue}
+Shuffle {
+ in reflect
+ name Shuffle3
+ label "\[value in 1 ]"
+ selected true
+ xpos -271
+ ypos -767
+}
+Multiply {
+ value {1.340000033 0.8123443127 1.310549617 0}
+ name FADE8
+ selected true
+ xpos -175
+ ypos -774
+}
+push $N92b4640
+add_layer {refract refract.red refract.green refract.blue}
+Shuffle {
+ in refract
+ name Shuffle4
+ label "\[value in 1 ]"
+ selected true
+ xpos -271
+ ypos -900
+}
+Multiply {
+ name FADE11
+ selected true
+ xpos -175
+ ypos -907
+}
+push $N92b4320
+add_layer {GI GI.red GI.green GI.blue}
+Shuffle {
+ in GI
+ name Shuffle1
+ label "\[value in 1 ]"
+ selected true
+ xpos -271
+ ypos -1027
+}
+Multiply {
+ name FADE12
+ selected true
+ xpos -175
+ ypos -1034
+}
+push $N93454c0
+add_layer {lightselect2 lightselect2.red lightselect2.green lightselect2.blue}
+Shuffle {
+ in lightselect2
+ name Shuffle10
+ label "\[value in 1 ]"
+ selected true
+ xpos -274
+ ypos -1270
+}
+clone node932a3e0|Multiply|252 Multiply {
+ value {0.4000061154 0 3.200000048 1}
+ name FADE16
+ selected true
+ xpos -164
+ ypos -1270
+}
+set C932a3e0 [stack 0]
+clone node932a710|Grade|252 Grade {
+ white 2.35
+ multiply {{"(((sin(((frame*(pi*2/(15/2))/2)+1))+1)/2) * (0.5-3) ) + 0.5" i}}
+ name Grade1
+ selected true
+ xpos 7
+ ypos -1271
+}
+set C932a710 [stack 0]
+push $N93451a0
+add_layer {lightselect1 lightselect1.red lightselect1.green lightselect1.blue}
+Shuffle {
+ in lightselect1
+ name Shuffle9
+ label "\[value in 1 ]"
+ selected true
+ xpos -274
+ ypos -1404
+}
+clone node932ad70|Multiply|252 Multiply {
+ value {2.599999905 0 0.9750148654 1}
+ name FADE15
+ selected true
+ xpos -164
+ ypos -1404
+}
+set C932ad70 [stack 0]
+clone $C932a710 {
+ xpos 40
+ ypos -1386
+ selected true
+}
+push 0
+PostageStamp {
+ name PostageStamp2
+ label "\[lindex \[split \[lindex \[split \[knob \[topnode].file] .] 0] /] end]"
+ selected true
+ xpos -66
+ ypos -2105
+ hide_input true
+ postage_stamp true
+}
+set N932b700 [stack 0]
+Dot {
+ name Dot1
+ selected true
+ xpos -121
+ ypos -2070
+}
+Shuffle {
+ in alpha
+ name Shuffle11
+ label "\[value in 1]"
+ selected true
+ xpos -155
+ ypos -1832
+}
+push $N932b700
+Matrix {
+ matrix {
+     {0 1 0}
+     {1 2 1}
+     {0 1 0}
+   }
+ normalize true
+ name Matrix1
+ selected true
+ xpos -66
+ ypos -1998
+}
+Unpremult {
+ name Unpremult1
+ selected true
+ xpos -66
+ ypos -1953
+}
+Reformat {
+ name Reformat1
+ selected true
+ xpos -66
+ ypos -1879
+}
+push 0
+PostageStamp {
+ name PostageStamp4
+ label "\[lindex \[split \[lindex \[split \[knob \[topnode].file] .] 0] /] end]"
+ selected true
+ xpos 118
+ ypos -2190
+ hide_input true
+ postage_stamp true
+}
+STMap {
+ inputs 2
+ channels rgba
+ uv rgb
+ blur -rgba.alpha
+ blur_scale 0
+ name STMap1
+ selected true
+ xpos 152
+ ypos -1887
+}
+Copy {
+ inputs 2
+ from0 rgba.alpha
+ to0 rgba.alpha
+ name Copy1
+ selected true
+ xpos 152
+ ypos -1832
+}
+Premult {
+ name Premult1
+ selected true
+ xpos 152
+ ypos -1624
+}
+push $N92b3ce0
+add_layer {lightselect lightselect.red lightselect.green lightselect.blue}
+Shuffle {
+ in lightselect
+ name Shuffle8
+ label "\[value in 1 ]"
+ selected true
+ xpos -274
+ ypos -1499
+}
+clone node9462500|Multiply|252 Multiply {
+ value {2.25999999 1.942748189 0 1}
+ name FADE14
+ selected true
+ xpos -164
+ ypos -1499
+}
+set C9462500 [stack 0]
+clone $C932a710 {
+ xpos 3
+ ypos -1493
+ selected true
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus6
+ selected true
+ xpos 152
+ ypos -1493
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus7
+ selected true
+ xpos 152
+ ypos -1398
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus1
+ selected true
+ xpos 152
+ ypos -1271
+}
+push $N92b4000
+add_layer {lighting lighting.red lighting.green lighting.blue}
+Shuffle {
+ in lighting
+ name Shuffle5
+ label "\[value in 1 ]"
+ selected true
+ xpos -271
+ ypos -1139
+}
+Multiply {
+ name FADE13
+ selected true
+ xpos -175
+ ypos -1146
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus2
+ selected true
+ xpos 152
+ ypos -1140
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus3
+ selected true
+ xpos 152
+ ypos -1028
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus4
+ selected true
+ xpos 152
+ ypos -901
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus5
+ selected true
+ xpos 152
+ ypos -768
+}
+Copy {
+ inputs 2
+ from0 rgba.red
+ to0 rgba.alpha
+ name Copy2
+ selected true
+ xpos 152
+ ypos -601
+}
+Premult {
+ name Premult2
+ selected true
+ xpos 152
+ ypos -516
+ postage_stamp true
+}
+set N953f580 [stack 0]
+Dot {
+ name Dot20
+ selected true
+ xpos 186
+ ypos -215
+}
+Remove {
+ operation keep
+ channels rgba
+ name Remove1
+ label "\[value channels]"
+ selected true
+ xpos 397
+ ypos -248
+ postage_stamp true
+}
+push $cut_paste_input
+PostageStamp {
+ name PostageStamp3
+ label "\[lindex \[split \[lindex \[split \[knob \[topnode].file] .] 0] /] end]"
+ selected true
+ xpos 548
+ ypos -1622
+ hide_input true
+ postage_stamp true
+}
+Unpremult {
+ channels all
+ name Unpremult3
+ selected true
+ xpos 548
+ ypos -1437
+}
+Dot {
+ name Dot10
+ selected true
+ xpos 708
+ ypos -1428
+}
+set N95408a0 [stack 0]
+Dot {
+ name Dot11
+ selected true
+ xpos 708
+ ypos -1311
+}
+set N9540bd0 [stack 0]
+Dot {
+ name Dot12
+ selected true
+ xpos 708
+ ypos -1172
+}
+set N9540f00 [stack 0]
+Dot {
+ name Dot13
+ selected true
+ xpos 708
+ ypos -1076
+}
+set N9541230 [stack 0]
+Dot {
+ name Dot14
+ selected true
+ xpos 708
+ ypos -981
+}
+set N9541560 [stack 0]
+Dot {
+ name Dot15
+ selected true
+ xpos 708
+ ypos -854
+}
+set N9541890 [stack 0]
+Dot {
+ name Dot16
+ selected true
+ xpos 708
+ ypos -730
+}
+set N9541bc0 [stack 0]
+Dot {
+ name Dot17
+ selected true
+ xpos 708
+ ypos -640
+}
+Shuffle {
+ in alpha
+ name Shuffle2
+ label "\[value in 1 ]"
+ selected true
+ xpos 949
+ ypos -673
+ postage_stamp true
+}
+Multiply {
+ name FADE2
+ selected true
+ xpos 949
+ ypos -589
+}
+push $N9541bc0
+Shuffle {
+ in reflect
+ name Shuffle7
+ label "\[value in 1 ]"
+ selected true
+ xpos 741
+ ypos -739
+}
+Multiply {
+ name FADE3
+ selected true
+ xpos 859
+ ypos -747
+}
+push $N9541890
+Shuffle {
+ in refract
+ name Shuffle12
+ label "\[value in 1 ]"
+ selected true
+ xpos 745
+ ypos -863
+}
+Multiply {
+ name FADE7
+ selected true
+ xpos 834
+ ypos -863
+}
+push $N9541560
+Shuffle {
+ in GI
+ name Shuffle13
+ label "\[value in 1 ]"
+ selected true
+ xpos 754
+ ypos -990
+}
+Blur {
+ size 43
+ name Blur1
+ selected true
+ xpos 833
+ ypos -990
+}
+Multiply {
+ name FADE6
+ selected true
+ xpos 920
+ ypos -990
+}
+push $N9540f00
+Shuffle {
+ in lightselect2
+ name Shuffle14
+ label "\[value in 1 ]"
+ selected true
+ xpos 748
+ ypos -1181
+}
+clone $C932a3e0 {
+ xpos 748
+ ypos -1145
+ selected true
+}
+clone $C932a710 {
+ xpos 853
+ ypos -1165
+ selected true
+}
+Multiply {
+ name FADE10
+ selected true
+ xpos 958
+ ypos -1185
+}
+push $N9540bd0
+Shuffle {
+ in lightselect1
+ name Shuffle15
+ label "\[value in 1 ]"
+ selected true
+ xpos 741
+ ypos -1320
+}
+clone $C932ad70 {
+ xpos 741
+ ypos -1284
+ selected true
+}
+clone $C932a710 {
+ xpos 865
+ ypos -1311
+ selected true
+}
+Multiply {
+ name FADE4
+ selected true
+ xpos 949
+ ypos -1324
+}
+push $N95408a0
+Shuffle {
+ in lightselect
+ name Shuffle16
+ label "\[value in 1 ]"
+ selected true
+ xpos 735
+ ypos -1437
+}
+clone $C9462500 {
+ xpos 735
+ ypos -1401
+ selected true
+}
+clone $C932a710 {
+ xpos 840
+ ypos -1423
+ selected true
+}
+Multiply {
+ name FADE1
+ selected true
+ xpos 951
+ ypos -1441
+}
+Dot {
+ name Dot18
+ selected true
+ xpos 1221
+ ypos -1432
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus9
+ selected true
+ xpos 1187
+ ypos -1314
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus10
+ selected true
+ xpos 1187
+ ypos -1175
+}
+push $N9541230
+Shuffle {
+ in lighting
+ name Shuffle17
+ label "\[value in 1 ]"
+ selected true
+ xpos 746
+ ypos -1085
+}
+Multiply {
+ name FADE9
+ selected true
+ xpos 910
+ ypos -1085
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus11
+ selected true
+ xpos 1187
+ ypos -1079
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus12
+ selected true
+ xpos 1187
+ ypos -984
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus13
+ selected true
+ xpos 1187
+ ypos -857
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Plus14
+ selected true
+ xpos 1187
+ ypos -741
+}
+Copy {
+ inputs 2
+ from0 rgba.red
+ to0 rgba.alpha
+ name Copy3
+ selected true
+ xpos 1187
+ ypos -589
+}
+Premult {
+ name Premult4
+ selected true
+ xpos 1187
+ ypos -505
+ postage_stamp true
+}
+Dot {
+ name Dot19
+ selected true
+ xpos 1221
+ ypos -220
+}
+Remove {
+ operation keep
+ channels rgb
+ name Remove2
+ label "\[value channels]"
+ selected true
+ xpos 880
+ ypos -253
+ postage_stamp true
+}
+Merge2 {
+ inputs 2
+ name Merge1
+ selected true
+ xpos 648
+ ypos -70
+}
+push 0
+CheckerBoard2 {
+ inputs 0
+ format "1920 1080 0 0 1920 1080 1 HD"
+ name CheckerBoard1
+ selected true
+ xpos 248
+ ypos -2173
+}
+push $N953f580
+Viewer {
+ inputs 3
+ input_process false
+ name Viewer1
+ selected true
+ xpos 798
+ ypos -2005
+}

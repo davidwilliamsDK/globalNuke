@@ -1,0 +1,930 @@
+set cut_paste_input [stack 0]
+version 6.1 v2
+push $cut_paste_input
+Scene {
+ name Emitters
+ selected true
+ xpos 137
+ ypos -146
+}
+push 0
+Group {
+ inputs 2
+ name Particular3DGizmo
+ help "The 'Particular' tab contains all of the settings you would usually find within the Particular node itself. The only difference is that some of the values (the emitter and camera transforms) now have expressions attached. You now alter these values by manipulating the nodes selected in the 'Setup' tab.\n\nThe 'Setup' tab is used to setup Particular for 3D. Hover over the different UI elements to find out exactly what they do. "
+ label "\n"
+ selected true
+ xpos -16
+ ypos -125
+ addUserKnob {20 Particular}
+ addUserKnob {41 FXid_Options l Register... T "Particular v2_1.FXid_Options"}
+ addUserKnob {41 CustomUIMode l "Graph Mode" T "Particular v2_1.CustomUIMode"}
+ addUserKnob {41 GraphColor l "Graph Color" T "Particular v2_1.GraphColor"}
+ addUserKnob {26 ""}
+ addUserKnob {20 "" n -2}
+ addUserKnob {20 Emitter}
+ addUserKnob {41 Gen1ParticlesPerSecF l Particles/sec T "Particular v2_1.Gen1ParticlesPerSecF"}
+ addUserKnob {41 Gen1EmitterType l "Emitter Type" T "Particular v2_1.Gen1EmitterType"}
+ addUserKnob {41 Gen1Pos l Position T "Particular v2_1.Gen1Pos"}
+ addUserKnob {41 Gen1SubframePos l "Position Subframe" T "Particular v2_1.Gen1SubframePos"}
+ addUserKnob {41 Gen1EmitterDir l Direction T "Particular v2_1.Gen1EmitterDir"}
+ addUserKnob {41 Gen1DirSpread l "Direction Spread \[%]" T "Particular v2_1.Gen1DirSpread"}
+ addUserKnob {41 Gen1Angle l Rotation T "Particular v2_1.Gen1Angle"}
+ addUserKnob {41 Gen1Vel l Velocity T "Particular v2_1.Gen1Vel"}
+ addUserKnob {41 Gen1VelSpread l "Velocity Random \[%]" T "Particular v2_1.Gen1VelSpread"}
+ addUserKnob {41 Gen1VelSpreadDistr l "Velocity Distribution" T "Particular v2_1.Gen1VelSpreadDistr"}
+ addUserKnob {41 Gen1VelEmit l "Velocity from Motion \[%]" T "Particular v2_1.Gen1VelEmit"}
+ addUserKnob {41 Gen1EmitterSizeX l "Emitter Size X" T "Particular v2_1.Gen1EmitterSizeX"}
+ addUserKnob {41 Gen1EmitterSizeY l "Emitter Size Y" T "Particular v2_1.Gen1EmitterSizeY"}
+ addUserKnob {41 Gen1EmitterSizeZ l "Emitter Size Z" T "Particular v2_1.Gen1EmitterSizeZ"}
+ addUserKnob {20 "Layer Emitter" n 2}
+ addUserKnob {20 "Layer Transform" n 2}
+ addUserKnob {41 LELayerTransformOffset l Position T "Particular v2_1.LELayerTransformOffset"}
+ addUserKnob {41 LELayerTransformRotate l Rotate T "Particular v2_1.LELayerTransformRotate"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {41 ELayerDuration l "Layer Duration" T "Particular v2_1.ELayerDuration"}
+ addUserKnob {41 LELayerIs l "Layer Sampling" T "Particular v2_1.LELayerIs"}
+ addUserKnob {41 LERGBUsage l "Layer RGB Usage" T "Particular v2_1.LERGBUsage"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 "Grid Emitter" n 2}
+ addUserKnob {41 Options_GridEmitter_ParticlesInX l "Particles in X" T "Particular v2_1.Options_GridEmitter_ParticlesInX"}
+ addUserKnob {41 Options_GridEmitter_ParticlesInY l "Particles in Y" T "Particular v2_1.Options_GridEmitter_ParticlesInY"}
+ addUserKnob {41 Options_GridEmitter_ParticlesInZ l "Particles in Z" T "Particular v2_1.Options_GridEmitter_ParticlesInZ"}
+ addUserKnob {41 GridEmitter_Type l Type T "Particular v2_1.GridEmitter_Type"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 "Emission Extras" n 2}
+ addUserKnob {41 Options_EmissionExtras_PreRun l "Pre Run" T "Particular v2_1.Options_EmissionExtras_PreRun"}
+ addUserKnob {41 Options_EmissionExtras_PerodicityRnd l "Perodicity Rnd" T "Particular v2_1.Options_EmissionExtras_PerodicityRnd"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {41 Options_RandomSeed l "Random Seed" T "Particular v2_1.Options_RandomSeed"}
+ addUserKnob {20 "Multi Emitters" n 2}
+ addUserKnob {20 "" n -2}
+ addUserKnob {20 Emitter1}
+ addUserKnob {41 Emitter1_Type l Type T "Particular v2_1.Emitter1_Type"}
+ addUserKnob {41 Emitter1_Color l Color T "Particular v2_1.Emitter1_Color"}
+ addUserKnob {41 Emitter1_Intensity l "Intensity \[%]" T "Particular v2_1.Emitter1_Intensity"}
+ addUserKnob {41 Emitter1_Pos l Position T "Particular v2_1.Emitter1_Pos"}
+ addUserKnob {41 Emitter1_Rotate l Rotate T "Particular v2_1.Emitter1_Rotate"}
+ addUserKnob {41 Emitter1_DirectionalSpread l "Directional Spread" T "Particular v2_1.Emitter1_DirectionalSpread"}
+ addUserKnob {20 endGroup_2 l endGroup n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Emitter2}
+ addUserKnob {41 Emitter2_Type l Type T "Particular v2_1.Emitter2_Type"}
+ addUserKnob {41 Emitter2_Color l Color T "Particular v2_1.Emitter2_Color"}
+ addUserKnob {41 Emitter2_Intensity l "Intensity \[%]" T "Particular v2_1.Emitter2_Intensity"}
+ addUserKnob {41 Emitter2_Pos l Position T "Particular v2_1.Emitter2_Pos"}
+ addUserKnob {41 Emitter2_Rotate l Rotate T "Particular v2_1.Emitter2_Rotate"}
+ addUserKnob {41 Emitter2_DirectionalSpread l "Directional Spread" T "Particular v2_1.Emitter2_DirectionalSpread"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Emitter3}
+ addUserKnob {41 Emitter3_Type l Type T "Particular v2_1.Emitter3_Type"}
+ addUserKnob {41 Emitter3_Color l Color T "Particular v2_1.Emitter3_Color"}
+ addUserKnob {41 Emitter3_Intensity l "Intensity \[%]" T "Particular v2_1.Emitter3_Intensity"}
+ addUserKnob {41 Emitter3_Pos l Position T "Particular v2_1.Emitter3_Pos"}
+ addUserKnob {41 Emitter3_Rotate l Rotate T "Particular v2_1.Emitter3_Rotate"}
+ addUserKnob {41 Emitter3_DirectionalSpread l "Directional Spread" T "Particular v2_1.Emitter3_DirectionalSpread"}
+ addUserKnob {20 endGroup_4 l endGroup n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Emitter4}
+ addUserKnob {41 Emitter4_Type l Type T "Particular v2_1.Emitter4_Type"}
+ addUserKnob {41 Emitter4_Color l Color T "Particular v2_1.Emitter4_Color"}
+ addUserKnob {41 Emitter4_Intensity l "Intensity \[%]" T "Particular v2_1.Emitter4_Intensity"}
+ addUserKnob {41 Emitter4_Pos l Position T "Particular v2_1.Emitter4_Pos"}
+ addUserKnob {41 Emitter4_Rotate l Rotate T "Particular v2_1.Emitter4_Rotate"}
+ addUserKnob {41 Emitter4_DirectionalSpread l "Directional Spread" T "Particular v2_1.Emitter4_DirectionalSpread"}
+ addUserKnob {20 endGroup_5 l endGroup n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Emitter5}
+ addUserKnob {41 Emitter5_Type l Type T "Particular v2_1.Emitter5_Type"}
+ addUserKnob {41 Emitter5_Color l Color T "Particular v2_1.Emitter5_Color"}
+ addUserKnob {41 Emitter5_Intensity l "Intensity \[%]" T "Particular v2_1.Emitter5_Intensity"}
+ addUserKnob {41 Emitter5_Pos l Position T "Particular v2_1.Emitter5_Pos"}
+ addUserKnob {41 Emitter5_Rotate l Rotate T "Particular v2_1.Emitter5_Rotate"}
+ addUserKnob {41 Emitter5_DirectionalSpread l "Directional Spread" T "Particular v2_1.Emitter5_DirectionalSpread"}
+ addUserKnob {20 endGroup_6 l endGroup n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Emitter6}
+ addUserKnob {41 Emitter6_Type l Type T "Particular v2_1.Emitter6_Type"}
+ addUserKnob {41 Emitter6_Color l Color T "Particular v2_1.Emitter6_Color"}
+ addUserKnob {41 Emitter6_Intensity l "Intensity \[%]" T "Particular v2_1.Emitter6_Intensity"}
+ addUserKnob {41 Emitter6_Pos l Position T "Particular v2_1.Emitter6_Pos"}
+ addUserKnob {41 Emitter6_Rotate l Rotate T "Particular v2_1.Emitter6_Rotate"}
+ addUserKnob {41 Emitter6_DirectionalSpread l "Directional Spread" T "Particular v2_1.Emitter6_DirectionalSpread"}
+ addUserKnob {20 endGroup_7 l endGroup n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Emitter7}
+ addUserKnob {41 Emitter7_Type l Type T "Particular v2_1.Emitter7_Type"}
+ addUserKnob {41 Emitter7_Color l Color T "Particular v2_1.Emitter7_Color"}
+ addUserKnob {41 Emitter7_Intensity l "Intensity \[%]" T "Particular v2_1.Emitter7_Intensity"}
+ addUserKnob {41 Emitter7_Pos l Position T "Particular v2_1.Emitter7_Pos"}
+ addUserKnob {41 Emitter7_Rotate l Rotate T "Particular v2_1.Emitter7_Rotate"}
+ addUserKnob {41 Emitter7_DirectionalSpread l "Directional Spread" T "Particular v2_1.Emitter7_DirectionalSpread"}
+ addUserKnob {20 endGroup_8 l endGroup n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Emitter8}
+ addUserKnob {41 Emitter8_Type l Type T "Particular v2_1.Emitter8_Type"}
+ addUserKnob {41 Emitter8_Color l Color T "Particular v2_1.Emitter8_Color"}
+ addUserKnob {41 Emitter8_Intensity l "Intensity \[%]" T "Particular v2_1.Emitter8_Intensity"}
+ addUserKnob {41 Emitter8_Pos l Position T "Particular v2_1.Emitter8_Pos"}
+ addUserKnob {41 Emitter8_Rotate l Rotate T "Particular v2_1.Emitter8_Rotate"}
+ addUserKnob {41 Emitter8_DirectionalSpread l "Directional Spread" T "Particular v2_1.Emitter8_DirectionalSpread"}
+ addUserKnob {20 "" n -3}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Particle}
+ addUserKnob {41 PLife l "Life \[sec]" T "Particular v2_1.PLife"}
+ addUserKnob {41 PLifeRnd l "Life Random \[%]" T "Particular v2_1.PLifeRnd"}
+ addUserKnob {41 PType l "Particle Type" T "Particular v2_1.PType"}
+ addUserKnob {41 PFeather l "Particle Feather" T "Particular v2_1.PFeather"}
+ addUserKnob {20 Texture n 2}
+ addUserKnob {41 PLayerDuration l "Layer Duration" T "Particular v2_1.PLayerDuration"}
+ addUserKnob {41 PLayerTime l "Time Sampling" T "Particular v2_1.PLayerTime"}
+ addUserKnob {41 Time_RandomSeed l "Random Seed" T "Particular v2_1.Time_RandomSeed"}
+ addUserKnob {41 PLayerMultiClips l "Number of Clips" T "Particular v2_1.PLayerMultiClips"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Rotation n 2}
+ addUserKnob {41 PRotAuto l "Orient to Motion" T "Particular v2_1.PRotAuto"}
+ addUserKnob {41 PRotateXYZ l Rotate T "Particular v2_1.PRotateXYZ"}
+ addUserKnob {41 PRotateRnd l "Random Rotation" T "Particular v2_1.PRotateRnd"}
+ addUserKnob {41 PRotateSpeedX l "Rotation Speed X" T "Particular v2_1.PRotateSpeedX"}
+ addUserKnob {41 PRotateSpeedY l "Rotation Speed Y" T "Particular v2_1.PRotateSpeedY"}
+ addUserKnob {41 PRotateSpeed l "Rotation Speed Z" T "Particular v2_1.PRotateSpeed"}
+ addUserKnob {41 PRotateRndSpeed l "Random Speed Rotate" T "Particular v2_1.PRotateRndSpeed"}
+ addUserKnob {41 PRotateRndSpeedDistr l "Random Speed Distribution" T "Particular v2_1.PRotateRndSpeedDistr"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {41 PSizeMax l Size T "Particular v2_1.PSizeMax"}
+ addUserKnob {41 PSizeRnd l "Size Random \[%]" T "Particular v2_1.PSizeRnd"}
+ addUserKnob {41 POpacMax l Opacity T "Particular v2_1.POpacMax"}
+ addUserKnob {41 POpacRnd l "Opacity Random \[%]" T "Particular v2_1.POpacRnd"}
+ addUserKnob {41 PSetColor l "Set Color" T "Particular v2_1.PSetColor"}
+ addUserKnob {41 PColor l Color T "Particular v2_1.PColor"}
+ addUserKnob {41 PColorRnd l "Color Random" T "Particular v2_1.PColorRnd"}
+ addUserKnob {41 PTMode l "Transfer Mode" T "Particular v2_1.PTMode"}
+ addUserKnob {20 Glow n 2}
+ addUserKnob {41 Options_Glow_Size l Size T "Particular v2_1.Options_Glow_Size"}
+ addUserKnob {41 Options_Glow_Opacity l Opacity T "Particular v2_1.Options_Glow_Opacity"}
+ addUserKnob {41 Options_Glow_Feather l Feather T "Particular v2_1.Options_Glow_Feather"}
+ addUserKnob {41 Glow_TransferMode l "Transfer Mode" T "Particular v2_1.Glow_TransferMode"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Streaklet n 2}
+ addUserKnob {41 Streaklet_RandomSeed l "Random Seed" T "Particular v2_1.Streaklet_RandomSeed"}
+ addUserKnob {41 Streaklet_NoSpheres l "No Streaks" T "Particular v2_1.Streaklet_NoSpheres"}
+ addUserKnob {41 Streaklet_Spread l "Streak Size" T "Particular v2_1.Streaklet_Spread"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 ShadingGrp l Shading}
+ addUserKnob {41 PShade l Shading T "Particular v2_1.PShade"}
+ addUserKnob {41 PShadeFalloff l "Light Falloff" T "Particular v2_1.PShadeFalloff"}
+ addUserKnob {41 PShadeFalloffAdjust l "Nominal Distance" T "Particular v2_1.PShadeFalloffAdjust"}
+ addUserKnob {41 PShadeAmbient l Ambient T "Particular v2_1.PShadeAmbient"}
+ addUserKnob {41 PShadeDiffuse l Diffuse T "Particular v2_1.PShadeDiffuse"}
+ addUserKnob {41 PShadeSpecular l "Specular Amount" T "Particular v2_1.PShadeSpecular"}
+ addUserKnob {41 PShadeSpecularSharp l "Specular Sharpness" T "Particular v2_1.PShadeSpecularSharp"}
+ addUserKnob {41 ReflectionMapIntens l "Reflection Strength" T "Particular v2_1.ReflectionMapIntens"}
+ addUserKnob {20 shadinglightsGrp l "Shading Lights" n 1}
+ shadinglightsGrp 0
+ addUserKnob {41 AmbientColor l "Ambient Color" T "Particular v2_1.AmbientColor"}
+ addUserKnob {20 "" n -2}
+ addUserKnob {20 Light1}
+ addUserKnob {41 Light1_Type l Type T "Particular v2_1.Light1_Type"}
+ addUserKnob {41 Light1_Color l Color T "Particular v2_1.Light1_Color"}
+ addUserKnob {41 Light1_Intensity l "Intensity \[%]" T "Particular v2_1.Light1_Intensity"}
+ addUserKnob {41 Light1_Pos l Position T "Particular v2_1.Light1_Pos"}
+ addUserKnob {41 Light1_Rotate l Rotate T "Particular v2_1.Light1_Rotate"}
+ addUserKnob {41 Light1_ConeAngle l "Cone Angle" T "Particular v2_1.Light1_ConeAngle"}
+ addUserKnob {41 Light1_ConeFeather l "Cone Feather \[%]" T "Particular v2_1.Light1_ConeFeather"}
+ addUserKnob {20 endLight1Grp n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Light2}
+ addUserKnob {41 Light2_Type l Type T "Particular v2_1.Light2_Type"}
+ addUserKnob {41 Light2_Color l Color T "Particular v2_1.Light2_Color"}
+ addUserKnob {41 Light2_Intensity l "Intensity \[%]" T "Particular v2_1.Light2_Intensity"}
+ addUserKnob {41 Light2_Pos l Position T "Particular v2_1.Light2_Pos"}
+ addUserKnob {41 Light2_Rotate l Rotate T "Particular v2_1.Light2_Rotate"}
+ addUserKnob {41 Light2_ConeAngle l "Cone Angle" T "Particular v2_1.Light2_ConeAngle"}
+ addUserKnob {41 Light2_ConeFeather l "Cone Feather \[%]" T "Particular v2_1.Light2_ConeFeather"}
+ addUserKnob {20 endLight2Grp t "\n" n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Light3}
+ addUserKnob {41 Light3_Type l Type T "Particular v2_1.Light3_Type"}
+ addUserKnob {41 Light3_Color l Color T "Particular v2_1.Light3_Color"}
+ addUserKnob {41 Light3_Intensity l "Intensity \[%]" T "Particular v2_1.Light3_Intensity"}
+ addUserKnob {41 Light3_Pos l Position T "Particular v2_1.Light3_Pos"}
+ addUserKnob {41 Light3_Rotate l Rotate T "Particular v2_1.Light3_Rotate"}
+ addUserKnob {41 Light3_ConeAngle l "Cone Angle" T "Particular v2_1.Light3_ConeAngle"}
+ addUserKnob {41 Light3_ConeFeather l "Cone Feather \[%]" T "Particular v2_1.Light3_ConeFeather"}
+ addUserKnob {20 endLight3Grp n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Light4}
+ addUserKnob {41 Light4_Type l Type T "Particular v2_1.Light4_Type"}
+ addUserKnob {41 Light4_Color l Color T "Particular v2_1.Light4_Color"}
+ addUserKnob {41 Light4_Intensity l "Intensity \[%]" T "Particular v2_1.Light4_Intensity"}
+ addUserKnob {41 Light4_Pos l Position T "Particular v2_1.Light4_Pos"}
+ addUserKnob {41 Light4_Rotate l Rotate T "Particular v2_1.Light4_Rotate"}
+ addUserKnob {41 Light4_ConeAngle l "Cone Angle" T "Particular v2_1.Light4_ConeAngle"}
+ addUserKnob {41 Light4_ConeFeather l "Cone Feather \[%]" T "Particular v2_1.Light4_ConeFeather"}
+ addUserKnob {20 endLight4Grp n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Light5}
+ addUserKnob {41 Light5_Type l Type T "Particular v2_1.Light5_Type"}
+ addUserKnob {41 Light5_Color l Color T "Particular v2_1.Light5_Color"}
+ addUserKnob {41 Light5_Intensity l "Intensity \[%]" T "Particular v2_1.Light5_Intensity"}
+ addUserKnob {41 Light5_Pos l Position T "Particular v2_1.Light5_Pos"}
+ addUserKnob {41 Light5_Rotate l Rotate T "Particular v2_1.Light5_Rotate"}
+ addUserKnob {41 Light5_ConeAngle l "Cone Angle" T "Particular v2_1.Light5_ConeAngle"}
+ addUserKnob {41 Light5_ConeFeather l "Cone Feather \[%]" T "Particular v2_1.Light5_ConeFeather"}
+ addUserKnob {20 endLight5Grp n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Light6}
+ addUserKnob {41 Light6_Type l Type T "Particular v2_1.Light6_Type"}
+ addUserKnob {41 Light6_Color l Color T "Particular v2_1.Light6_Color"}
+ addUserKnob {41 Light6_Intensity l "Intensity \[%]" T "Particular v2_1.Light6_Intensity"}
+ addUserKnob {41 Light6_Pos l Position T "Particular v2_1.Light6_Pos"}
+ addUserKnob {41 Light6_Rotate l Rotate T "Particular v2_1.Light6_Rotate"}
+ addUserKnob {41 Light6_ConeAngle l "Cone Angle" T "Particular v2_1.Light6_ConeAngle"}
+ addUserKnob {41 Light6_ConeFeather l "Cone Feather \[%]" T "Particular v2_1.Light6_ConeFeather"}
+ addUserKnob {20 endLight6Grp n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Light7}
+ addUserKnob {41 Light7_Type l Type T "Particular v2_1.Light7_Type"}
+ addUserKnob {41 Light7_Color l Color T "Particular v2_1.Light7_Color"}
+ addUserKnob {41 Light7_Intensity l "Intensity \[%]" T "Particular v2_1.Light7_Intensity"}
+ addUserKnob {41 Light7_Pos l Position T "Particular v2_1.Light7_Pos"}
+ addUserKnob {41 Light7_Rotate l Rotate T "Particular v2_1.Light7_Rotate"}
+ addUserKnob {41 Light7_ConeAngle l "Cone Angle" T "Particular v2_1.Light7_ConeAngle"}
+ addUserKnob {41 Light7_ConeFeather l "Cone Feather \[%]" T "Particular v2_1.Light7_ConeFeather"}
+ addUserKnob {20 endLight7Grp n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Light8}
+ addUserKnob {41 Light8_Type l Type T "Particular v2_1.Light8_Type"}
+ addUserKnob {41 Light8_Color l Color T "Particular v2_1.Light8_Color"}
+ addUserKnob {41 Light8_Intensity l "Intensity \[%]" T "Particular v2_1.Light8_Intensity"}
+ addUserKnob {41 Light8_Pos l Position T "Particular v2_1.Light8_Pos"}
+ addUserKnob {41 Light8_Rotate l Rotate T "Particular v2_1.Light8_Rotate"}
+ addUserKnob {41 Light8_ConeAngle l "Cone Angle" T "Particular v2_1.Light8_ConeAngle"}
+ addUserKnob {41 Light8_ConeFeather l "Cone Feather \[%]" T "Particular v2_1.Light8_ConeFeather"}
+ addUserKnob {20 "" n -3}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 endLight8Grp n -1}
+ addUserKnob {41 PShadow l "Shadowlet for Main" T "Particular v2_1.PShadow"}
+ addUserKnob {41 SE_PShadow l "Shadowlet for Aux" T "Particular v2_1.SE_PShadow"}
+ addUserKnob {20 "Shadowlet Settings" n 2}
+ "Shadowlet Settings" 1
+ addUserKnob {41 Options_SmokeletShadow_Color l Color T "Particular v2_1.Options_SmokeletShadow_Color"}
+ addUserKnob {41 Options_SmokeletShadow_ColorStrength l "Color Strength" T "Particular v2_1.Options_SmokeletShadow_ColorStrength"}
+ addUserKnob {41 Options_SmokeletShadow_Opacity l Opacity T "Particular v2_1.Options_SmokeletShadow_Opacity"}
+ addUserKnob {41 PShadow_Size l "Adjust Size" T "Particular v2_1.PShadow_Size"}
+ addUserKnob {41 PShadow_Dist l "Adjust Distance" T "Particular v2_1.PShadow_Dist"}
+ addUserKnob {41 PShadow_ZPos l Placement T "Particular v2_1.PShadow_ZPos"}
+ addUserKnob {41 Shadowlet_Pos l "Shadowlet Position" T "Particular v2_1.Shadowlet_Pos"}
+ addUserKnob {20 endShadingLightsGrp n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 PhysicsTab l Physics}
+ addUserKnob {41 AnimationSystem l "Physics Model" T "Particular v2_1.AnimationSystem"}
+ addUserKnob {41 Gravity T "Particular v2_1.Gravity"}
+ addUserKnob {41 PhTime l "Physics Time Factor" T "Particular v2_1.PhTime"}
+ addUserKnob {20 Air n 2}
+ Air 1
+ addUserKnob {41 AirResist l "Air Resistance" T "Particular v2_1.AirResist"}
+ addUserKnob {41 AirResistRotation l "Air Resistance Rotation" T "Particular v2_1.AirResistRotation"}
+ addUserKnob {41 SpinAmp l "Spin Amplitude" T "Particular v2_1.SpinAmp"}
+ addUserKnob {41 SpinFreq l "Spin Frequency" T "Particular v2_1.SpinFreq"}
+ addUserKnob {41 SpinTime l "Fade-in Spin \[sec]" T "Particular v2_1.SpinTime"}
+ addUserKnob {41 WindX l "Wind X" T "Particular v2_1.WindX"}
+ addUserKnob {41 WindY l "Wind Y" T "Particular v2_1.WindY"}
+ addUserKnob {41 WindZ l "Wind Z" T "Particular v2_1.WindZ"}
+ addUserKnob {41 DVisualize l "Visualize Fields" T "Particular v2_1.DVisualize"}
+ addUserKnob {20 "Turbulence Field" n 2}
+ addUserKnob {41 FAffectSize l "Affect Size" T "Particular v2_1.FAffectSize"}
+ addUserKnob {41 FAffectPos l "Affect Position" T "Particular v2_1.FAffectPos"}
+ addUserKnob {41 FAffectTime l "Fade-in Time \[sec]" T "Particular v2_1.FAffectTime"}
+ addUserKnob {41 FAffectCurve l "Fade-in Curve" T "Particular v2_1.FAffectCurve"}
+ addUserKnob {41 FScale l Scale T "Particular v2_1.FScale"}
+ addUserKnob {41 FComplex l Complexity T "Particular v2_1.FComplex"}
+ addUserKnob {41 FOctMult l "Octave Multiplier" T "Particular v2_1.FOctMult"}
+ addUserKnob {41 FOctScale l "Octave Scale" T "Particular v2_1.FOctScale"}
+ addUserKnob {41 FEvolution l "Evolution Speed" T "Particular v2_1.FEvolution"}
+ addUserKnob {41 FOffsetE l "Evolution Offset" T "Particular v2_1.FOffsetE"}
+ addUserKnob {41 FOffsetXYZ l Offset T "Particular v2_1.FOffsetXYZ"}
+ addUserKnob {41 FMoveWithWind l "Move with Wind \[%]" T "Particular v2_1.FMoveWithWind"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 "Spherical Field" n 2}
+ addUserKnob {41 DStrength l Strength T "Particular v2_1.DStrength"}
+ addUserKnob {41 DPos l Position T "Particular v2_1.DPos"}
+ addUserKnob {41 DRadius l Radius T "Particular v2_1.DRadius"}
+ addUserKnob {41 DFeather l Feather T "Particular v2_1.DFeather"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Bounce n 2}
+ addUserKnob {41 FloorMode l "Floor Mode" T "Particular v2_1.FloorMode"}
+ addUserKnob {20 "Floor Transform" n 2}
+ addUserKnob {41 FLayerTransformOffset l Position T "Particular v2_1.FLayerTransformOffset"}
+ addUserKnob {41 FLayerTransformRotate l Rotate T "Particular v2_1.FLayerTransformRotate"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {41 WallMode l "Wall Mode" T "Particular v2_1.WallMode"}
+ addUserKnob {20 "Wall Transform" n 2}
+ addUserKnob {41 WLayerTransformOffset l Position T "Particular v2_1.WLayerTransformOffset"}
+ addUserKnob {41 WLayerTransformRotate l Rotate T "Particular v2_1.WLayerTransformRotate"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {41 WFEvent l "Collision Event" T "Particular v2_1.WFEvent"}
+ addUserKnob {41 WFBounce l Bounce T "Particular v2_1.WFBounce"}
+ addUserKnob {41 WFBounceRnd l "Bounce Random \[%]" T "Particular v2_1.WFBounceRnd"}
+ addUserKnob {41 WFSlide l Slide T "Particular v2_1.WFSlide"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 AuxSystemTab l "Aux System"}
+ addUserKnob {41 SE_Emitter l Emit T "Particular v2_1.SE_Emitter"}
+ addUserKnob {41 Options_Aux_EmitProbability l "Emit Probability \[%]" T "Particular v2_1.Options_Aux_EmitProbability"}
+ addUserKnob {41 SE_ParticlesPerSecF l "Particle Emit Rate" T "Particular v2_1.SE_ParticlesPerSecF"}
+ addUserKnob {41 SE_PLife l "Life \[sec]" T "Particular v2_1.SE_PLife"}
+ addUserKnob {41 SE_PType l Type T "Particular v2_1.SE_PType"}
+ addUserKnob {41 SE_PVel l Velocity T "Particular v2_1.SE_PVel"}
+ addUserKnob {41 SE_PSize l Size T "Particular v2_1.SE_PSize"}
+ addUserKnob {41 SE_POpacity l Opacity T "Particular v2_1.SE_POpacity"}
+ addUserKnob {41 SE_PColorFromMain l "Color From Main \[%]" T "Particular v2_1.SE_PColorFromMain"}
+ addUserKnob {41 Options_Aux_Gravity l Gravity T "Particular v2_1.Options_Aux_Gravity"}
+ addUserKnob {41 Options_Aux_TransferMode l "Transfer Mode" T "Particular v2_1.Options_Aux_TransferMode"}
+ addUserKnob {41 Options_Aux_RotateSpeed l "Rotate Speed" T "Particular v2_1.Options_Aux_RotateSpeed"}
+ addUserKnob {41 Options_Aux_Feather l Feather T "Particular v2_1.Options_Aux_Feather"}
+ addUserKnob {20 "Control from Main Particles" n 2}
+ addUserKnob {41 Options_Aux_Control_InheritVelocity l "Inherit Velocity" T "Particular v2_1.Options_Aux_Control_InheritVelocity"}
+ addUserKnob {41 Options_Aux_Control_StartEmit l "Start Emit \[% of Life]" T "Particular v2_1.Options_Aux_Control_StartEmit"}
+ addUserKnob {41 Options_Aux_Control_StopEmit l "Stop Emit \[% of Life]" T "Particular v2_1.Options_Aux_Control_StopEmit"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 "Physics (Air mode only)" n 2}
+ "Physics (Air mode only)" 1
+ addUserKnob {41 Options_Aux_AirPhysics_Resistance l "Air Resistance" T "Particular v2_1.Options_Aux_AirPhysics_Resistance"}
+ addUserKnob {41 Options_Aux_AirPhysics_Wind l "Wind Affect \[%]" T "Particular v2_1.Options_Aux_AirPhysics_Wind"}
+ addUserKnob {41 Options_Aux_AirPhysics_Turbulence l "Turbulence Position" T "Particular v2_1.Options_Aux_AirPhysics_Turbulence"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 Randomness n 2}
+ Randomness 1
+ addUserKnob {41 Options_Aux_Randomness_Life l Life T "Particular v2_1.Options_Aux_Randomness_Life"}
+ addUserKnob {41 Options_Aux_Randomness_Size l Size T "Particular v2_1.Options_Aux_Randomness_Size"}
+ addUserKnob {41 Options_Aux_Randomness_Opacity l Opacity T "Particular v2_1.Options_Aux_Randomness_Opacity"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 WorldTransformTab l "World Transform"}
+ addUserKnob {41 WT_R l Rotation T "Particular v2_1.WT_R"}
+ addUserKnob {41 WT_TXYZ l Offset T "Particular v2_1.WT_TXYZ"}
+ addUserKnob {20 VisibilityTab l Visibility}
+ addUserKnob {41 NFFarVanish l "Far Vanish" T "Particular v2_1.NFFarVanish"}
+ addUserKnob {41 NFFarStartFade l "Far Start Fade" T "Particular v2_1.NFFarStartFade"}
+ addUserKnob {41 NFNearStartFade l "Near Start Fade" T "Particular v2_1.NFNearStartFade"}
+ addUserKnob {41 NFNearVanish l "Near Vanish" T "Particular v2_1.NFNearVanish"}
+ addUserKnob {41 NFCurve l "Near and Far Curves" T "Particular v2_1.NFCurve"}
+ addUserKnob {41 ZBlack l "Z at Black" T "Particular v2_1.ZBlack"}
+ addUserKnob {41 ZWhite l "Z at White" T "Particular v2_1.ZWhite"}
+ addUserKnob {20 "Obscuration Transform" n 2}
+ addUserKnob {41 OLayerTransformOffset l Position T "Particular v2_1.OLayerTransformOffset"}
+ addUserKnob {41 OLayerTransformRotate l Rotate T "Particular v2_1.OLayerTransformRotate"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {41 Obscure l "Also Obscure with" T "Particular v2_1.Obscure"}
+ addUserKnob {20 RenderingTab l Rendering}
+ addUserKnob {41 RenderMode l "Render Mode" T "Particular v2_1.RenderMode"}
+ addUserKnob {41 DOF l "Depth of Field" T "Particular v2_1.DOF"}
+ addUserKnob {41 DOFtype l "Depth of Field Type" T "Particular v2_1.DOFtype"}
+ addUserKnob {41 TMode l "Transfer Mode" T "Particular v2_1.TMode"}
+ addUserKnob {41 TModeOpac l Opacity T "Particular v2_1.TModeOpac"}
+ addUserKnob {20 "Motion Blur" n 2}
+ "Motion Blur" 1
+ addUserKnob {41 MBlurPopup l "Motion Blur" T "Particular v2_1.MBlurPopup"}
+ addUserKnob {41 MBlurShutter l "Shutter Angle" T "Particular v2_1.MBlurShutter"}
+ addUserKnob {41 MBlurShutterPhase l "Shutter Phase" T "Particular v2_1.MBlurShutterPhase"}
+ addUserKnob {41 MBlurType l Type T "Particular v2_1.MBlurType"}
+ addUserKnob {41 MBlurLevels l Levels T "Particular v2_1.MBlurLevels"}
+ addUserKnob {41 MBlurLinAdjust l "Linear Accuracy" T "Particular v2_1.MBlurLinAdjust"}
+ addUserKnob {41 MBlurOpacBoost l "Opacity Boost" T "Particular v2_1.MBlurOpacBoost"}
+ addUserKnob {41 MBlurDisregard l Disregard T "Particular v2_1.MBlurDisregard"}
+ addUserKnob {20 "" n -1}
+ addUserKnob {20 CameraTab l Camera}
+ addUserKnob {41 CameraPos l Position T "Particular v2_1.CameraPos"}
+ addUserKnob {41 CameraZoom l Zoom T "Particular v2_1.CameraZoom"}
+ addUserKnob {41 CameraO l Rotation T "Particular v2_1.CameraO"}
+ addUserKnob {41 IsCameraOrtho l "Ortho Projection" T "Particular v2_1.IsCameraOrtho"}
+ addUserKnob {41 FocalDistance l "Focal Distance" T "Particular v2_1.FocalDistance"}
+ addUserKnob {41 Aperture l "Focal Aperture" T "Particular v2_1.Aperture"}
+ addUserKnob {41 BlurLevel l "Blur Level" T "Particular v2_1.BlurLevel"}
+ addUserKnob {41 DistImagePlane l "Dist Image Plane" T "Particular v2_1.DistImagePlane"}
+ addUserKnob {20 "" n -3}
+ addUserKnob {20 Setup}
+ addUserKnob {26 firstInstruction l "1. Set Scene Camera" t "The first step in setting up Particular for 3D is to get and set your scene camera. Use the 'Get Cameras' button below to populate the 'Camera' list with all of the cameras in your scene, and then select your chosen camera from the dropdown."}
+ addUserKnob {22 pv2_getCameraList l "Get Cameras" t "The 'Get Cameras' button should be the first thing you press in the 'Setup' tab. It populates the 'Camera' dropdown list to the right with all of the cameras in your scene." -STARTLINE}
+ addUserKnob {4 pv2_cameraList l "    Camera" t "This 'Camera' dropdown list is populated by clicking the 'Get Cameras' button. Once you select a scene camera, it's position and rotation values are automatically used to control Particular's in-built camera - the two should now sync up perfectly. If you select 'None', the values are unlinked." -STARTLINE M {None "" ""}}
+ addUserKnob {20 pv2_cameraDetailsGrp l INVISIBLE +INVISIBLE n 1}
+ addUserKnob {3 pv2_projectWidth l INVISIBLE +DISABLED +INVISIBLE}
+ pv2_projectWidth 1920
+ addUserKnob {3 pv2_projectHeight l INVISIBLE -STARTLINE +DISABLED +INVISIBLE}
+ pv2_projectHeight 1080
+ addUserKnob {7 pv2_aspect l INVISIBLE +DISABLED +INVISIBLE R 0 5}
+ pv2_aspect 1.777777778
+ addUserKnob {7 pv2_camXMultiplier l INVISIBLE +DISABLED +INVISIBLE R -100 100}
+ pv2_camXMultiplier 0.25
+ addUserKnob {7 pv2_camYMultiplier l INVISIBLE +DISABLED +INVISIBLE R -100 100}
+ pv2_camYMultiplier 0.4444444444
+ addUserKnob {7 pv2_camZMultiplier l INVISIBLE +DISABLED +INVISIBLE R -100 100}
+ pv2_camZMultiplier 1
+ addUserKnob {7 pv2_camZoomSlider l INVISIBLE +DISABLED +INVISIBLE R 0 10000}
+ pv2_camZoomSlider 3906.25
+ addUserKnob {20 pv2_endCameraInfoGrp l INVISIBLE +INVISIBLE n -1}
+ addUserKnob {26 ""}
+ addUserKnob {26 secondInstructionText l "2. Add Emitter Proxy" t "The second step in setting up Particular for 3D is to get and set your emitter proxy object. Use the 'Refresh' button below to populate the 'Objects' list with all of the objects attached to Particular's 'Emitter' scene node, and then select the required object from the dropdown. \n\nAlternatively, you can select an object in your scene and press the 'Add Selected' button below to have Particular automatically add that object to the dropdown list."}
+ addUserKnob {22 pv2_addSelectedObj l "Add Selected" t "The 'Add Selected' button in the 'Add Emitter Proxy' section is used to add an node to the 'Objects' dropdown list without needing to connect it to an 'Emitters' scene node. Select your node, click 'Add Selected' and as long as it has a transform knob, you can now select it to be used as an emitter proxy." +STARTLINE}
+ addUserKnob {22 pv2_refreshEmitterList l Refresh t "The 'Refresh' button in the 'Add Emitter Proxy' section is used to update the 'Objects' dropdown list to the right with all of the nodes connected to Particular's Emitter Scene node." -STARTLINE}
+ addUserKnob {4 pv2_emitterList l "    Objects" t "The 'Objects' dropdown contains all of the objects that Particular can use as an emitter proxy. When you select an object, it's transform values are used to control the position and rotation of Particular's emitter. If you select 'None', the values are unlinked." -STARTLINE M {None ""}}
+ addUserKnob {20 proxyInfoGrp1 l INVISIBLE +INVISIBLE n 1}
+ addUserKnob {13 pv2_proxyPos l INVISIBLE +INVISIBLE}
+ addUserKnob {13 pv2_proxyRot l INVISIBLE +INVISIBLE}
+ pv2_proxyRot {{curve} {curve} {curve}}
+ addUserKnob {20 endGroup l INVISIBLE +INVISIBLE n -1}
+ addUserKnob {26 ""}
+ addUserKnob {20 pv2_cardTransf1 l "Card Properties" n 1}
+ addUserKnob {6 pv2_cardAlignToCam l "Align to Cam" t "If checked, the 'Align to Cam' checkbox will make the card, onto which Particular's output is being projected. always face the selected scene camera. When unchecked, the card's rotation values will only take into account the 'Rot Offset' values below." +STARTLINE}
+ pv2_cardAlignToCam true
+ addUserKnob {4 pv2_lockCardToDropDown l "Lock Card To..." t "The 'Lock Card To...' dropdown allows you to control the position of the card, onto which Particular's output is being projected, within your scene. The options are :\n\nNone - The card is positioned at \[0,0,0] and offset using the 'Trans Offset' values below.\n\nEmitter - The card is positioned at the emitter proxy object (and will animate along with it.) The 'Trans Offset' values can be used to tweak this positioning.\n\nCamera - The card is positioned just in front of the chosen scene camera, and the 'Trans Offset' values can be used to twaek this position. This option is recommended if performing large camera moves." M {None Emitter Camera ""}}
+ addUserKnob {13 pv2_cardOffset l "Trans Offset" t "The 'Trans Offset' values can be used to offset Particular's projection card in 3D space. "}
+ pv2_cardOffset {0 0 -0.75}
+ addUserKnob {13 pv2_cardRot l "Rot Offset" t "The 'Rot Offset' values can be used to rotate Particular's projection card in 3D space. "}
+ addUserKnob {12 pv2_cardScale l Scale t "The 'Scale' values can be used to alter the size of Particular's projection card. Be aware that if the values are too small, you may experience clipping of the particle image."}
+ pv2_cardScale {1 1}
+ addUserKnob {7 pv2_cardScaleUni l " " t "The 'Uniform Scale' slider can be used to alter the size of Particular's projection card uniformly on both the X and Y axis. Be aware that if the value is too small, you may experience clipping of the particle image." R 0.01 10}
+ pv2_cardScaleUni 3
+ addUserKnob {20 pv2_cardTransf1End l endGroup n -1}
+ addUserKnob {26 ""}
+ addUserKnob {20 pv2_obscureGrp l INVISIBLE +INVISIBLE n 1}
+ addUserKnob {41 Obscure_1 l INVISIBLE +DISABLED +INVISIBLE T "Particular v2_1.Obscure"}
+ addUserKnob {20 endGroup_1 l INVISIBLE +INVISIBLE n -1}
+ addUserKnob {20 setupTabEnd n -3}
+}
+ Camera2 {
+  inputs 0
+  display off
+  selectable false
+  translate {0 0 4}
+  name p_cam
+  xpos 280
+  ypos -35
+ }
+set N2895d870 [stack 0]
+ Dot {
+  name Dot4
+  xpos 304
+  ypos 191
+ }
+set N289f1cf0 [stack 0]
+ Dot {
+  name Dot1
+  xpos 304
+  ypos 283
+ }
+push 0
+push 0
+push 0
+push 0
+push $N289f1cf0
+push 0
+push $N2895d870
+ Input {
+  inputs 0
+  name RefMap
+  xpos 229
+  ypos -155
+  number 8
+ }
+ Input {
+  inputs 0
+  name Obstructions
+  xpos 212
+  ypos -183
+  number 7
+ }
+ Input {
+  inputs 0
+  name ZBuffer
+  xpos 170
+  ypos -208
+  number 6
+ }
+ Input {
+  inputs 0
+  name Wall
+  xpos -24
+  ypos -210
+  number 4
+ }
+ Input {
+  inputs 0
+  name Floor
+  xpos -76
+  ypos -155
+  number 3
+ }
+ Input {
+  inputs 0
+  name Texture
+  xpos -62
+  ypos -185
+  number 2
+ }
+ Input {
+  inputs 0
+  name Emitter
+  xpos 24
+  ypos -235
+ }
+ Input {
+  inputs 0
+  name Source
+  xpos 119
+  ypos -234
+  number 5
+ }
+ OFXtrapcode.particular_v2 {
+  inputs 8
+  CustomUIMode Off
+  GraphColor {0.8727281094 0.8495452404 0.8356363773}
+  FXid_CustomData "000000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063136198122063016141117063152083112063032026107063168224101063048167096063184109091063064052086063200250080063080193075063216135070063096078065063232020060063112219054063248161049063128104044063008047039063144245033063024188028063160130023063040073018063176015013063056214007063192156002063144198250062160083240062176224229062192109219062208250208062224135198062240020188062000162177062016047167062032188156062048073146062064214135062159198122062190224101062221250080062252020060062027047039062058073018062179198250061242250208061049047167061224198122061094047039061183047167060000000178052000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005047167060005047039061136198122061005047167061198250208061135198250061036073018062005047039062230020060062199250080062168224101062137198122062053214135062037073146062021188156062005047167062245161177062229020188062213135198062197250208062181109219062165224229062149083240062133198250062187156002063051214007063171015013063035073018063155130023063019188028063139245033063003047039063123104044063243161049063107219054063227020060063091078065063211135070063075193075063195250080063059052086063179109091063043167096063163224101063027026107063147083112063011141117063131198122063251255127063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063136198122063016141117063152083112063032026107063168224101063048167096063184109091063064052086063200250080063080193075063216135070063096078065063232020060063112219054063248161049063128104044063008047039063144245033063024188028063160130023063040073018063176015013063056214007063192156002063144198250062160083240062176224229062192109219062208250208062224135198062240020188062000162177062016047167062032188156062048073146062064214135062159198122062190224101062221250080062252020060062027047039062058073018062179198250061242250208061049047167061224198122061094047039061183047167060000000178052000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005047167060005047039061136198122061005047167061198250208061135198250061036073018062005047039062230020060062199250080062168224101062137198122062053214135062037073146062021188156062005047167062245161177062229020188062213135198062197250208062181109219062165224229062149083240062133198250062187156002063051214007063171015013063035073018063155130023063019188028063139245033063003047039063123104044063243161049063107219054063227020060063091078065063211135070063075193075063195250080063059052086063179109091063043167096063163224101063027026107063147083112063011141117063131198122063251255127063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000000128063000050100150200255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255000000128063000000128063000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000128063000000128063000000128063000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000128063000000128063000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000202171115063122180113063122214110063207252106063082165102063007187097063085135092063040073087063235052082063016127077063117123073063036021070063174023067063158099064063011186061063135230058063018233055063039204052063198143049063226093046063247064043063005057040063143059037063025062034063053012031063103155027063051225023063144242019063122228015063216245011063032070008063199244004063205001002063101218254062007047250062144194245062018107241062155254236062051104232062226146227062151168222062085169217062010191212062184233207062080083203062218230198062093143194062223055190062098224185062235115181062124242176062255154172062115109168062216105164062040165160062090052157062125237153062139229150062123049148062087188145062034113143062223079141062142088139062047139137062192231135062067110134062185030133062053186131062205001130062008235127062175042123062146194117062128048112062083242106062008008102062160113097062027047093062120064089062200123085062008225081062059112078062095041075062146184071062196071068062232000065062238013062062215110059062149077057062067086055062001053053062234149050062240162047062019092044062070235040062120122037062156051034062207194030062015040027062095099023062189116019062041092015062151067011062245084007062053186003062088115000062219172250061005115244061133061237061183016228061179152216061066125203061040102189061015079175061157051162061124015151061173226141061046173134061001111129061072080124061167097120061085106118061143194117061143194117061143194117061143194117061143194117061143194117061143194117061143194117061202026117061120035115061215052111061029167104061136210094061162006083061247146070061075031058061100083046061010215035061175090025061202142013061030027001061227078233060024183209060237013190060123242176060055021169060149038165060010215163060010215163060010215163060010215163060127135162060221152158060154187150060040160137060251237107060099190060060179239010060054128183059024183081059024183209058173197039058173197039057000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003254152062178240153062139113155062110155157062009084160062235147163062127076167062167115171062245255175062013234180062075043186062007189191062095151197062119176203062218251209062093106216062098234222062098104229062187207235062157011242062008008248062223178253062130126001063202237003063135036006063065035008063053238009063139141011063054013013063093124014063090236015063067111017063051022019063114239020063211004023063117090025063044238027063157183030063041169033063107177036063035189039063067185042063215148045063133066048063141185050063051246052063153249054063043201056063187109058063118242059063194099061063051206062063147061064063013188065063146081067063089003069063168211070063191193072063000202074063071230076063104014079063224056081063155091083063208108085063223099087063034058089063144235090063037119092063240222093063203039095063183088096063231121097063159147098063013173099063083203100063211240101063234028103063040076104063227120105063029156106063141174107063152169108063037136109063023071110063123229110063098100111063125198111063154015112063015068112063063104112063056128112063111143112063171152112063005158112063247160112063127162112063064163112063154163112063192163112063208163112063213163112063215163112063215163112063213163112063208163112063195163112063162163112063088163112063187162112063136161112063079159112063099155112063213148112063095138112063093122112063223098112063171065112063104020112063178216111063080140111063088045111063074186110063027050110063075148109063210224108063021024108063234058107063122074106063083072105063082054104063157022103063136235101063115183100063146124099063171060098063234248096063167177095063087102094063144021093063048189091063154090090063008235088063210107087063194218085063074054084063155125082063181176080063069208078063133221076063251217074063064199072063213166070063240121068063101065066063157253063063159174061063026084059063110237056063187121054063231247051063162102049063107196046063159015044063148070041063203103038063036114035063032101032063033065029063144007026063238186022063191094019063071247015063047137012063011025009063229170005063190065002063144190253062112007247062147091240062024182233062151016227062090100220062179171213062067227206062021011200062043039193062168063186062083096179062163151172062152245165062152138159062152102153062179152147062102047142062193056137062188195132062163222128062199055123062055009118062029112114062167043112062000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000128063000000128063000000128063080166127063160076127063240242126063064153126063144063126063224229125063048140125063128050125063208216124063032127124063112037124063192203123063016114123063096024123063176190122063000101122063080011122063160177121063240087121063064254120063144164120063224074120063048241119063128151119063208061119063032228118063112138118063192048118063016215117063096125117063176035117063000202116063080112116063160022116063240188115063064099115063144009115063224175114063048086114063128252113063208162113063032073113063112239112063192149112063016060112063096226111063176136111063000047111063080213110063160123110063240033110063064200109063144110109063224020109063048187108063128097108063208007108063032174107063112084107063192250106063016161106063096071106063176237105063000148105063080058105063160224104063240134104063064045104063144211103063224121103063048032103063128198102063208108102063032019102063112185101063192095101063016006101063096172100063176082100063000249099063080159099063160069099063240235098063064146098063144056098063224222097063048133097063128043097063208209096063032120096063112030096063192196095063016107095063028107095063052002094063076153092063100048091063124199089063148094088063172245086063196140085063220035084063244186082063012082081063036233079063060128078063084023077063108174075063132069074063156220072063180115071063204010070063228161068063252056067063020208065063044103064063068254062063092149061063116044060063140195058063164090057063188241055063212136054063236031053063004183051063028078050063052229048063076124047063100019046063124170044063148065043063172216041063196111040063220006039063244157037063012053036063036204034063060099033063084250031063108145030063132040029063156191027063180086026063204237024063228132023063252027022063020179020063044074019063068225017063092120016063116015015063140166013063164061012063188212010063212107009063236002008063004154006063028049005063052200003063076095002063100246000063248026255062040073252062088119249062136165246062184211243062232001241062024048238062072094235062120140232062168186229062216232226062008023224062056069221062104115218062152161215062200207212062248253209062040044207062088090204062136136201062184182198062232228195062024019193062072065190062120111187062168157184062216203181062008250178062056040176062104086173062152132170062200178167062248224164062040015162062088061159062136107156062184153153062000000128063000000128063000000128063250149127063244043127063238193126063232087126063226237125063220131125063214025125063208175124063202069124063196219123063190113123063184007123063178157122063172051122063166201121063160095121063154245120063148139120063142033120063136183119063130077119063124227118063118121118063112015118063106165117063100059117063094209116063088103116063082253115063076147115063070041115063064191114063058085114063052235113063046129113063040023113063034173112063028067112063022217111063016111111063010005111063004155110063254048110063248198109063242092109063236242108063230136108063224030108063218180107063212074107063206224106063200118106063194012106063188162105063182056105063176206104063170100104063164250103063158144103063152038103063146188102063140082102063134232101063128126101063122020101063116170100063110064100063104214099063098108099063092002099063086152098063080046098063074196097063068090097063062240096063056134096063050028096063044178095063038072095063032222094063026116094063020010094063014160093063008054093063002204092063252097092063246247091063240141091063234035091063228185090063222079090063216229089063210123089063204123089063040209087063132038086063224123084063060209082063152038081063244123079063080209077063172038076063008124074063100209072063192038071063028124069063120209067063212038066063048124064063140209062063232038061063068124059063160209057063252038056063088124054063180209052063016039051063108124049063200209047063036039046063128124044063220209042063056039041063148124039063240209037063076039036063168124034063004210032063096039031063188124029063024210027063116039026063208124024063044210022063136039021063228124019063064210017063156039016063248124014063084210012063176039011063012125009063104210007063196039006063032125004063124210002063216039001063103250254062030165251062213079248062140250244062067165241062250079238062177250234062104165231062031080228062214250224062141165221062068080218062251250214062178165211062105080208062032251204062215165201062142080198062069251194062252165191062179080188062106251184062033166181062216080178062143251174062070166171062253080168062180251164062107166161062034081158062217251154062144166151062071081148062254251144062181166141062108081138062035252134062218166131062145081128062145248121062000078115062111163108062222248101062077078095062188163088062043249081062154078075062009164068062120249061062231078055062086164048062000000128063000000128063000000128063045140127063090024127063135164126063180048126063225188125063014073125063059213124063104097124063149237123063194121123063239005123063028146122063073030122063118170121063163054121063208194120063253078120063042219119063087103119063132243118063177127118063222011118063011152117063056036117063101176116063146060116063191200115063236084115063025225114063070109114063115249113063160133113063205017113063250157112063039042112063084182111063129066111063174206110063219090110063008231109063053115109063098255108063143139108063188023108063233163107063022048107063067188106063112072106063157212105063202096105063247236104063036121104063081005104063126145103063171029103063216169102063005054102063050194101063095078101063140218100063185102100063230242099063019127099063064011099063109151098063154035098063199175097063244059097063033200096063078084096063123224095063168108095063213248094063002133094063047017094063092157093063137041093063182181092063227065092063016206091063061090091063106230090063151114090063196254089063241138089063030023089063075163088063120047088063165187087063210071087063255211086063044096086063089236085063068236085063046026084063024072082063002118080063236163078063214209076063192255074063170045073063148091071063126137069063104183067063082229065063060019064063038065062063016111060063250156058063228202056063206248054063184038053063162084051063140130049063118176047063096222045063074012044063052058042063030104040063008150038063242195036063220241034063198031033063176077031063154123029063132169027063110215025063088005024063066051022063044097020063022143018063000189016063234234014063212024013063190070011063168116009063146162007063124208005063102254003063080044002063058090000063073016253062030108249062243199245062200035242062157127238062114219234062071055231062028147227062241238223062198074220062155166216062112002213062069094209062026186205062239021202062196113198062153205194062110041191062067133187062024225183062237060180062194152176062151244172062108080169062065172165062022008162062235099158062192191154062149027151062106119147062063211143062020047140062233138136062190230132062147066129062207060123062120244115062033172108062202099101062115027094062028211086062197138079062110066072062023250064062192177057062105105050062018033043062187216035062100144028062013072021062182255013062095183006062017222254061100077240061183188225061010044211061093155196061001095200255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255255000000128063028107095063154153153062000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000128063204123089063038164048062000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000128063068236085063166155196061000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\n"
+  Gen1ParticlesPerSecF {{curve 300 0}}
+  Gen1EmitterType Point
+  Gen1Pos {{"parent.pv2_proxyPos * parent.pv2_camXMultiplier" i} {"parent.pv2_proxyPos * parent.pv2_camYMultiplier" i} {parent.pv2_proxyPos i}}
+  Gen1SubframePos Linear
+  Gen1EmitterDir Uniform
+  Gen1DirSpread 20
+  Gen1Angle {{parent.pv2_proxyRot i} {parent.pv2_proxyRot i} {parent.pv2_proxyRot i}}
+  Gen1Vel 400
+  Gen1VelSpread 18.6
+  Gen1VelSpreadDistr 1
+  Gen1VelEmit 20
+  Gen1EmitterSizeX 50
+  Gen1EmitterSizeY 50
+  Gen1EmitterSizeZ 50
+  "Layer Emitter" 0
+  "Layer Transform" 0
+  LELayerTransformOffset {0 0 0}
+  LELayerTransformRotate {0 0 0}
+  ELayerDuration 100
+  LELayerIs "Current Time"
+  LERGBUsage "RGB - Particle Color"
+  "Grid Emitter" 0
+  Options_GridEmitter_ParticlesInX 5
+  Options_GridEmitter_ParticlesInY 5
+  Options_GridEmitter_ParticlesInZ 1
+  GridEmitter_Type "Periodic Burst"
+  "Emission Extras" 0
+  Options_EmissionExtras_PreRun 0
+  Options_EmissionExtras_PerodicityRnd 0
+  Options_RandomSeed 100000
+  "Multi Emitters" 1
+  Emitter1_Type Off
+  Emitter1_Color 1
+  Emitter1_Intensity 100
+  Emitter1_Pos {0 0 0.2083333284}
+  Emitter1_Rotate {0 0 0}
+  Emitter1_DirectionalSpread 50
+  Emitter2_Type Off
+  Emitter2_Color 1
+  Emitter2_Intensity 100
+  Emitter2_Pos {0 0 0.2083333284}
+  Emitter2_Rotate {0 0 0}
+  Emitter2_DirectionalSpread 50
+  Emitter3_Type Off
+  Emitter3_Color 1
+  Emitter3_Intensity 100
+  Emitter3_Pos {0 0 0.2083333284}
+  Emitter3_Rotate {0 0 0}
+  Emitter3_DirectionalSpread 50
+  Emitter4_Type Off
+  Emitter4_Color 1
+  Emitter4_Intensity 100
+  Emitter4_Pos {0 0 0.2083333284}
+  Emitter4_Rotate {0 0 0}
+  Emitter4_DirectionalSpread 50
+  Emitter5_Type Off
+  Emitter5_Color 1
+  Emitter5_Intensity 100
+  Emitter5_Pos {0 0 0.2083333284}
+  Emitter5_Rotate {0 0 0}
+  Emitter5_DirectionalSpread 50
+  Emitter6_Type Off
+  Emitter6_Color 1
+  Emitter6_Intensity 100
+  Emitter6_Pos {0 0 0.2083333284}
+  Emitter6_Rotate {0 0 0}
+  Emitter6_DirectionalSpread 50
+  Emitter7_Type Off
+  Emitter7_Color 1
+  Emitter7_Intensity 100
+  Emitter7_Pos {0 0 0.2083333284}
+  Emitter7_Rotate {0 0 0}
+  Emitter7_DirectionalSpread 50
+  Emitter8_Type Off
+  Emitter8_Color 1
+  Emitter8_Intensity 100
+  Emitter8_Pos {0 0 0.2083333284}
+  Emitter8_Rotate {0 0 0}
+  Emitter8_DirectionalSpread 50
+  PLife 1.2
+  PLifeRnd 20
+  PType "Glow Sphere (No DOF)"
+  PFeather 0
+  Texture 0
+  PLayerDuration 100
+  PLayerTime "Current Time"
+  Time_RandomSeed 1
+  PLayerMultiClips 2
+  Rotation 0
+  PRotAuto On
+  PRotateXYZ {0 0 0}
+  PRotateRnd 0
+  PRotateSpeedX 0
+  PRotateSpeedY 0
+  PRotateSpeed 0
+  PRotateRndSpeed 0
+  PRotateRndSpeedDistr 0.5
+  PSizeMax 0
+  PSizeRnd 0
+  POpacMax 100
+  POpacRnd 0
+  PSetColor "At Birth"
+  PColor 1
+  PColorRnd 0
+  PTMode Normal
+  Glow 0
+  Options_Glow_Size 300
+  Options_Glow_Opacity 25
+  Options_Glow_Feather 100
+  Glow_TransferMode Normal
+  Streaklet 0
+  Streaklet_RandomSeed 0
+  Streaklet_NoSpheres 7
+  Streaklet_Spread 60
+  PShade Off
+  PShadeFalloff "Natural (Lux)"
+  PShadeFalloffAdjust 250
+  PShadeAmbient 20
+  PShadeDiffuse 80
+  PShadeSpecular 0
+  PShadeSpecularSharp 100
+  ReflectionMapIntens 100
+  "Shading Lights" 0
+  AmbientColor 0
+  Light1_Type Off
+  Light1_Color 1
+  Light1_Intensity 100
+  Light1_Pos {0 0 0.2083333284}
+  Light1_Rotate {0 0 0}
+  Light1_ConeAngle 90
+  Light1_ConeFeather 50
+  Light2_Type Off
+  Light2_Color 1
+  Light2_Intensity 100
+  Light2_Pos {0 0 0.2083333284}
+  Light2_Rotate {0 0 0}
+  Light2_ConeAngle 90
+  Light2_ConeFeather 50
+  Light3_Type Off
+  Light3_Color 1
+  Light3_Intensity 100
+  Light3_Pos {0 0 0.2083333284}
+  Light3_Rotate {0 0 0}
+  Light3_ConeAngle 90
+  Light3_ConeFeather 50
+  Light4_Type Off
+  Light4_Color 1
+  Light4_Intensity 100
+  Light4_Pos {0 0 0.2083333284}
+  Light4_Rotate {0 0 0}
+  Light4_ConeAngle 90
+  Light4_ConeFeather 50
+  Light5_Type Off
+  Light5_Color 1
+  Light5_Intensity 100
+  Light5_Pos {0 0 0.2083333284}
+  Light5_Rotate {0 0 0}
+  Light5_ConeAngle 90
+  Light5_ConeFeather 50
+  Light6_Type Off
+  Light6_Color 1
+  Light6_Intensity 100
+  Light6_Pos {0 0 0.2083333284}
+  Light6_Rotate {0 0 0}
+  Light6_ConeAngle 90
+  Light6_ConeFeather 50
+  Light7_Type Off
+  Light7_Color 1
+  Light7_Intensity 100
+  Light7_Pos {0 0 0.2083333284}
+  Light7_Rotate {0 0 0}
+  Light7_ConeAngle 90
+  Light7_ConeFeather 50
+  Light8_Type Off
+  Light8_Color 1
+  Light8_Intensity 100
+  Light8_Pos {0 0 0.2083333284}
+  Light8_Rotate {0 0 0}
+  Light8_ConeAngle 90
+  Light8_ConeFeather 50
+  PShadow Off
+  SE_PShadow On
+  "Shadowlet Settings" 0
+  Options_SmokeletShadow_Color 0
+  Options_SmokeletShadow_ColorStrength 70
+  Options_SmokeletShadow_Opacity 90
+  PShadow_Size 100
+  PShadow_Dist 100
+  PShadow_ZPos Auto
+  Shadowlet_Pos {0 0 -0.2083333284}
+  AnimationSystem Air
+  Gravity 100
+  PhTime 1
+  Air 0
+  AirResist 2
+  AirResistRotation false
+  SpinAmp 0
+  SpinFreq 1
+  SpinTime 1
+  WindX 1.6
+  WindY 0
+  WindZ 0
+  DVisualize false
+  "Turbulence Field" 0
+  FAffectSize 0
+  FAffectPos 0
+  FAffectTime 0.5
+  FAffectCurve Smooth
+  FScale 10
+  FComplex 3
+  FOctMult 0.5
+  FOctScale 1.5
+  FEvolution 50
+  FOffsetE 0
+  FOffsetXYZ {0 0 0}
+  FMoveWithWind 80
+  "Spherical Field" 0
+  DStrength 0
+  DPos {0 0 0}
+  DRadius 100
+  DFeather 50
+  Bounce 0
+  FloorMode "Infinite Plane"
+  "Floor Transform" 0
+  FLayerTransformOffset {0 0 0}
+  FLayerTransformRotate {0 0 0}
+  WallMode "Infinite Plane"
+  "Wall Transform" 0
+  WLayerTransformOffset {0 0 0}
+  WLayerTransformRotate {0 0 0}
+  WFEvent Bounce
+  WFBounce 50
+  WFBounceRnd 30
+  WFSlide 80
+  SE_Emitter Continously
+  Options_Aux_EmitProbability 100
+  SE_ParticlesPerSecF 70
+  SE_PLife 5
+  SE_PType Cloudlet
+  SE_PVel 10
+  SE_PSize 9.1
+  SE_POpacity 44
+  SE_PColorFromMain 0
+  Options_Aux_Gravity 0
+  Options_Aux_TransferMode Normal
+  Options_Aux_RotateSpeed 0
+  Options_Aux_Feather 30
+  "Control from Main Particles" 0
+  Options_Aux_Control_InheritVelocity 0
+  Options_Aux_Control_StartEmit 0
+  Options_Aux_Control_StopEmit 100
+  "Physics (Air mode only)" 0
+  Options_Aux_AirPhysics_Resistance 0
+  Options_Aux_AirPhysics_Wind 500
+  Options_Aux_AirPhysics_Turbulence 0
+  Randomness 0
+  Options_Aux_Randomness_Life 50
+  Options_Aux_Randomness_Size 30
+  Options_Aux_Randomness_Opacity 50
+  WT_R {0 0 0}
+  WT_TXYZ {0 0 0}
+  NFFarVanish 1000
+  NFFarStartFade 39.583333
+  NFNearStartFade 0.020833
+  NFNearVanish 0.002083
+  NFCurve Linear
+  ZBlack 20.833333
+  ZWhite 0
+  "Obscuration Transform" 0
+  OLayerTransformOffset {0 0 0}
+  OLayerTransformRotate {0 0 0}
+  Obscure None
+  RenderMode "Full Render"
+  DOF Off
+  DOFtype Smooth
+  TMode None
+  TModeOpac 100
+  "Motion Blur" 0
+  MBlurPopup Off
+  MBlurShutter 360
+  MBlurShutterPhase 0
+  MBlurType Linear
+  MBlurLevels 8
+  MBlurLinAdjust 70
+  MBlurOpacBoost 0
+  MBlurDisregard Nothing
+  CameraPos {{"p_cam.world_matrix.3 * parent.pv2_camXMultiplier" i} {"p_cam.world_matrix.7 * parent.pv2_camYMultiplier" i} {p_cam.world_matrix.11 i}}
+  CameraZoom {{"(p_cam.focal/p_cam.haperture) * parent.pv2_projectWidth" i}}
+  CameraO {{parent.p_cam.rotate i} {parent.p_cam.rotate i} {parent.p_cam.rotate i}}
+  IsCameraOrtho false
+  FocalDistance 6.3
+  Aperture 78.5
+  BlurLevel 365
+  DistImagePlane 2.591667
+  name "Particular v2_1"
+  xpos 70
+  ypos -155
+ }
+ Dot {
+  name Dot2
+  xpos 104
+  ypos -83
+ }
+set N1e8eea10 [stack 0]
+ Project3D {
+  inputs 2
+  name Project3D1
+  xpos 152
+  ypos -14
+ }
+push $N1e8eea10
+ Switch {
+  inputs 2
+  which 1
+  name frontOrCamProject1
+  xpos 70
+  ypos 47
+ }
+set N1e8e5920 [stack 0]
+push $N1e8e5920
+ BasicMaterial {
+  inputs 2
+  diffuse 0
+  specular 0
+  min_shininess 2
+  max_shininess 2
+  name BasicMaterial1
+  xpos 70
+  ypos 84
+ }
+ Card2 {
+  selectable false
+  image_aspect false
+  rows 1
+  columns 1
+  rotate {{parent.pv2_cardRot.x i} {parent.pv2_cardRot.y i} {parent.pv2_cardRot.z i}}
+  scaling {{parent.pv2_cardScale.x i} {parent.pv2_cardScale.y i} 0}
+  uniform_scale {{parent.pv2_cardScaleUni i x50 1}}
+  control_points {3 3 3 6 
+
+1 {-0.5 -0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0 0 0} 
+1 {0 -0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 -0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {1 0.5 0} 
+1 {-0.5 0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0 1 0} 
+1 {0 0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0.5 1 0} 
+1 {0.5 0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {1 1 0} }
+  name emitterCard1
+  xpos 70
+  ypos 122
+ }
+ TransformGeo {
+  inputs 3
+  translate {{parent.pv2_cardOffset.x i} {parent.pv2_cardOffset.y i} {parent.pv2_cardOffset.z i}}
+  rotate_x {{parent.pv2_cardAlignToCam i}}
+  rotate_y {{parent.pv2_cardAlignToCam i}}
+  rotate_z {{parent.pv2_cardAlignToCam i}}
+  name TransformGeo1
+  selected true
+  xpos 70
+  ypos 188
+ }
+ Scene {
+  inputs 6
+  name p_sceneNode
+  xpos 80
+  ypos 259
+ }
+ Output {
+  name Output1
+  xpos 70
+  ypos 387
+ }
+ Input {
+  inputs 0
+  name Emitters
+  xpos 66
+  ypos -419
+  number 1
+ }
+ Scene {
+  name p_EmitterObjs
+  xpos 76
+  ypos -357
+ }
+end_group

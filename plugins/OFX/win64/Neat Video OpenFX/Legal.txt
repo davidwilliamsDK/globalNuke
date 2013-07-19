@@ -1,0 +1,73 @@
+Neat Video
+To make video cleaner.
+
+LEGAL INFORMATION
+
+COPYRIGHT
+Neat Video (c) 1999-2013 ABSoft. All rights reserved.
+
+LICENCE AGREEMENT
+By downloading and/or using the Neat Video OpenFX plug-in (Win)
+software (called "Neat Video" hereunder in this agreement) you indicate
+that you accept this license agreement. If you are unable or unwilling
+to accept this license agreement then you may not use Neat Video and
+must return and/or destroy all copies of Neat Video in your possession.
+
+YOU MAY
+- Use the Demo edition of Neat Video free of charge for non-commercial
+  purposes only.
+
+- Copy and distribute the Demo edition of Neat Video.
+
+- Run the Home or Pro edition of Neat Video on one (or more, up to the
+  number specified in your license) computer (computers) at a time for
+  commercial and other purposes provided you are a registered user and
+  you have a valid license for the corresponding edition of Neat Video.
+
+YOU MAY NOT
+- Sublicense, rent, lease and sell any version or edition of Neat Video
+  or any portion of it including the license data without the explicit
+  written permission from the Neat Video team, ABSoft.
+
+- Copy, share and distribute the Home and Pro edition of Neat Video or
+  any portion of it including the license data without the explicit
+  written permission from the Neat Video team, ABSoft.
+
+- Decompile, disassemble, reverse engineer, modify, clone and emulate
+  any version or edition of Neat Video or any portion of it including
+  the license data.
+
+- Use the Home and Pro edition of Neat Video if you are not registered
+  user.
+
+TERM AND TERMINATION
+If you are a registered user of the Home or Pro edition of Neat Video
+and you have purchased a license for a certain major version and edition
+of Neat Video then you may use this major version (including all minor
+updates of the same major version) and edition of the software without
+time limitations provided you observe this license agreement.
+
+A license for a certain major version of Neat Video may be extended to
+a higher major version. By decision of the Neat Video team, ABSoft,
+this extension may be automatic and free or may involve an upgrade fee.
+
+You may terminate this license agreement at any time by returning or
+destroying all copies of Neat Video in your possession and notifying
+the Neat Video team.
+
+This license agreement will terminate immediately if you infringe upon
+the Neat Video team, ABSoft's copyrights or breach this agreement.
+Copyright infringement or breaching this agreement may also result in
+criminal or civil prosecution.
+
+DISCLAIMER OF WARRANTY
+The authors make no warranty or representation, either express or implied,
+with respect to this software, its quality, accuracy, merchantability,
+or fitness for a particular purpose. This software is provided "as is",
+and you, its user, assume the entire risk as to its quality and accuracy.
+
+DISTRIBUTION
+The Demo edition of Neat Video may be distributed unmodified provided
+any charge is to cover distribution costs only. The Demo edition of
+Neat Video may be placed on magazine discs as long as the Neat Video
+team is informed.

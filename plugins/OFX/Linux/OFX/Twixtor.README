@@ -1,0 +1,36 @@
+
+You will find here the Twixtor plugins for linux in this directory
+If you are a systen administrator, there is a PDF manual that your users might be interested in...
+
+Default place to copy these
+A particular OFX host might have special additional instructions
+
+On UNIX, Linux and other UNIX-like operating systems,
+
+   1. the ':' separated directory specified by the environment variable "OFX_PLUGIN_PATH"
+   2. the directory "/usr/OFX/Plugins" 
+
+Linux Users:
+
+Linux users must use the included license registration program makedenoiseofxlinuxlic for each license that we sent you
+type ./maketwxofxlic for usage
+example:  ./maketwxofxlic "Pierre Jasmin" I9k7UCY3kCazU10O 001185AE4CA2
+
+Note node-locked licenses can be all created on one machine and copy to all machines, the MacAddress is in the filename.
+the program writes files to /usr/local/revision
+
+If the default location is used you can simply run the following commands:
+#	login as root 
+su
+# 	set umask to avoid permissions problem as other users for that
+umask 0
+# 	if there is no /usr/OFX/Plugins, that is ls -R /usr/OFX/Plugins does not return anything do
+mkdir -p /usr/OFX/Plugins
+#   	and just copy over the plugin folder
+cp -rf   *bundle /usr/OFX/Plugins
+ 
+for questions: techsupport@revisionfx.com
+
+
+
+
